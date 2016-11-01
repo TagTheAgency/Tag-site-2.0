@@ -158,13 +158,13 @@ body {
 				float: left;
 
 				.bottom-nav-titles {
+					white-space: nowrap;
 					font-family: 'Futura';
 					top: 70px;
 					@include center-horizontally;
 					position: relative;
 					display: inline-block;
-					// display: inline-block;
-					font-size: 20px;
+					font-size: 17px;
 					text-align: center;
 				}
 			}
