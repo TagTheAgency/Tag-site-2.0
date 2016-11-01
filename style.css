@@ -8,7 +8,6 @@
   color: white; }
 
 body {
-  font-family: 'Futura Light';
   font-weight: 100;
   margin: 0 0 0 0; }
 
@@ -19,8 +18,15 @@ body {
   background-size: cover;
   background-position: center;
   background-image: url("imgs/iStock_67834587_MEDIUM.jpg"); }
+  #container #background-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: radial-gradient(white, black, black);
+    opacity: 0.4; }
 
 #header {
+  font-family: 'Futura Light';
   top: 0%;
   position: absolute;
   width: 100%;
@@ -55,7 +61,7 @@ body {
 #footer {
   position: absolute;
   bottom: 0%;
-  height: 150px;
+  height: 210px;
   width: 100%; }
   #footer #bottom-nav-bar {
     left: 50%;
@@ -63,20 +69,46 @@ body {
     -webkit-transform: translatex(-50%);
     position: absolute;
     height: 100%;
-    width: 50%; }
+    width: 720px; }
     #footer #bottom-nav-bar #menu-wrapper {
       top: 50%;
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       position: relative;
-      height: 76.92308px;
-      width: 100%;
-      background-color: white; }
+      height: 72px;
+      width: 100%; }
+      #footer #bottom-nav-bar #menu-wrapper #blue {
+        color: #1DAFEB;
+        border-color: #1DAFEB; }
+      #footer #bottom-nav-bar #menu-wrapper #pink {
+        color: #E9168C;
+        border-color: #E9168C; }
+      #footer #bottom-nav-bar #menu-wrapper #yellow {
+        color: #FEF035;
+        border-color: #FEF035; }
+      #footer #bottom-nav-bar #menu-wrapper #black {
+        color: black;
+        border-color: black; }
       #footer #bottom-nav-bar #menu-wrapper .menu-item {
+        font-family: 'Futura';
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         margin-left: 5%;
         margin-right: 5%;
         width: 10%;
-        background-color: red;
+        border-radius: 50%;
+        border: 7px solid white;
         float: left; }
+        #footer #bottom-nav-bar #menu-wrapper .menu-item .bottom-nav-titles {
+          font-family: 'Futura';
+          top: 70px;
+          left: 50%;
+          transform: translatex(-50%);
+          -webkit-transform: translatex(-50%);
+          position: relative;
+          display: inline-block;
+          font-size: 20px;
+          text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
