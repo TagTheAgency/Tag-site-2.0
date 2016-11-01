@@ -97,9 +97,14 @@ body {
 
 			.menu-item {
 				@extend .menu-item;
+				transition-duration: 1s;
 				display: inline;
 				margin-left: 5px;
 				margin-right: 5px;
+			}
+
+			.menu-item:hover {
+				color: black;
 			}
 		}
 	}

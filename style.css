@@ -54,9 +54,12 @@ body {
       height: 33.33333px;
       width: 100%; }
       #header #right-nav-bar #menu-wrapper .menu-item {
+        transition-duration: 1s;
         display: inline;
         margin-left: 5px;
         margin-right: 5px; }
+      #header #right-nav-bar #menu-wrapper .menu-item:hover {
+        color: black; }
 
 #footer {
   position: absolute;
