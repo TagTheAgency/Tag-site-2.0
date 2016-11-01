@@ -83,7 +83,7 @@
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          ' Hello React!'
+	          '"We will assist you in the development of strategic social media content and Facebook apps\u2026"'
 	        )
 	      );
 	    }
@@ -92,7 +92,7 @@
 	  return App;
 	}(_react2.default.Component);
 	
-	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('description-doing'));
 
 /***/ },
 /* 1 */
