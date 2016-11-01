@@ -50,4 +50,11 @@ body {
         font-size: 25px;
         color: white; }
 
+#footer {
+  position: absolute;
+  bottom: 0%;
+  height: 200px;
+  width: 100%;
+  background-color: white; }
+
 /*# sourceMappingURL=style.css.map */
