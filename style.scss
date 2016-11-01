@@ -1,13 +1,25 @@
-$background-image: 'iStock_67834587_MEDIUM.jpg';
 
+//////////////////////////////////////////////////////////////////////
+
+$background-image: 'iStock_67834587_MEDIUM.jpg';
 $header-height: 100px;
 $nav-bar-width: 400px;
+$footer-height: 150px;
 
-$footer-height: 200px;
+//////////////////////////////////////////////////////////////////////
 
 @font-face {
     font-family: 'Futura Light';
     src: url('fonts/Futura (Light).ttf');
+}
+
+//////////////////////////////////////////////////////////////////////
+
+@mixin center {
+	top: 50%;
+	left: 50%;
+	transform: translate(50%,50%);
+	-webkit-transform: translate(50%,50%);
 }
 
 @mixin center-vertically() {
@@ -16,11 +28,21 @@ $footer-height: 200px;
 	-webkit-transform: translateY(-50%);
 }
 
+@mixin center-horizontally() {
+	left: 50%;
+	transform: translatex(-50%);
+	-webkit-transform: translatex(-50%);
+}
+
+//////////////////////////////////////////////////////////////////////
+
 body {
 	font-family: 'Futura Light';
 	font-weight: 100;
 	margin: 0 0 0 0;
 }
+
+//////////////////////////////////////////////////////////////////////
 
 #container {
 	width: 100%;
@@ -30,6 +52,8 @@ body {
 	background-position: center;
 	background-image: url('imgs/' + $background-image);
 }
+
+//////////////////////////////////////////////////////////////////////
 
 #header {
 	top: 0%;
@@ -74,11 +98,29 @@ body {
 	}
 }
 
+//////////////////////////////////////////////////////////////////////
+
 #footer {
 	position: absolute;
 	bottom: 0%;
 	height: $footer-height;
 	width: 100%;
-	background-color: white;
+
+	#bottom-nav-bar {
+		@include center-horizontally;
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		background-color: red;
+
+			#menu-wrapper {
+			@include center-vertically;
+			position: relative;
+			top: 50%;
+			height: $header-height / 3;
+			width: 100%;
+		}
 }
+
+
 
