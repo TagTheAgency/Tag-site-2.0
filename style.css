@@ -23,7 +23,7 @@ body {
     width: 100%;
     position: absolute;
     background: radial-gradient(white, black, black);
-    opacity: 0.4; }
+    opacity: 0.6; }
 
 #header {
   font-family: 'Futura Light';
@@ -92,7 +92,10 @@ body {
       #footer #bottom-nav-bar #menu-wrapper #black {
         color: black;
         border-color: black; }
+      #footer #bottom-nav-bar #menu-wrapper .menu-item:hover {
+        box-shadow: inset 0px 0px 20px 30px; }
       #footer #bottom-nav-bar #menu-wrapper .menu-item {
+        transition-duration: 2s;
         font-family: 'Futura';
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
