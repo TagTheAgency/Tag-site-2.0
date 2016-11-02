@@ -38,7 +38,7 @@ body {
   background-image: url("imgs/iStock_79251697_XXLARGE.jpg");
 }
 
-.vr {
+.vr-page {
   background-image: url("imgs/iStock_93639499_MEDIUM.jpg");
 }
 
@@ -184,3 +184,9 @@ body {
           text-align: center; }
 
 
+
+#vr-text-column {
+  width: 330px;
+  margin: 175px 0 0 200px;
+  color: #FFF;
+}
