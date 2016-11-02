@@ -3,6 +3,9 @@
 $header-height: 100px;
 $nav-bar-width: 400px;
 $footer-height: 210px;
+$blue: #1DAFEB;
+$pink: #E9168C;
+$yellow: #F0DE0F;
 //////////////////////////////////////////////////////////////////////
 @font-face {
     font-family: 'Futura Light';
@@ -54,8 +57,8 @@ body {
 	padding-top: $header-height;
 	padding-bottom: $footer-height;
 	position: fixed;
-	width: 100%;
-	height: 100%; }
+	width: 1920px;
+	height: 1080px; }
 #footer {
 	z-index: 1;
 	position: fixed;
@@ -105,10 +108,10 @@ body {
 				color: black; }
 			.menu-item:hover {
 				text-shadow: 0px 3px 5px black;
-				color: #F0DE0F; }
+				color: $yellow; }
 			.menu-item-dark:hover {
 				text-shadow: 0px 3px 5px black;
-				color: #F0DE0F; } } } }
+				color: $yellow; } } } }
 //////////////////////////////////////////////////////////////////////
 
 #work-content {
@@ -127,6 +130,7 @@ body {
 		width: 60%; 
 		height: 100%; 
 		#right-media-wrapper {
+			box-sizing: border-box;
 			height: 100%;
 			padding-right: 30%;
 			padding-top: 100px; 
@@ -134,7 +138,25 @@ body {
 				float: left;
 				height: 45%;
 				width: 30%;
-				margin: 0 2.5% 0 0; } } } } 
+				margin: 0 2.5% 2.5% 0;
+				background-color: #3A3A3C; 
+				.video-media-bottom {
+					height: 25%; 
+					top: 75%;
+					position: relative;
+					width: 100%;
+					background-color: #58585A; 
+					.video-media-bottom-color-bars { 
+						position: relative;
+						height: 11%;
+						top: 90%;
+						width: 50%;
+						float: left;
+						background-color: $blue; }
+					.video-media-bottom-color-bars:nth-child(even) { 
+						background-color: $yellow; }
+					.video-media-bottom-color-bars.pink { 
+					 	background-color: $pink; } } } } } } 
 //////////////////////////////////////////////////////////////////////
 #footer {
 	@extend #footer;
@@ -149,14 +171,14 @@ body {
 			height: 72px;
 			width: 100%;
 				#blue {
-					color: #1DAFEB;
-					border-color: #1DAFEB; }
+					color: $blue;
+					border-color: $blue; }
 				#pink {
-					color: #E9168C;
-					border-color: #E9168C; }
+					color: $pink;
+					border-color: $pink; }
 				#yellow {
-					color: #F0DE0F;
-					border-color: #F0DE0F; }
+					color: $yellow;
+					border-color: $yellow; }
 				#black {
 					color: black;
 					border-color: black; }
