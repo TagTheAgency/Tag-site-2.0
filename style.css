@@ -7,12 +7,6 @@
   font-size: 25px;
   color: white; }
 
-.four-grid {
-  height: 100%;
-  width: 25%;
-  color: red;
-  float: left; }
-
 body {
   font-weight: 100;
   margin: 0 0 0 0; }
@@ -43,7 +37,15 @@ body {
   width: 100%;
   height: 100%; }
 
+#footer {
+  z-index: 1;
+  position: fixed;
+  bottom: 0%;
+  height: 210px;
+  width: 100%; }
+
 #header {
+  z-index: 1;
   font-family: 'Futura Light';
   top: 0%;
   position: fixed;
@@ -88,62 +90,57 @@ body {
         text-shadow: 0px 3px 5px black;
         color: #F0DE0F; }
 
-#footer {
-  position: fixed;
-  bottom: 0%;
-  height: 210px;
-  width: 100%; }
-  #footer #bottom-nav-bar {
-    left: 50%;
-    transform: translatex(-50%);
-    -webkit-transform: translatex(-50%);
-    position: absolute;
-    height: 100%;
-    width: 720px; }
-    #footer #bottom-nav-bar #menu-wrapper {
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      position: relative;
-      height: 72px;
-      width: 100%; }
-      #footer #bottom-nav-bar #menu-wrapper #blue {
-        color: #1DAFEB;
-        border-color: #1DAFEB; }
-      #footer #bottom-nav-bar #menu-wrapper #pink {
-        color: #E9168C;
-        border-color: #E9168C; }
-      #footer #bottom-nav-bar #menu-wrapper #yellow {
-        color: #F0DE0F;
-        border-color: #F0DE0F; }
-      #footer #bottom-nav-bar #menu-wrapper #black {
-        color: black;
-        border-color: black; }
-      #footer #bottom-nav-bar #header #right-nav-bar #menu-wrapper .menu-item-dark:hover, #header #right-nav-bar #footer #bottom-nav-bar #menu-wrapper .menu-item-dark:hover, #footer #bottom-nav-bar #menu-wrapper .menu-item:hover {
-        box-shadow: inset 0px 0px 20px 30px, 0px 3px 5px black;
-        text-shadow: 0px 3px 5px black; }
-      #footer #bottom-nav-bar #header #right-nav-bar #menu-wrapper .menu-item-dark, #header #right-nav-bar #footer #bottom-nav-bar #menu-wrapper .menu-item-dark, #footer #bottom-nav-bar #menu-wrapper .menu-item {
-        transition-duration: 1s;
+#footer #bottom-nav-bar {
+  left: 50%;
+  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%);
+  position: absolute;
+  height: 100%;
+  width: 720px; }
+  #footer #bottom-nav-bar #menu-wrapper {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    position: relative;
+    height: 72px;
+    width: 100%; }
+    #footer #bottom-nav-bar #menu-wrapper #blue {
+      color: #1DAFEB;
+      border-color: #1DAFEB; }
+    #footer #bottom-nav-bar #menu-wrapper #pink {
+      color: #E9168C;
+      border-color: #E9168C; }
+    #footer #bottom-nav-bar #menu-wrapper #yellow {
+      color: #F0DE0F;
+      border-color: #F0DE0F; }
+    #footer #bottom-nav-bar #menu-wrapper #black {
+      color: black;
+      border-color: black; }
+    #footer #bottom-nav-bar #header #right-nav-bar #menu-wrapper .menu-item-dark, #header #right-nav-bar #footer #bottom-nav-bar #menu-wrapper .menu-item-dark, #footer #bottom-nav-bar #menu-wrapper .menu-item {
+      transition-duration: 1s;
+      font-family: 'Futura';
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 10%;
+      border-radius: 50%;
+      border: 7px solid white;
+      float: left; }
+      #footer #bottom-nav-bar #header #right-nav-bar #menu-wrapper .menu-item-dark .bottom-nav-titles, #header #right-nav-bar #footer #bottom-nav-bar #menu-wrapper .menu-item-dark .bottom-nav-titles, #footer #bottom-nav-bar #menu-wrapper .menu-item .bottom-nav-titles {
+        white-space: nowrap;
         font-family: 'Futura';
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        margin-left: 5%;
-        margin-right: 5%;
-        width: 10%;
-        border-radius: 50%;
-        border: 7px solid white;
-        float: left; }
-        #footer #bottom-nav-bar #header #right-nav-bar #menu-wrapper .menu-item-dark .bottom-nav-titles, #header #right-nav-bar #footer #bottom-nav-bar #menu-wrapper .menu-item-dark .bottom-nav-titles, #footer #bottom-nav-bar #menu-wrapper .menu-item .bottom-nav-titles {
-          white-space: nowrap;
-          font-family: 'Futura';
-          top: 70px;
-          left: 50%;
-          transform: translatex(-50%);
-          -webkit-transform: translatex(-50%);
-          position: relative;
-          display: inline-block;
-          font-size: 17px;
-          text-align: center; }
+        top: 70px;
+        left: 50%;
+        transform: translatex(-50%);
+        -webkit-transform: translatex(-50%);
+        position: relative;
+        display: inline-block;
+        font-size: 17px;
+        text-align: center; }
+    #footer #bottom-nav-bar #header #right-nav-bar #menu-wrapper .menu-item-dark:hover, #header #right-nav-bar #footer #bottom-nav-bar #menu-wrapper .menu-item-dark:hover, #footer #bottom-nav-bar #menu-wrapper .menu-item:hover {
+      box-shadow: 0px 3px 5px black;
+      text-shadow: 0px 3px 5px black; }
 
 /*# sourceMappingURL=style.css.map */
