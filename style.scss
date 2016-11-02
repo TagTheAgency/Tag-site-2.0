@@ -110,10 +110,25 @@ body {
 				color: #F0DE0F; } } } }
 //////////////////////////////////////////////////////////////////////
 
-.content {
+#work-content {
 	@extend .content;
-	#work-container {
-		#left-text-container { } } }
+	#left-text-container { 
+		float: left;
+		width: 40%;
+		height: 100%;
+		#left-text-wrapper {
+			height: 100%;
+			padding-left: 30%;
+			padding-right: 10%;
+			padding-top: 100px; } }
+	#right-media-container {
+		float: left;
+		width: 60%; 
+		height: 100%; 
+		#right-media-wrapper {
+			height: 100%;
+			padding-right: 30%;
+			padding-top: 100px; } } } 
 //////////////////////////////////////////////////////////////////////
 #footer {
 	@extend #footer;
