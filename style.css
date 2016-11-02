@@ -110,7 +110,10 @@ body {
       #footer #bottom-nav-bar #menu-wrapper #black {
         color: black;
         border-color: black; }
+      #footer #bottom-nav-bar #menu-wrapper .menu-item:hover {
+        box-shadow: inset 0px 0px 20px 30px; }
       #footer #bottom-nav-bar #menu-wrapper .menu-item {
+        transition-duration: 2s;
         font-family: 'Futura';
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
