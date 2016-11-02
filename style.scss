@@ -1,6 +1,5 @@
 
 //////////////////////////////////////////////////////////////////////
-$background-image: 'iStock_67834587_MEDIUM.jpg';
 $header-height: 100px;
 $nav-bar-width: 400px;
 $footer-height: 210px;
@@ -39,19 +38,25 @@ $footer-height: 210px;
 	color: white;
 }
 
+.four-grid {
+	height: 100%;
+	width: 25%;
+	color: red;
+	float: left;
+}
+
 //////////////////////////////////////////////////////////////////////
 body {
 	font-weight: 100;
 	margin: 0 0 0 0;
 }
 
-#container {
+.container {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	background-size: cover;
 	background-position: center;
-	background-image: url('imgs/' + $background-image);
 
 	#background-overlay {
 		height: 100%;
@@ -62,16 +67,34 @@ body {
 	}
 }
 
+#index-container {
+	background-image: url('imgs/iStock_67834587_MEDIUM.jpg');
+	@extend .container;
+
+}
+
+#work-container {
+	@extend .container;
+	background: white;
+}
+
+.content {
+	padding-top: $header-height;
+	padding-bottom: $footer-height;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
 
 //////////////////////////////////////////////////////////////////////
 #header {
 	font-family: 'Futura Light';
 	top: 0%;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: $header-height;
 
-	#logo {
+	.logo {
 		cursor: pointer;
 		margin-left: 10px;
 		background-position: center;
@@ -81,6 +104,11 @@ body {
 		float: left;
 		width: $header-height;
 		height: $header-height;
+	}
+
+	.logo-dark {
+		@extend .logo;
+		background-image: url('imgs/TAG_logo_tag_black_blacktag.png');
 	}
 
 	#right-nav-bar {
@@ -97,13 +125,24 @@ body {
 
 			.menu-item {
 				@extend .menu-item;
+				color: white;
 				transition-duration: 1s;
 				display: inline;
 				margin-left: 5px;
 				margin-right: 5px;
 			}
 
+			.menu-item-dark {
+				@extend .menu-item;
+				color: black;
+			}
+
 			.menu-item:hover {
+				text-shadow: 0px 3px 5px black;
+				color: #F0DE0F;
+			}
+
+			.menu-item-dark:hover {
 				text-shadow: 0px 3px 5px black;
 				color: #F0DE0F;
 			}
@@ -113,7 +152,7 @@ body {
 
 //////////////////////////////////////////////////////////////////////
 #footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0%;
 	height: $footer-height;
 	width: 100%;
