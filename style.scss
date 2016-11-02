@@ -137,9 +137,9 @@ body {
 			.video-media-wrapper {
 				float: left;
 				height: 45%;
-				width: 30%;
-				margin: 0 2.5% 2.5% 0;
-				background-color: #3A3A3C; 
+				width: 32%;
+				margin: 0 10px 10px 0;
+				background-color: #3A3A3C;
 				.video-media-bottom {
 					height: 25%; 
 					top: 75%;
@@ -156,7 +156,29 @@ body {
 					.video-media-bottom-color-bars:nth-child(even) { 
 						background-color: $yellow; }
 					.video-media-bottom-color-bars.pink { 
-					 	background-color: $pink; } } } } } } 
+					 	background-color: $pink; } } }
+			#video-media-nav {
+					margin: 0 10px 0 0;
+					position: relative;
+					float: right;
+					bottom: 0%;
+					width: 110px;
+					height: 50px;
+					.arrow:nth-child(2) {
+						margin-left: 10px; }
+					.arrow {
+						font-family: 'Futura Light';
+						font-size: 35px;
+						opacity: 0.7;
+						line-height: 50px;
+						text-align: center;
+						color: #58585A;
+						box-sizing: border-box;
+						border-radius: 50%;
+						border: 2px solid #58585A;
+						float: left;
+						width: 50px;
+						height: 100%; } } } } }
 //////////////////////////////////////////////////////////////////////
 #footer {
 	@extend #footer;
