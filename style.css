@@ -31,6 +31,7 @@ body {
   background: white; }
 
 .content, #work-content {
+  box-sizing: border-box;
   padding-top: 100px;
   padding-bottom: 210px;
   position: fixed;
@@ -107,13 +108,18 @@ body {
     height: 100%;
     padding-right: 30%;
     padding-top: 100px; }
+    #work-content #right-media-container #right-media-wrapper .video-media-wrapper {
+      float: left;
+      height: 45%;
+      width: 30%;
+      margin: 0 2.5% 0 0; }
 
 #footer #bottom-nav-bar {
   left: 50%;
   transform: translatex(-50%);
   -webkit-transform: translatex(-50%);
   position: absolute;
-  height: 100%;
+  height: inherit;
   width: 720px; }
   #footer #bottom-nav-bar #menu-wrapper {
     top: 50%;

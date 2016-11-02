@@ -50,6 +50,7 @@ body {
 	@extend .container;
 	background: white; }
 .content {
+	box-sizing: border-box;
 	padding-top: $header-height;
 	padding-bottom: $footer-height;
 	position: fixed;
@@ -128,14 +129,19 @@ body {
 		#right-media-wrapper {
 			height: 100%;
 			padding-right: 30%;
-			padding-top: 100px; } } } 
+			padding-top: 100px; 
+			.video-media-wrapper {
+				float: left;
+				height: 45%;
+				width: 30%;
+				margin: 0 2.5% 0 0; } } } } 
 //////////////////////////////////////////////////////////////////////
 #footer {
 	@extend #footer;
 	#bottom-nav-bar {
 		@include center-horizontally;
 		position: absolute;
-		height: 100%;
+		height: inherit;
 		width: 720px;
 			#menu-wrapper {
 			@include center-vertically;
