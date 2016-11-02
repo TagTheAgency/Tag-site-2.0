@@ -16,14 +16,31 @@ body {
   height: 100%;
   position: absolute;
   background-size: cover;
-  background-position: center;
-  background-image: url("imgs/iStock_67834587_MEDIUM.jpg"); }
-  #container #background-overlay {
+  background-position: center; }
+  #background-overlay {
     height: 100%;
     width: 100%;
-    position: absolute;
-    background: radial-gradient(white, black, black);
-    opacity: 0.4; }
+    position: absolute; }
+    .home-page #background-overlay {
+      background: radial-gradient(white, black, black);
+      opacity: 0.4; }
+    .production-page #background-overlay {
+      background-color: #00AEEF;
+      opacity: 0.4;
+    }
+
+
+.home-page {
+  background-image: url("imgs/iStock_67834587_MEDIUM.jpg");
+}
+
+.production-page {
+  background-image: url("imgs/iStock_79251697_XXLARGE.jpg");
+}
+
+.vr {
+  background-image: url("imgs/iStock_93639499_MEDIUM.jpg");
+}
 
 #header {
   font-family: 'Futura Light';
@@ -60,6 +77,7 @@ body {
         margin-right: 5px; }
       #header #right-nav-bar #menu-wrapper .menu-item:hover {
         color: black; }
+
 
 #footer {
   position: absolute;
@@ -116,3 +134,50 @@ body {
           text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+#footer-production {
+  position: absolute;
+  bottom: 0%;
+  height: 210px;
+  width: 100%; }
+  #footer-production #bottom-nav-bar {
+    left: 50%;
+    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+    position: absolute;
+    height: 100%;
+    width: 720px; }
+    #footer-production #bottom-nav-bar #menu-wrapper {
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      position: relative;
+      height: 54px;
+      width: 75%;
+      color: #FFF;
+      border-color: #FFF; }
+      #footer-production #bottom-nav-bar #menu-wrapper .menu-item {
+        font-family: 'Futura';
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        width: 10%;
+        border-radius: 50%;
+        border: 4px solid white;
+        float: left; }
+        #footer-production #bottom-nav-bar #menu-wrapper .menu-item .bottom-nav-titles {
+          white-space: nowrap;
+          font-family: 'Futura';
+          top: 70px;
+          left: 50%;
+          transform: translatex(-50%);
+          -webkit-transform: translatex(-50%);
+          position: relative;
+          display: inline-block;
+          font-size: 12px;
+          text-align: center; }
+
+
