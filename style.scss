@@ -1,8 +1,11 @@
 
 //////////////////////////////////////////////////////////////////////
+$content-height: 960px;
 $header-height: 100px;
 $nav-bar-width: 400px;
-$footer-height: 210px;
+$footer-height: 175px;
+$body-font-size: 22px;
+$header-font-size: 60px;
 $blue: #1DAFEB;
 $pink: #E9168C;
 $yellow: #F0DE0F;
@@ -10,6 +13,12 @@ $yellow: #F0DE0F;
 @font-face {
     font-family: 'Futura Light';
     src: url('fonts/Futura (Light).ttf'); }
+@font-face {
+	font-family: 'Harriet Regular';
+	src: url('fonts/Harriet Display Regular.otf'); }
+@font-face {
+	font-family: 'Harriet Bold';
+	src: url('fonts/Harriet Display Bold.otf'); }
 //////////////////////////////////////////////////////////////////////
 @mixin center {
 	top: 50%;
@@ -64,7 +73,7 @@ body {
 	padding-bottom: $footer-height;
 	position: fixed;
 	width: 1920px;
-	height: 100%}
+	height: $content-height;}
 #footer {
 	z-index: 1;
 	position: fixed;
@@ -121,30 +130,41 @@ body {
 //////////////////////////////////////////////////////////////////////
 
 #work-content {
-	$right-media-wrapper-width: 660px;
+	$right-media-wrapper-width: 600px;
 	$video-wrapper-spacing: 10px;
 	$video-wrapper-width: ($right-media-wrapper-width - ($video-wrapper-spacing * 3)) / 3;
 	@extend .content;
-	#left-text-container { 
+	#left-text-container {
 		float: left;
-		width: 40%;
+		width: 45%;
 		height: 100%;
 		#left-text-wrapper {
 			box-sizing: border-box;
 			height: 100%;
 			padding-left: 30%;
 			padding-right: 10%;
-			padding-top: 100px; } }
+			padding-top: 50px;
+			h1 {
+				margin: 0 0 10px 0;
+				font-family: 'Harriet Bold';
+				font-size: $header-font-size; }
+			p {	
+				margin: 0 0 40px 0;
+				font-size: $body-font-size;
+				font-family: 'Futura Light'; }
+			h2 {
+				margin: 70px 0 0 0;
+				font-size: $header-font-size * 0.75; } } }
 	#right-media-container {
 		float: left;
-		width: 60%; 
+		width: 55%; 
 		height: 100%; 
 		#right-media-wrapper {
 			box-sizing: border-box;
 			height: 100%;
 			width: $right-media-wrapper-width;
 			// padding-right: 40%;
-			// padding-top: 100px; 
+			padding-top: 100px; 
 			.video-media-wrapper {
 				float: left;
 				height: 45%;
@@ -176,7 +196,8 @@ body {
 					width: 110px;
 					height: 50px;
 					.arrow:hover {
-						color: $yellow }
+						color: $yellow;
+						border-color: $yellow; }
 					.arrow:nth-child(2) {
 						margin-left: 10px; }
 					.arrow {
@@ -196,6 +217,10 @@ body {
 						width: 50px;
 						height: 100%; } } } } }
 //////////////////////////////////////////////////////////////////////
+#homepage-footer {
+	@extend #footer;
+	height: 210px;
+}
 #footer {
 	@extend #footer;
 	#bottom-nav-bar {
