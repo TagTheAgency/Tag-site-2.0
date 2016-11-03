@@ -1,3 +1,36 @@
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .content, #work-content {
+    width: 1200px !important;
+    height: 700px !important; }
+
+  #left-text-wrapper > h2 {
+    margin: 0 0 10px 0 !important;
+    font-size: 30px !important; }
+
+  #left-text-wrapper > p {
+    margin: 0 0 15px 0 !important;
+    font-size: 16px !important; }
+
+  #left-text-wrapper > h1 {
+    font-size: 40px !important; } }
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .content, #work-content {
+    width: 1200px !important;
+    height: 700px !important; }
+
+  #left-text-wrapper > h2 {
+    margin: 0 0 10px 0 !important;
+    font-size: 30px !important; }
+
+  #left-text-wrapper > p {
+    margin: 0 0 15px 0 !important;
+    font-size: 16px !important; }
+
+  #left-text-wrapper > h1 {
+    font-size: 40px !important; }
+
+  #right-media-wrapper {
+    padding-top: 20px !important; } }
 @font-face {
   font-family: 'Futura Light';
   src: url("fonts/Futura (Light).ttf"); }
@@ -39,7 +72,7 @@ body {
 .content, #work-content {
   box-sizing: border-box;
   padding-top: 100px;
-  padding-bottom: 175px;
+  padding-bottom: 120px;
   position: fixed;
   width: 1920px;
   height: 960px; }
@@ -48,7 +81,7 @@ body {
   z-index: 1;
   position: fixed;
   bottom: 0%;
-  height: 175px;
+  height: 120px;
   width: 100%; }
 
 #header {
