@@ -28,16 +28,26 @@ body {
     opacity: 0.6;
   }
   #production-container #background-overlay {
-    /*background-color: #00AEEF;*/
+    z-index: -1;
+    background-color: #00AEEF;
+    opacity: 0.4;
+  }
+  #vr-container #background-overlay {
+    z-index: -1;
+    background-color: #EC008C;
+    opacity: 0.4;
+    filter: hue-rotate(10deg);
   }
 
 #index-container {
   background-image: url("imgs/iStock_67834587_MEDIUM.jpg"); }
 
 #production-container {
+  z-index: -10;
   background-image: url("imgs/iStock_79251697_XXLARGE.jpg"); }
 
 #vr-container {
+  z-index: -10;
   background-image: url("imgs/iStock_93639499_MEDIUM.jpg"); }
 
 
@@ -139,47 +149,16 @@ body {
 
 /*# sourceMappingURL=style.css.map */
 
-#footer-production {
-  position: absolute;
-  height: 210px;
-  width: 100%; }
-  #footer-production #bottom-nav-bar {
-    transform: translatex(-50%);
-    -webkit-transform: translatex(-50%);
-    position: absolute;
-    height: 100%;
-    width: 720px; }
-    #footer-production #bottom-nav-bar #menu-wrapper {
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      position: relative;
-      height: 54px;
-      width: 75%;
-      color: #FFF;
-      border-color: #FFF; }
-      #footer-production #bottom-nav-bar #menu-wrapper .menu-item {
-        font-family: 'Futura';
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-        width: 10%;
-        border-radius: 50%;
-        border: 4px solid white;
-        /*float: left; */
-      }
-        #footer-production #bottom-nav-bar #menu-wrapper .menu-item .bottom-nav-titles {
-          white-space: nowrap;
-          font-family: 'Futura';
-          transform: translatex(-50%);
-          -webkit-transform: translatex(-50%);
-          position: relative;
-          display: inline-block;
-          font-size: 12px;
-          text-align: center; }
 
-#vr-text-column {
+#description-header {
+  font-family: 'Futura';
+  font-size: 27px;
+  font-weight: bold;
+}
+
+#text-column {
+  font-family: 'Futura Light';
+  font-size: 15px;
   width: 330px;
   margin: 175px 0 0 200px;
   color: #FFF;
@@ -191,4 +170,63 @@ body {
   clear: both;
 }
 
+
+
+#icon-bar {
+  position: absolute;
+  bottom: 0%;
+  height: 210px;
+  width: 100%; }
+  #icon-bar #bottom-nav-bar {
+    left: 50%;
+    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+    position: absolute;
+    height: 100%;
+    width: 720px; }
+    #icon-bar #bottom-nav-bar #menu-wrapper {
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      position: relative;
+      height: 54px;
+      width: 75%; }
+      #icon-bar #bottom-nav-bar #menu-wrapper #blue {
+        color: #1DAFEB;
+        border-color: #1DAFEB; }
+      #icon-bar #bottom-nav-bar #menu-wrapper #pink {
+        color: #E9168C;
+        border-color: #E9168C; }
+      #icon-bar #bottom-nav-bar #menu-wrapper #yellow {
+        color: #F0DE0F;
+        border-color: #F0DE0F; }
+      #icon-bar #bottom-nav-bar #menu-wrapper #black {
+        color: black;
+        border-color: black; }
+      #icon-bar #bottom-nav-bar #menu-wrapper .menu-item:hover {
+        box-shadow: inset 0px 0px 20px 30px, 0px 3px 5px black;
+        text-shadow: 0px 3px 5px black; }
+      #icon-bar #bottom-nav-bar #menu-wrapper .menu-item {
+        transition-duration: 1s;
+        font-family: 'Futura';
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 10%;
+        border-radius: 50%;
+        border: 4px solid white;
+        float: left; }
+        #icon-bar #bottom-nav-bar #menu-wrapper .menu-item .bottom-nav-titles {
+          white-space: nowrap;
+          font-family: 'Futura';
+          top: 70px;
+          left: 50%;
+          transform: translatex(-50%);
+          -webkit-transform: translatex(-50%);
+          position: relative;
+          display: inline-block;
+          font-size: 15px;
+          text-align: center; }
 
