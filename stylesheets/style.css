@@ -1,0 +1,13 @@
+header {
+  width: 100%; }
+  @media only screen and (max-width: 64em) {
+    header {
+      background-color: green; } }
+  @media only screen and (min-width: 79em) and (max-width: 90em) {
+    header {
+      background-color: blue; } }
+  @media only screen and (min-width: 90em) {
+    header {
+      background-color: red; } }
+
+/*# sourceMappingURL=style.css.map */
