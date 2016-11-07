@@ -7,16 +7,27 @@
 @font-face {
   font-family: 'Harriet Bold';
   src: url("../fonts/Harriet Display Bold.otf"); }
-body {
+p {
+  margin: 0 0 0 0; }
+
+html, body {
+  overflow: hidden;
   margin: 0 0 0 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 header, main, footer {
-  position: absolute; }
+  position: fixed;
+  box-sizing: border-box; }
 
 main {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media only screen and (max-width: 64em) {
+    main {
+      padding-top: 150px; } }
 
 header {
   width: 100%;
@@ -24,6 +35,11 @@ header {
   @media only screen and (max-width: 64em) {
     header {
       height: 150px; } }
+
+footer {
+  bottom: 0;
+  height: 100px;
+  width: 100%; }
 
 .background {
   z-index: -1;
@@ -44,11 +60,11 @@ header {
   font-family: "Futura Light";
   font-size: 1.4em; }
   .nav-top__menu {
-    margin: 0 20px 0 0;
-    height: 100%;
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
+    margin: 0 20px 0 0;
+    height: 100%;
     float: right;
     text-align: center;
     list-style-type: none; }
@@ -96,20 +112,20 @@ header {
   @media only screen and (min-width: 90em) {
     .cmyk-crosses {
       bottom: 50px; } }
-  .cmyk-crosses__inner {
+  .cmyk-crosses__wrapper {
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
     margin: 0 auto 0 auto;
     height: 100%; }
     @media only screen and (max-width: 64em) {
-      .cmyk-crosses__inner {
+      .cmyk-crosses__wrapper {
         width: 90%; } }
     @media only screen and (min-width: 79em) and (max-width: 90em) {
-      .cmyk-crosses__inner {
+      .cmyk-crosses__wrapper {
         width: 50%; } }
     @media only screen and (min-width: 90em) {
-      .cmyk-crosses__inner {
+      .cmyk-crosses__wrapper {
         width: 40%; } }
   .cmyk-crosses__item {
     margin: 0 10px 0 10px;
@@ -153,5 +169,34 @@ header {
     background-image: url("../imgs/cmyk-black-active.png"); }
   .cmyk-crosses__text--black {
     color: #231F20; }
+
+.work-examples {
+  float: right;
+  height: 100%; }
+  @media only screen and (min-width: 79em) and (max-width: 90em) {
+    .work-examples {
+      width: 60%; } }
+  @media only screen and (min-width: 90em) {
+    .work-examples {
+      width: 65%; } }
+  .work-examples__wrapper {
+    float: left;
+    height: 100%;
+    width: 75%; }
+  .work-examples__row-1, .work-examples__row-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 50%;
+    width: 100%; }
+  .work-examples__item {
+    background-color: blue;
+    flex: 1; }
+    @media only screen and (min-width: 79em) and (max-width: 90em) {
+      .work-examples__item {
+        margin: 5px 5px 5px 5px; } }
+    @media only screen and (min-width: 90em) {
+      .work-examples__item {
+        margin: 10px 10px 10px 10px; } }
 
 /*# sourceMappingURL=style.css.map */

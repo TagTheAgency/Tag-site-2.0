@@ -46,6 +46,12 @@ $xlarge-breakpoint: em(1920) !default;
   }
 }
 
+@mixin flex-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+}
+
 //Copy / Paste for responsive styles
 
 // @include respond-to(handhelds) {
@@ -55,18 +61,31 @@ $xlarge-breakpoint: em(1920) !default;
 // @include respond-to(wide-screens) {
 // }
 
-body {
+// resets:
+p {
+	margin: 0 0 0 0;
+}
+
+html, body {
+	overflow: hidden;
 	margin: 0 0 0 0;
 	box-sizing: border-box;
+	height: 100%;
 }
 
 header, main, footer {
-	position: absolute;
+	position: fixed;
+	box-sizing: border-box;
 }
 
 main {
 	height: 100%;
 	width: 100%;
+	padding-top: 100px; //Header Height
+	padding-bottom: 100px;
+	@include respond-to(handhelds) {
+		padding-top: 150px; // Header Height on mobile
+	}
 }
 
 header { 
@@ -75,6 +94,12 @@ header {
   @include respond-to(handhelds) {
   	height: 150px;
   }
+}
+
+footer {
+	bottom: 0;
+	height: 100px;
+	width: 100%;
 }
 
 .background {
@@ -98,11 +123,9 @@ header {
 	font-family: $body-font;
 	font-size: 1.4em;
 	&__menu {
+		@include flex-wrapper;
 		margin: 0 20px 0 0;
 		height: 100%;
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: stretch;
 		float: right;
 		text-align: center;
 		list-style-type: none;
@@ -159,10 +182,8 @@ header {
 	@include respond-to(wide-screens) {
 		bottom: 50px;
 	}
-	&__inner {
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: stretch;
+	&__wrapper {
+		@include flex-wrapper;
 		margin: 0 auto 0 auto;
 		height: 100%;
 		@include respond-to(handhelds) {
@@ -199,6 +220,43 @@ header {
 		}
 		&__text--#{$color} {
 			color: $hex;
+		}
+	}
+}
+
+.work-examples {
+	float: right;
+	height: 100%;
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		width: 60%;
+	}
+	@include respond-to(wide-screens) {
+		width: 65%;
+	}
+	&__wrapper {
+		float: left;
+		height: 100%;
+		width: 75%;
+	}
+	&__row-1, &__row-2 {
+		@include flex-wrapper;
+		height: 50%;
+		width: 100%;
+	}
+	&__item {
+		background-color: blue;
+		flex: 1;
+		@include respond-to(handhelds) {
+			// To Add mobile styles when Rosa completes them
+		}
+		@include respond-to(medium-screens) {
+			margin: 5px 5px 5px 5px;
+		}
+		@include respond-to(wide-screens) {
+			margin: 10px 10px 10px 10px;
 		}
 	}
 }
