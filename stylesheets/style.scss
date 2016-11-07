@@ -20,6 +20,7 @@ $header-font: 'Harriet Bold';
 $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
+$homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
 
 $small-breakpoint: em(1024) !default;
 $medium-breakpoint:  em(1264) !default;
@@ -48,15 +49,30 @@ $xlarge-breakpoint: em(1920) !default;
 // }
 
 body {
+	margin: 0 0 0 0;
 	box-sizing: border-box;
 }
 
-header {
+header { 
   width: 100%;
   height: 100px;
 }
 
+.background {
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&--homepage {
+		background-image: url($img-path + $homepage-bg);
+	}
+	
+}
+
 .nav-top {
+	color: white;	
 	height: 100%;
 	font-family: $body-font;
 	font-size: 1.4em;
@@ -87,6 +103,7 @@ header {
 
 	&__logo {
 		float: left;
+		margin: 0 0 0 20px;
 		width: 100px;
 		height: 100%;
 		background-size: contain;
@@ -98,6 +115,10 @@ header {
 		&--light {
 			background-image: url($img-path + $logo-light);
 		}
+	}
+
+	&--dark {
+		color: black;
 	}
 }
 
