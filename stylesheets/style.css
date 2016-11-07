@@ -37,6 +37,12 @@ header {
       background-position: center; } }
   .background--homepage {
     background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
+  .background--strategy {
+    background-image: url("../imgs/thinking-bg.png"); }
+  .background--production {
+    background-image: url("../imgs/TAG-The-Agency-website-production-bg.png"); }
+  .background--vr {
+    background-image: url("../imgs/TAG-The-Agency-website-VR-Studios-bg.png"); }
 
 .nav-top {
   color: white;
@@ -82,105 +88,21 @@ header {
   .nav-top--dark {
     color: black; }
 
-.cmyk-crosses {
-  position: absolute;
-  width: 100%;
-  bottom: 20px;
-  height: 200px;
-  text-align: center;
-  font-family: "Harriet Bold"; }
-  .cmyk-crosses__inner {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    margin: 0 auto 0 auto;
-    height: 100%; }
-    @media only screen and (max-width: 64em) {
-      .cmyk-crosses__inner {
-        width: 90%; } }
-    @media only screen and (min-width: 79em) and (max-width: 90em) {
-      .cmyk-crosses__inner {
-        width: 60%; } }
-    @media only screen and (min-width: 90em) {
-      .cmyk-crosses__inner {
-        width: 40%; } }
-  .cmyk-crosses__item {
-    margin: 0 10px 0 10px;
-    flex: 1; }
-  .cmyk-crosses__image {
-    background-size: cover;
-    width: 100%;
-    padding-bottom: 100%; }
-  .cmyk-crosses__text {
-    margin: 10px 0 0 0; }
-  .cmyk-crosses__image--blue {
-    background-image: url("../imgs/cmyk-blue.png"); }
-  .cmyk-crosses__text--blue {
-    color: #1DAFEB; }
-  .cmyk-crosses__image--pink {
-    background-image: url("../imgs/cmyk-pink.png"); }
-  .cmyk-crosses__text--pink {
-    color: #E9168C; }
-  .cmyk-crosses__image--yellow {
-    background-image: url("../imgs/cmyk-yellow.png"); }
-  .cmyk-crosses__text--yellow {
-    color: #F0DE0F; }
-  .cmyk-crosses__image--white {
-    background-image: url("../imgs/cmyk-white.png"); }
-  .cmyk-crosses__text--white {
-    color: white; }
-  .cmyk-crosses__image--black {
-    background-image: url("../imgs/cmyk-black.png"); }
-  .cmyk-crosses__text--black {
-    color: black; }
+#description-header {
+  font-family: 'Futura';
+  font-size: 27px;
+  font-weight: bold; }
+
+#text-column {
+  font-family: 'Futura Light';
+  font-size: 15px;
+  width: 330px;
+  margin: 175px 0 0 200px;
+  color: #FFF; }
+
+#content {
+  width: 330px;
+  display: block;
+  clear: both; }
 
 /*# sourceMappingURL=style.css.map */
-
-
-.icon-bar {
-  position: absolute;
-  bottom: 0%;
-  height: 210px;
-  width: 100%; }
-  .icon-bar .icon-bar_borders {
-    left: 50%;
-    transform: translatex(-50%);
-    -webkit-transform: translatex(-50%);
-    position: absolute;
-    height: 100%;
-    width: 720px; }
-    .icon-bar .icon-bar_borders .icon-bar_title-wrapper {
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      position: relative;
-      height: 54px;
-      width: 75%; }
-      .icon-bar .icon-bar_borders .icon-bar_title-wrapper .icon-bar_title-item:hover {
-        box-shadow: inset 0px 0px 20px 30px, 0px 3px 5px black;
-        text-shadow: 0px 3px 5px black; }
-      .icon-bar .icon-bar_borders .icon-bar_title-wrapper .icon-bar_title-item {
-        transition-duration: 1s;
-        font-family: 'Futura';
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        margin-left: 5%;
-        margin-right: 5%;
-        width: 10%;
-        border-radius: 50%;
-        border: 4px solid white;
-        float: left; }
-        .icon-bar .icon-bar_borders .icon-bar_title-wrapper .icon-bar_title-item .icon-bar_title {
-          white-space: nowrap;
-          font-family: 'Futura';
-          top: 70px;
-          left: 50%;
-          transform: translatex(-50%);
-          -webkit-transform: translatex(-50%);
-          position: relative;
-          display: inline-block;
-          font-size: 15px;
-          text-align: center; }
-
-

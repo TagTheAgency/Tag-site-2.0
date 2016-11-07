@@ -21,6 +21,10 @@ $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
+$thinking-bg: 'thinking-bg.png';
+$production-bg: 'TAG-The-Agency-website-production-bg.png';
+$vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
+
 $blue: #1DAFEB;
 $pink: #E9168C;
 $yellow: #F0DE0F;
@@ -89,7 +93,16 @@ header {
 	background-repeat: no-repeat;
 	&--homepage {
 		background-image: url($img-path + $homepage-bg);
-	}	
+	}
+	&--strategy {
+		background-image: url($img-path + $thinking-bg);
+	}
+	&--production {
+		background-image: url($img-path + $production-bg);
+	}
+	&--vr {
+		background-image: url($img-path + $vr-md);
+	}
 }
 
 .nav-top {
@@ -143,49 +156,46 @@ header {
 	}
 }
 
-.cmyk-crosses {
-	position: absolute;
-	width: 100%;
-	bottom: 20px;
-	height: 200px;
-	text-align: center;
-	font-family: $header-font;
-	&__inner {
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: stretch;
-		margin: 0 auto 0 auto;
-		height: 100%;
-		@include respond-to(handhelds) {
-			width: 90%;
-		}
-		@include respond-to(medium-screens) {
-			width: 60%;
-		}
-		@include respond-to(wide-screens) {
-			width: 40%;
-		}
-	}
-	&__item {
-		margin: 0 10px 0 10px;
-		flex: 1;
-	}
-	&__image {
-		background-size: cover;
-		width: 100%;
-		padding-bottom: 100%;
-	}
-	&__text{
-		margin: 10px 0 0 0;
-	}
-	@each $color, $hex in $colors-list {
-		&__image--#{$color} {
-			background-image: url($img-path + "cmyk-" + $color + ".png");
-		}
-		&__text--#{$color} {
-			color: $hex;
-		}
-	}
+@mixin center {
+	top: 50%;
+	left: 50%;
+	transform: translate(50%,50%);
+	-webkit-transform: translate(50%,50%); }
+@mixin center-vertically() {
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%); }
+@mixin center-horizontally() {
+	left: 50%;
+	transform: translatex(-50%);
+	-webkit-transform: translatex(-50%); }
+@mixin hover-text-shadow {
+	text-shadow: 0px 3px 5px black;
+}
+@mixin hover-box-shadow {
+	box-shadow: -3px 3px 5px black;
+}
+
+
+
+#description-header {
+  font-family: 'Futura';
+  font-size: 27px;
+  font-weight: bold;
+}
+
+#text-column {
+  font-family: 'Futura Light';
+  font-size: 15px;
+  width: 330px;
+  margin: 175px 0 0 200px;
+  color: #FFF;
+}
+
+#content {
+  width: 330px;
+  display: block;
+  clear: both;
 }
 
 // @media screen 
@@ -503,6 +513,7 @@ header {
 // 				.menu-item:hover {
 // 					@include hover-text-shadow;
 // 					@include hover-box-shadow; } } } }
-
+//
+// ///////////////////////////////////////////////////////////////
 
 
