@@ -8,6 +8,7 @@
   font-family: 'Harriet Bold';
   src: url("../fonts/Harriet Display Bold.otf"); }
 p {
+  font-family: "Futura Light";
   margin: 0 0 0 0; }
 
 html, body {
@@ -171,6 +172,7 @@ footer {
     color: #231F20; }
 
 .work-examples {
+  color: white;
   float: right;
   height: 100%; }
   @media only screen and (min-width: 79em) and (max-width: 90em) {
@@ -190,7 +192,7 @@ footer {
     height: 50%;
     width: 100%; }
   .work-examples__item {
-    background-color: blue;
+    background-color: #3A3A3C;
     flex: 1; }
     @media only screen and (min-width: 79em) and (max-width: 90em) {
       .work-examples__item {
@@ -198,5 +200,37 @@ footer {
     @media only screen and (min-width: 90em) {
       .work-examples__item {
         margin: 10px 10px 10px 10px; } }
+  .work-examples__category {
+    position: absolute; }
+  .work-examples__video {
+    width: 100%;
+    height: 80%; }
+  .work-examples__description {
+    position: relative;
+    width: 100%;
+    background-color: #58585A;
+    height: 20%;
+    bottom: 0%; }
+    @media only screen and (min-width: 79em) and (max-width: 90em) {
+      .work-examples__description {
+        font-size: 0.7em; } }
+    @media only screen and (min-width: 90em) {
+      .work-examples__description {
+        font-size: 1em; } }
+    .work-examples__description p {
+      padding: 5px 10px 5px 10px; }
+  .work-examples__color-strip {
+    float: left;
+    position: relative;
+    bottom: 0%;
+    height: 10px;
+    width: 100%;
+    background-color: #00AEEF; }
+  .work-examples__color-strip:after {
+    content: "";
+    width: 50%;
+    float: right;
+    height: 10px;
+    background-color: #FFF200; }
 
 /*# sourceMappingURL=style.css.map */
