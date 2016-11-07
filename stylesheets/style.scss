@@ -48,17 +48,27 @@ $xlarge-breakpoint: em(1920) !default;
 // @include respond-to(wide-screens) {
 // }
 
-.body {
+body {
+	margin: 0 0 0 0;
 	box-sizing: border-box;
+}
+
+header { 
+  width: 100%;
+  height: 100px;
+}
+
+.background {
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	width: 100%;
 	background-size: cover;
+	background-repeat: no-repeat;
 	&--homepage {
 		background-image: url($img-path + $homepage-bg);
 	}
-}
-
-header {
-  width: 100%;
-  height: 100px;
+	
 }
 
 .nav-top {

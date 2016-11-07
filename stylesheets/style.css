@@ -7,15 +7,23 @@
 @font-face {
   font-family: 'Harriet Bold';
   src: url("../fonts/Harriet Display Bold.otf"); }
-.body {
-  box-sizing: border-box;
-  background-size: cover; }
-  .body--homepage {
-    background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
+body {
+  margin: 0 0 0 0;
+  box-sizing: border-box; }
 
 header {
   width: 100%;
   height: 100px; }
+
+.background {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .background--homepage {
+    background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
 
 .nav-top {
   color: white;
