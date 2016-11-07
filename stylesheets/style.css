@@ -11,9 +11,19 @@ body {
   margin: 0 0 0 0;
   box-sizing: border-box; }
 
+header, main, footer {
+  position: absolute; }
+
+main {
+  height: 100%;
+  width: 100%; }
+
 header {
   width: 100%;
   height: 100px; }
+  @media only screen and (max-width: 64em) {
+    header {
+      height: 150px; } }
 
 .background {
   z-index: -1;
@@ -22,6 +32,9 @@ header {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 64em) {
+    .background {
+      background-position: center; } }
   .background--homepage {
     background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
 
@@ -59,11 +72,66 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
+    @media only screen and (max-width: 64em) {
+      .nav-top__logo {
+        width: 150px; } }
     .nav-top__logo--dark {
       background-image: url("../imgs/TAG_logo_tag_black_blacktag.png"); }
     .nav-top__logo--light {
       background-image: url("../imgs/TAG_white_1920x1080.png"); }
   .nav-top--dark {
+    color: black; }
+
+.cmyk-crosses {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  height: 200px;
+  text-align: center;
+  font-family: "Harriet Bold"; }
+  .cmyk-crosses__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 0 auto 0 auto;
+    height: 100%; }
+    @media only screen and (max-width: 64em) {
+      .cmyk-crosses__inner {
+        width: 90%; } }
+    @media only screen and (min-width: 79em) and (max-width: 90em) {
+      .cmyk-crosses__inner {
+        width: 60%; } }
+    @media only screen and (min-width: 90em) {
+      .cmyk-crosses__inner {
+        width: 40%; } }
+  .cmyk-crosses__item {
+    margin: 0 10px 0 10px;
+    flex: 1; }
+  .cmyk-crosses__image {
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 100%; }
+  .cmyk-crosses__text {
+    margin: 10px 0 0 0; }
+  .cmyk-crosses__image--blue {
+    background-image: url("../imgs/cmyk-blue.png"); }
+  .cmyk-crosses__text--blue {
+    color: #1DAFEB; }
+  .cmyk-crosses__image--pink {
+    background-image: url("../imgs/cmyk-pink.png"); }
+  .cmyk-crosses__text--pink {
+    color: #E9168C; }
+  .cmyk-crosses__image--yellow {
+    background-image: url("../imgs/cmyk-yellow.png"); }
+  .cmyk-crosses__text--yellow {
+    color: #F0DE0F; }
+  .cmyk-crosses__image--white {
+    background-image: url("../imgs/cmyk-white.png"); }
+  .cmyk-crosses__text--white {
+    color: white; }
+  .cmyk-crosses__image--black {
+    background-image: url("../imgs/cmyk-black.png"); }
+  .cmyk-crosses__text--black {
     color: black; }
 
 /*# sourceMappingURL=style.css.map */
