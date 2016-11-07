@@ -21,6 +21,13 @@ $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
+$blue: #1DAFEB;
+$pink: #E9168C;
+$yellow: #F0DE0F;
+$black: black;
+$white: white;
+$colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); 
+
 
 $small-breakpoint: em(1024) !default;
 $medium-breakpoint:  em(1264) !default;
@@ -53,12 +60,27 @@ body {
 	box-sizing: border-box;
 }
 
+header, main, footer {
+	position: absolute;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+}
+
 header { 
   width: 100%;
   height: 100px;
+  @include respond-to(handhelds) {
+  	height: 150px;
+  }
 }
 
 .background {
+	@include respond-to(handhelds) {
+		background-position: center;
+	}
 	z-index: -1;
 	position: absolute;
 	height: 100%;
@@ -67,8 +89,7 @@ header {
 	background-repeat: no-repeat;
 	&--homepage {
 		background-image: url($img-path + $homepage-bg);
-	}
-	
+	}	
 }
 
 .nav-top {
@@ -95,13 +116,14 @@ header {
 			width: 30%;
 		}
 	}
-
 	&__menu-item {
 		margin: auto 0 auto 0;
 		flex: 1;
 	}
-
 	&__logo {
+		@include respond-to(handhelds) {
+			width: 150px;
+		}
 		float: left;
 		margin: 0 0 0 20px;
 		width: 100px;
@@ -116,9 +138,53 @@ header {
 			background-image: url($img-path + $logo-light);
 		}
 	}
-
 	&--dark {
 		color: black;
+	}
+}
+
+.cmyk-crosses {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	height: 200px;
+	text-align: center;
+	font-family: $header-font;
+	&__inner {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		margin: 0 auto 0 auto;
+		height: 100%;
+		@include respond-to(handhelds) {
+			width: 90%;
+		}
+		@include respond-to(medium-screens) {
+			width: 60%;
+		}
+		@include respond-to(wide-screens) {
+			width: 40%;
+		}
+	}
+	&__item {
+		margin: 0 10px 0 10px;
+		flex: 1;
+	}
+	&__image {
+		background-size: cover;
+		width: 100%;
+		padding-bottom: 100%;
+	}
+	&__text{
+		margin: 10px 0 0 0;
+	}
+	@each $color, $hex in $colors-list {
+		&__image--#{$color} {
+			background-image: url($img-path + "cmyk-" + $color + ".png");
+		}
+		&__text--#{$color} {
+			color: $hex;
+		}
 	}
 }
 
