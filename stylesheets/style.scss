@@ -26,7 +26,7 @@ $pink: #E9168C;
 $yellow: #F0DE0F;
 $black: black;
 $white: white;
-$colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); 
+$colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); //Used in @each loop for cmyk crosses colors
 
 
 $small-breakpoint: em(1024) !default;
@@ -144,12 +144,21 @@ header {
 }
 
 .cmyk-crosses {
+	font-size: 1.3em;
 	position: absolute;
 	width: 100%;
-	bottom: 20px;
-	height: 200px;
+	height: 150px;
 	text-align: center;
 	font-family: $header-font;
+	bottom: 75px;
+	@include respond-to(handhelds) {
+	}
+	@include respond-to(medium-screens) {
+		bottom: 20px;
+	}
+	@include respond-to(wide-screens) {
+		bottom: 50px;
+	}
 	&__inner {
 		display: flex;
 		flex-wrap: nowrap;
@@ -160,7 +169,7 @@ header {
 			width: 90%;
 		}
 		@include respond-to(medium-screens) {
-			width: 60%;
+			width: 50%;
 		}
 		@include respond-to(wide-screens) {
 			width: 40%;
@@ -171,6 +180,8 @@ header {
 		flex: 1;
 	}
 	&__image {
+		transition-duration: 0.5s;
+		background-position: center;
 		background-size: cover;
 		width: 100%;
 		padding-bottom: 100%;
@@ -181,6 +192,9 @@ header {
 	@each $color, $hex in $colors-list {
 		&__image--#{$color} {
 			background-image: url($img-path + "cmyk-" + $color + ".png");
+		}
+		&__image--#{$color}:hover {
+			background-image: url($img-path + "cmyk-" + $color + "-active.png");
 		}
 		&__text--#{$color} {
 			color: $hex;

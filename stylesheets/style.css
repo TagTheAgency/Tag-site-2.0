@@ -83,12 +83,19 @@ header {
     color: black; }
 
 .cmyk-crosses {
+  font-size: 1.3em;
   position: absolute;
   width: 100%;
-  bottom: 20px;
-  height: 200px;
+  height: 150px;
   text-align: center;
-  font-family: "Harriet Bold"; }
+  font-family: "Harriet Bold";
+  bottom: 75px; }
+  @media only screen and (min-width: 79em) and (max-width: 90em) {
+    .cmyk-crosses {
+      bottom: 20px; } }
+  @media only screen and (min-width: 90em) {
+    .cmyk-crosses {
+      bottom: 50px; } }
   .cmyk-crosses__inner {
     display: flex;
     flex-wrap: nowrap;
@@ -100,7 +107,7 @@ header {
         width: 90%; } }
     @media only screen and (min-width: 79em) and (max-width: 90em) {
       .cmyk-crosses__inner {
-        width: 60%; } }
+        width: 50%; } }
     @media only screen and (min-width: 90em) {
       .cmyk-crosses__inner {
         width: 40%; } }
@@ -108,6 +115,8 @@ header {
     margin: 0 10px 0 10px;
     flex: 1; }
   .cmyk-crosses__image {
+    transition-duration: 0.5s;
+    background-position: center;
     background-size: cover;
     width: 100%;
     padding-bottom: 100%; }
@@ -115,22 +124,32 @@ header {
     margin: 10px 0 0 0; }
   .cmyk-crosses__image--blue {
     background-image: url("../imgs/cmyk-blue.png"); }
+  .cmyk-crosses__image--blue:hover {
+    background-image: url("../imgs/cmyk-blue-active.png"); }
   .cmyk-crosses__text--blue {
     color: #1DAFEB; }
   .cmyk-crosses__image--pink {
     background-image: url("../imgs/cmyk-pink.png"); }
+  .cmyk-crosses__image--pink:hover {
+    background-image: url("../imgs/cmyk-pink-active.png"); }
   .cmyk-crosses__text--pink {
     color: #E9168C; }
   .cmyk-crosses__image--yellow {
     background-image: url("../imgs/cmyk-yellow.png"); }
+  .cmyk-crosses__image--yellow:hover {
+    background-image: url("../imgs/cmyk-yellow-active.png"); }
   .cmyk-crosses__text--yellow {
     color: #F0DE0F; }
   .cmyk-crosses__image--white {
     background-image: url("../imgs/cmyk-white.png"); }
+  .cmyk-crosses__image--white:hover {
+    background-image: url("../imgs/cmyk-white-active.png"); }
   .cmyk-crosses__text--white {
     color: white; }
   .cmyk-crosses__image--black {
     background-image: url("../imgs/cmyk-black.png"); }
+  .cmyk-crosses__image--black:hover {
+    background-image: url("../imgs/cmyk-black-active.png"); }
   .cmyk-crosses__text--black {
     color: black; }
 
