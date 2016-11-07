@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Futura Light';
   src: url("fonts/Futura (Light).ttf"); }
 .menu-item, #header #right-nav-bar #menu-wrapper .menu-item, #footer #bottom-nav-bar #menu-wrapper .menu-item {
@@ -158,7 +158,7 @@ body {
 /*# sourceMappingURL=style.css.map */
 
 
-#description-header {
+/*#description-header {
   font-family: 'Futura';
   font-size: 27px;
   font-weight: bold;
@@ -238,3 +238,4 @@ body {
           font-size: 15px;
           text-align: center; }
 
+*/
