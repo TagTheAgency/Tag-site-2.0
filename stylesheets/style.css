@@ -7,14 +7,18 @@
 @font-face {
   font-family: 'Harriet Bold';
   src: url("../fonts/Harriet Display Bold.otf"); }
-body {
-  box-sizing: border-box; }
+.body {
+  box-sizing: border-box;
+  background-size: cover; }
+  .body--homepage {
+    background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
 
 header {
   width: 100%;
   height: 100px; }
 
 .nav-top {
+  color: white;
   height: 100%;
   font-family: "Futura Light";
   font-size: 1.4em; }
@@ -41,6 +45,7 @@ header {
     flex: 1; }
   .nav-top__logo {
     float: left;
+    margin: 0 0 0 20px;
     width: 100px;
     height: 100%;
     background-size: contain;
@@ -50,5 +55,7 @@ header {
       background-image: url("../imgs/TAG_logo_tag_black_blacktag.png"); }
     .nav-top__logo--light {
       background-image: url("../imgs/TAG_white_1920x1080.png"); }
+  .nav-top--dark {
+    color: black; }
 
 /*# sourceMappingURL=style.css.map */
