@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Futura Light';
+  src: url("../fonts/Futura (Light).ttf"); }
+@font-face {
+  font-family: 'Harriet Regular';
+  src: url("../fonts/Harriet Display Regular.otf"); }
+@font-face {
+  font-family: 'Harriet Bold';
+  src: url("../fonts/Harriet Display Bold.otf"); }
+body {
+  box-sizing: border-box; }
+
+header {
+  width: 100%;
+  height: 100px; }
+
+.nav-top {
+  height: 100%;
+  font-family: "Futura Light";
+  font-size: 1.4em; }
+  .nav-top__menu {
+    margin: 0 20px 0 0;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    float: right;
+    text-align: center;
+    list-style-type: none; }
+    @media only screen and (max-width: 64em) {
+      .nav-top__menu {
+        width: 60%; } }
+    @media only screen and (min-width: 79em) and (max-width: 90em) {
+      .nav-top__menu {
+        width: 45%; } }
+    @media only screen and (min-width: 90em) {
+      .nav-top__menu {
+        width: 30%; } }
+  .nav-top__menu-item {
+    margin: auto 0 auto 0;
+    flex: 1; }
+  .nav-top__logo {
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .nav-top__logo--dark {
+      background-image: url("../imgs/TAG_logo_tag_black_blacktag.png"); }
+    .nav-top__logo--light {
+      background-image: url("../imgs/TAG_white_1920x1080.png"); }
+
+/*# sourceMappingURL=style.css.map */
