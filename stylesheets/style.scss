@@ -21,10 +21,10 @@ $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
-$blue: #1DAFEB;
-$pink: #E9168C;
-$yellow: #F0DE0F;
-$black: black;
+$blue: #00AEEF;
+$pink: #EC008C;
+$yellow: #FFF200;
+$black: #231F20;
 $white: white;
 $colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); //Used in @each loop for cmyk crosses colors
 
@@ -180,7 +180,8 @@ header {
 		flex: 1;
 	}
 	&__image {
-		transition-duration: 0.5s;
+		cursor: pointer;
+		transition-duration: 1.5s;
 		background-position: center;
 		background-size: cover;
 		width: 100%;

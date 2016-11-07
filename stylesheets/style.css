@@ -115,7 +115,8 @@ header {
     margin: 0 10px 0 10px;
     flex: 1; }
   .cmyk-crosses__image {
-    transition-duration: 0.5s;
+    cursor: pointer;
+    transition-duration: 1.5s;
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -127,19 +128,19 @@ header {
   .cmyk-crosses__image--blue:hover {
     background-image: url("../imgs/cmyk-blue-active.png"); }
   .cmyk-crosses__text--blue {
-    color: #1DAFEB; }
+    color: #00AEEF; }
   .cmyk-crosses__image--pink {
     background-image: url("../imgs/cmyk-pink.png"); }
   .cmyk-crosses__image--pink:hover {
     background-image: url("../imgs/cmyk-pink-active.png"); }
   .cmyk-crosses__text--pink {
-    color: #E9168C; }
+    color: #EC008C; }
   .cmyk-crosses__image--yellow {
     background-image: url("../imgs/cmyk-yellow.png"); }
   .cmyk-crosses__image--yellow:hover {
     background-image: url("../imgs/cmyk-yellow-active.png"); }
   .cmyk-crosses__text--yellow {
-    color: #F0DE0F; }
+    color: #FFF200; }
   .cmyk-crosses__image--white {
     background-image: url("../imgs/cmyk-white.png"); }
   .cmyk-crosses__image--white:hover {
@@ -151,6 +152,6 @@ header {
   .cmyk-crosses__image--black:hover {
     background-image: url("../imgs/cmyk-black-active.png"); }
   .cmyk-crosses__text--black {
-    color: black; }
+    color: #231F20; }
 
 /*# sourceMappingURL=style.css.map */
