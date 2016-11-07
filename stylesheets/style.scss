@@ -14,13 +14,17 @@ $browser-context: 16;
 }
 
 // $small-breakpoint:  em(640)  !default;
+
+$body-font: 'Futura Light';
+$header-font: 'Harriet Bold';
+$img-path: '../imgs/';
+$logo-dark: 'TAG_logo_tag_black_blacktag.png';
+$logo-light: 'TAG_white_1920x1080.png';
+
 $small-breakpoint: em(1024) !default;
 $medium-breakpoint:  em(1264) !default;
 $large-breakpoint:  em(1440) !default;
 $xlarge-breakpoint: em(1920) !default;
-
-$body-font: 'Futura Light';
-$header-font: 'Harriet Bold';
 
 @mixin respond-to($media) {
   @if $media == handhelds {
@@ -79,6 +83,21 @@ header {
 	&__menu-item {
 		margin: auto 0 auto 0;
 		flex: 1;
+	}
+
+	&__logo {
+		float: left;
+		width: 100px;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		&--dark {
+			background-image: url($img-path + $logo-dark);
+		}
+		&--light {
+			background-image: url($img-path + $logo-light);
+		}
 	}
 }
 

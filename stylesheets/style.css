@@ -39,5 +39,16 @@ header {
   .nav-top__menu-item {
     margin: auto 0 auto 0;
     flex: 1; }
+  .nav-top__logo {
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .nav-top__logo--dark {
+      background-image: url("../imgs/TAG_logo_tag_black_blacktag.png"); }
+    .nav-top__logo--light {
+      background-image: url("../imgs/TAG_white_1920x1080.png"); }
 
 /*# sourceMappingURL=style.css.map */
