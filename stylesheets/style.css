@@ -353,4 +353,27 @@ footer {
       background-position: center;
       background-image: url("../imgs/play-icon.png"); }
 
+#description-header {
+  font-family: 'Futura';
+  font-size: 27px;
+  font-weight: bold; }
+
+#text-column {
+  font-family: 'Futura Light';
+  font-size: 15px;
+  width: 330px;
+  margin: 40px 0 0 80px;
+  color: #000; }
+
+#content {
+  width: 330px;
+  display: block;
+  clear: both; }
+
+#thinking-content {
+  background-color: #FFF200;
+  width: 75%;
+  margin: 0 200px;
+  padding: 25px; }
+
 /*# sourceMappingURL=style.css.map */
