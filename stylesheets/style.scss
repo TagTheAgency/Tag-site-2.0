@@ -21,6 +21,7 @@ $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
+<<<<<<< HEAD
 $thinking-bg: 'thinking-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
 $vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
@@ -29,8 +30,16 @@ $blue: #1DAFEB;
 $pink: #E9168C;
 $yellow: #F0DE0F;
 $black: black;
+=======
+$blue: #00AEEF;
+$pink: #EC008C;
+$yellow: #FFF200;
+$black: #231F20;
+>>>>>>> 8beea18f7afe9a41c90cf865cedbf72bb4788065
 $white: white;
-$colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); 
+$dark-grey: #3A3A3C;
+$light-grey: #58585A;
+$colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); //Used in @each loop for cmyk crosses colors
 
 
 $small-breakpoint: em(1024) !default;
@@ -43,11 +52,17 @@ $xlarge-breakpoint: em(1920) !default;
     @media only screen and (max-width: $small-breakpoint) { @content; }
   }
   @else if $media == medium-screens {
-    @media only screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint) { @content; }
+    @media only screen and (min-width: $small-breakpoint) and (max-width: $large-breakpoint) { @content; }
   }
   @else if $media == wide-screens {
     @media only screen and (min-width: $large-breakpoint) { @content; }
   }
+}
+
+@mixin flex-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
 }
 
 //Copy / Paste for responsive styles
@@ -59,18 +74,31 @@ $xlarge-breakpoint: em(1920) !default;
 // @include respond-to(wide-screens) {
 // }
 
-body {
+p {
+	font-family: $body-font;
+	margin: 0 0 0 0;
+}
+
+html, body {
+	overflow: hidden;
 	margin: 0 0 0 0;
 	box-sizing: border-box;
+	height: 100%;
 }
 
 header, main, footer {
-	position: absolute;
+	position: fixed;
+	box-sizing: border-box;
 }
 
 main {
 	height: 100%;
 	width: 100%;
+	padding-top: 100px; //Header Height
+	padding-bottom: 100px;
+	@include respond-to(handhelds) {
+		padding-top: 150px; // Header Height on mobile
+	}
 }
 
 header { 
@@ -79,6 +107,12 @@ header {
   @include respond-to(handhelds) {
   	height: 150px;
   }
+}
+
+footer {
+	bottom: 0;
+	height: 100px;
+	width: 100%;
 }
 
 .background {
@@ -111,11 +145,9 @@ header {
 	font-family: $body-font;
 	font-size: 1.4em;
 	&__menu {
+		@include flex-wrapper;
 		margin: 0 20px 0 0;
 		height: 100%;
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: stretch;
 		float: right;
 		text-align: center;
 		list-style-type: none;
@@ -156,6 +188,7 @@ header {
 	}
 }
 
+<<<<<<< HEAD
 @mixin center {
 	top: 50%;
 	left: 50%;
@@ -196,182 +229,166 @@ header {
   width: 330px;
   display: block;
   clear: both;
+=======
+.cmyk-crosses {
+	font-size: 1.3em;
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	font-family: $header-font;
+	bottom: 75px;
+	@include respond-to(handhelds) {
+	}
+	@include respond-to(medium-screens) {
+		bottom: 20px;
+	}
+	@include respond-to(wide-screens) {
+		bottom: 50px;
+	}
+	&__wrapper {
+		@include flex-wrapper;
+		margin: 0 auto 0 auto;
+		height: 100%;
+		@include respond-to(handhelds) {
+			width: 90%;
+		}
+		@include respond-to(medium-screens) {
+			width: 50%;
+		}
+		@include respond-to(wide-screens) {
+			width: 40%;
+		}
+	}
+	&__item {
+		margin: 0 10px 0 10px;
+		flex: 1;
+	}
+	&__image {
+		cursor: pointer;
+		transition-duration: 1.5s;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		padding-bottom: 100%;
+	}
+	&__text{
+		margin: 10px 0 0 0;
+	}
+	@each $color, $hex in $colors-list {
+		&__image--#{$color} {
+			background-image: url($img-path + "cmyk-" + $color + ".png");
+		}
+		&__image--#{$color}:hover {
+			background-image: url($img-path + "cmyk-" + $color + "-active.png");
+		}
+		&__text--#{$color} {
+			color: $hex;
+		}
+	}
+>>>>>>> 8beea18f7afe9a41c90cf865cedbf72bb4788065
 }
 
-// @media screen 
-//   and (min-device-width: 1200px) 
-//   and (min-device-width: 1600px) 
-//   and (-webkit-min-device-pixel-ratio: 1) {
-//     .content {
-// 		width: 1200px !important;
-// 		height: 700px !important;
-// 	} 
-//   	#left-text-wrapper > h2 {
-// 		margin: 0 0 10px 0 !important;
-//   		font-size: 30px !important;
-// 	} 
-//   	#left-text-wrapper > p {
-//   		margin: 0 0 15px 0 !important;
-//   		font-size: 16px !important; 
-//   	}
-//   	#left-text-wrapper > h1 {
-//   		font-size: 40px !important; 
-//   	} 
-// }
-// @media screen 
-//   and (min-device-width: 1200px) 
-//   and (max-device-width: 1600px) 
-//   and (-webkit-min-device-pixel-ratio: 2)
-//   and (min-resolution: 192dpi) {
-//     .content {
-// 		width: 1200px !important;
-// 		height: 700px !important;
-// 	} 
-//   	#left-text-wrapper > h2 {
-// 		margin: 0 0 10px 0 !important;
-//   		font-size: 30px !important;
-// 	} 
-//   	#left-text-wrapper > p {
-//   		margin: 0 0 15px 0 !important;
-//   		font-size: 16px !important; 
-//   	}
-//   	#left-text-wrapper > h1 {
-//   		font-size: 40px !important; 
-//   	}
-//   	#right-media-wrapper {
-//   		padding-top: 20px !important;
-//   	}
-// }
-// //////////////////////////////////////////////////////////////////////
-// $footer-height: 120px;
-// $header-height: 100px;
-// // $content-height: 960px;
-// $nav-bar-width: 400px;
-// $body-font-size: 22px;
-// $header-font-size: 60px;
-// $blue: #1DAFEB;
-// $pink: #E9168C;
-// $yellow: #F0DE0F;
-// //////////////////////////////////////////////////////////////////////
-// @font-face {
-//     font-family: 'Futura Light';
-//     src: url('fonts/Futura (Light).ttf'); }
-// @font-face {
-// 	font-family: 'Harriet Regular';
-// 	src: url('fonts/Harriet Display Regular.otf'); }
-// @font-face {
-// 	font-family: 'Harriet Bold';
-// 	src: url('fonts/Harriet Display Bold.otf'); }
-// //////////////////////////////////////////////////////////////////////
-// @mixin center {
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(50%,50%);
-// 	-webkit-transform: translate(50%,50%); }
-// @mixin center-vertically() {
-// 	top: 50%;
-// 	transform: translateY(-50%);
-// 	-webkit-transform: translateY(-50%); }
-// @mixin center-horizontally() {
-// 	left: 50%;
-// 	transform: translatex(-50%);
-// 	-webkit-transform: translatex(-50%); }
-// @mixin hover-text-shadow {
-// 	text-shadow: 0px 3px 5px black;
-// }
-// @mixin hover-box-shadow {
-// 	box-shadow: -3px 3px 5px black;
-// }
-// ///Classes to be used with @extend////////////////////////////////////
-// .menu-item {
-// 	cursor: pointer;
-// 	height: 100%;
-// 	font-size: 25px;
-// 	color: white; }
-// //////////////////////////////////////////////////////////////////////
-// body {
-// 	font-weight: 100;
-// 	margin: 0 0 0 0; }
-// .container {
-// 	width: 100%;
-// 	height: 100%;
-// 	position: absolute;
-// 	background-size: cover;
-// 	background-position: center;
-// 	#background-overlay {
-// 		height: 100%;
-// 		width: 100%;
-// 		position: absolute;
-// 		background: radial-gradient(black, black, white);
-// 		opacity: 0.6; } }
-// #index-container {
-// 	background-image: url('imgs/iStock_67834587_MEDIUM.jpg');
-// 	@extend .container; }
-// #work-container {
-// 	@extend .container;
-// 	background: white; }
-// .content {
-// 	box-sizing: border-box;
-// 	padding-top: $header-height;
-// 	padding-bottom: $footer-height;
-// 	position: fixed;
-// 	width: 1920px;
-// 	height: 960px;}
-// #footer {
-// 	z-index: 1;
-// 	position: fixed;
-// 	bottom: 0%;
-// 	height: $footer-height;
-// 	width: 100%; }
-// //////////////////////////////////////////////////////////////////////
-// #header {
-// 	z-index: 1;
-// 	font-family: 'Futura Light';
-// 	top: 0%;
-// 	position: fixed;
-// 	width: 100%;
-// 	height: $header-height;
-// 	.logo {
-// 		cursor: pointer;
-// 		margin-left: 10px;
-// 		background-position: center;
-// 		background-repeat: no-repeat;
-// 		background-size: 100%;
-// 		background-image: url('imgs/TAG_white_1920x1080.png');
-// 		float: left;
-// 		width: $header-height;
-// 		height: $header-height; }
-// 	.logo-dark {
-// 		@extend .logo;
-// 		background-image: url('imgs/TAG_logo_tag_black_blacktag.png'); }
-// 	#right-nav-bar {
-// 		float: right;
-// 		height: $header-height;
-// 		width: 400px;
-// 		#menu-wrapper {
-// 			@include center-vertically;
-// 			position: relative;
-// 			top: 50%;
-// 			height: $header-height / 3;
-// 			width: 100%;
-// 			.menu-item {
-// 				@extend .menu-item;
-// 				color: white;
-// 				transition-duration: 1s;
-// 				display: inline;
-// 				margin-left: 5px;
-// 				margin-right: 5px; }
-// 			.menu-item-dark {
-// 				@extend .menu-item;
-// 				color: black; }
-// 			.menu-item:hover {
-// 				@include hover-text-shadow;
-// 				color: $yellow; }
-// 			.menu-item-dark:hover {
-// 				@include hover-text-shadow;
-// 				color: $yellow; } } } }
-// //////////////////////////////////////////////////////////////////////
+.work-examples {
+	color: white;
+	float: right;
+	height: 100%;
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		// width: 60%;
+		max-width: 760px;
+	}
+	@include respond-to(wide-screens) {
+		// width: 65%;
+		max-width: 1250px;
+	}
+	&__wrapper {
+		float: left;
+		height: 100%;
+		width: 75%;
+	}
+	&__row-1, &__row-2 {
+		@include flex-wrapper;
+		height: 50%;
+		width: 100%;
+	}
+	&__item {
+		background-color: $dark-grey;
+		flex: 1;
+		@include respond-to(handhelds) {
+			// To Add mobile styles when Rosa completes them
+		}
+		@include respond-to(medium-screens) {
+			margin: 5px 5px 5px 5px;
+		}
+		@include respond-to(wide-screens) {
+			margin: 10px 10px 10px 10px;
+		}
+	}
+	&__category {
+		font: 1em $body-font;
+		position: absolute;
+		margin: 10px 0 0 5px;
+	}
+	&__title {
+		font: 1.2em $header-font;
+		position: absolute;
+		margin: 30px 0 0 5px;
+	}
+	&__video {
+		width: 100%;
+		height: 75%;
+	}
+	&__description {
+		position: relative;
+		width: 100%;
+		background-color: $light-grey;
+		height: 25%;
+		bottom: 0%;
+		@include respond-to(handhelds) {
+			// To Add mobile styles when Rosa completes them
+		}
+		@include respond-to(medium-screens) {
+			font-size: 0.7em;
+		}
+		@include respond-to(wide-screens) {
+			font-size: 1.2em;
+		}
+		p {
+			padding: 5px 10px 5px 10px;
+		}
+	}
+	&__color-strip {
+		float: left;
+		position: relative;
+		bottom: 0%;
+		height: 2%;
+		width: 100%;
+		background-color: $blue;
+		&:after {
+			content: "";
+			width: 50%;
+			float: right;
+			height: 100%;
+			background-color: $yellow;
+		}
+		&--full-pink {
+			background-color: $pink;
+			&:after {
+				background-color: $pink;
+			}
+		}
+		&--half-pink {
+			background-color: $pink;
+		}
+	}
 
+
+}
+
+<<<<<<< HEAD
 // #work-content {
 // 	$right-media-wrapper-width: 600px;
 // 	$video-wrapper-spacing: 10px;
@@ -515,5 +532,8 @@ header {
 // 					@include hover-box-shadow; } } } }
 //
 // ///////////////////////////////////////////////////////////////
+=======
+
+>>>>>>> 8beea18f7afe9a41c90cf865cedbf72bb4788065
 
 
