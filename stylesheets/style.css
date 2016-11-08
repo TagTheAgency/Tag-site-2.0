@@ -1,45 +1,359 @@
-/*
-Error: Invalid CSS after "...hinking-bg.png'": expected "{", was ";"
-        on line 25 of stylesheets/style.scss
+@font-face {
+  font-family: 'Futura Light';
+  src: url("../fonts/Futura (Light).ttf"); }
+@font-face {
+  font-family: 'Harriet Regular';
+  src: url("../fonts/Harriet Display Regular.otf"); }
+@font-face {
+  font-family: 'Harriet Bold';
+  src: url("../fonts/Harriet Display Bold.otf"); }
+p {
+  font-family: "Futura Light";
+  margin: 0 0 0 0; }
 
-20: $img-path: '../imgs/';
-21: $logo-dark: 'TAG_logo_tag_black_blacktag.png';
-22: $logo-light: 'TAG_white_1920x1080.png';
-23: $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
-24: <<<<<<< HEAD
-25: $thinking-bg: 'thinking-bg.png';
-26: $production-bg: 'TAG-The-Agency-website-production-bg.png';
-27: $vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
-28: 
-29: $blue: #1DAFEB;
-30: $pink: #E9168C;
+html, body {
+  overflow: hidden;
+  margin: 0 0 0 0;
+  box-sizing: border-box;
+  height: 100%; }
 
-Backtrace:
-stylesheets/style.scss:25
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Users/joannecarr/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...hinking-bg.png'\": expected \"{\", was \";\"\A         on line 25 of stylesheets/style.scss\A \A 20: $img-path: '../imgs/';\A 21: $logo-dark: 'TAG_logo_tag_black_blacktag.png';\A 22: $logo-light: 'TAG_white_1920x1080.png';\A 23: $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';\A 24: <<<<<<< HEAD\A 25: $thinking-bg: 'thinking-bg.png';\A 26: $production-bg: 'TAG-The-Agency-website-production-bg.png';\A 27: $vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';\A 28: \A 29: $blue: #1DAFEB;\A 30: $pink: #E9168C;"; }
+header, main, footer {
+  position: fixed;
+  box-sizing: border-box; }
+
+main {
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media only screen and (max-width: 64em) {
+    main {
+      padding-top: 150px; } }
+
+header {
+  width: 100%;
+  height: 100px; }
+  @media only screen and (max-width: 64em) {
+    header {
+      height: 150px; } }
+
+footer {
+  bottom: 0;
+  height: 100px;
+  width: 100%; }
+
+.background {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 64em) {
+    .background {
+      background-position: center; } }
+  .background--homepage {
+    background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
+  .background--strategy {
+    background-image: url("../imgs/thinking-bg.png"); }
+  .background--production {
+    background-image: url("../imgs/TAG-The-Agency-website-production-bg.png"); }
+  .background--vr {
+    background-image: url("../imgs/TAG-The-Agency-website-VR-Studios-bg.png"); }
+
+.nav-top {
+  color: white;
+  height: 100%;
+  font-family: "Futura Light";
+  font-size: 1.4em; }
+  .nav-top__menu {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 0 20px 0 0;
+    height: 100%;
+    float: right;
+    text-align: center;
+    list-style-type: none; }
+    @media only screen and (max-width: 64em) {
+      .nav-top__menu {
+        width: 60%; } }
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
+      .nav-top__menu {
+        width: 45%; } }
+    @media only screen and (min-width: 90em) {
+      .nav-top__menu {
+        width: 30%; } }
+  .nav-top__menu-item {
+    margin: auto 0 auto 0;
+    flex: 1; }
+  .nav-top__logo {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 100px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media only screen and (max-width: 64em) {
+      .nav-top__logo {
+        width: 150px; } }
+    .nav-top__logo--dark {
+      background-image: url("../imgs/TAG_logo_tag_black_blacktag.png"); }
+    .nav-top__logo--light {
+      background-image: url("../imgs/TAG_white_1920x1080.png"); }
+  .nav-top--dark {
+    color: black; }
+
+.icon-bar {
+  font-size: 1.3em;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  font-family: "Harriet Bold";
+  bottom: 75px; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .icon-bar {
+      bottom: 20px; } }
+  @media only screen and (min-width: 90em) {
+    .icon-bar {
+      bottom: 50px; } }
+  .icon-bar icon-bar_borders {
+    left: 50%;
+    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+    position: absolute;
+    height: 100%;
+    width: 720px; }
+  .icon-bar__title-wrapper {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    position: relative;
+    height: 54px;
+    width: 75%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 0 auto 0 auto;
+    height: 100%; }
+    @media only screen and (max-width: 64em) {
+      .icon-bar__title-wrapper {
+        width: 90%; } }
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
+      .icon-bar__title-wrapper {
+        width: 50%; } }
+    @media only screen and (min-width: 90em) {
+      .icon-bar__title-wrapper {
+        width: 40%; } }
+  .icon-bar__title-item {
+    margin: 0 10px 0 10px;
+    flex: 1; }
+  .icon-bar__image {
+    cursor: pointer;
+    transition-duration: 1.5s;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 100%; }
+  .icon-bar__title {
+    margin: 10px 0 0 0; }
+  .icon-bar__image--blue {
+    background-image: url("../imgs/cmyk-blue.png"); }
+  .icon-bar__image--blue:hover {
+    background-image: url("../imgs/cmyk-blue-active.png"); }
+  .icon-bar__title--blue {
+    color: #1DAFEB; }
+  .icon-bar__image--pink {
+    background-image: url("../imgs/cmyk-pink.png"); }
+  .icon-bar__image--pink:hover {
+    background-image: url("../imgs/cmyk-pink-active.png"); }
+  .icon-bar__title--pink {
+    color: #E9168C; }
+  .icon-bar__image--yellow {
+    background-image: url("../imgs/cmyk-yellow.png"); }
+  .icon-bar__image--yellow:hover {
+    background-image: url("../imgs/cmyk-yellow-active.png"); }
+  .icon-bar__title--yellow {
+    color: #F0DE0F; }
+  .icon-bar__image--white {
+    background-image: url("../imgs/cmyk-white.png"); }
+  .icon-bar__image--white:hover {
+    background-image: url("../imgs/cmyk-white-active.png"); }
+  .icon-bar__title--white {
+    color: white; }
+  .icon-bar__image--black {
+    background-image: url("../imgs/cmyk-black.png"); }
+  .icon-bar__image--black:hover {
+    background-image: url("../imgs/cmyk-black-active.png"); }
+  .icon-bar__title--black {
+    color: black; }
+
+.cmyk-crosses {
+  font-size: 1.3em;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  font-family: "Harriet Bold";
+  bottom: 75px; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .cmyk-crosses {
+      bottom: 20px; } }
+  @media only screen and (min-width: 90em) {
+    .cmyk-crosses {
+      bottom: 50px; } }
+  .cmyk-crosses__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 0 auto 0 auto;
+    height: 100%; }
+    @media only screen and (max-width: 64em) {
+      .cmyk-crosses__wrapper {
+        width: 90%; } }
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
+      .cmyk-crosses__wrapper {
+        width: 50%; } }
+    @media only screen and (min-width: 90em) {
+      .cmyk-crosses__wrapper {
+        width: 40%; } }
+  .cmyk-crosses__item {
+    margin: 0 10px 0 10px;
+    flex: 1; }
+  .cmyk-crosses__image {
+    cursor: pointer;
+    transition-duration: 1.5s;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 100%; }
+  .cmyk-crosses__text {
+    margin: 10px 0 0 0; }
+  .cmyk-crosses__image--blue {
+    background-image: url("../imgs/cmyk-blue.png"); }
+  .cmyk-crosses__image--blue:hover {
+    background-image: url("../imgs/cmyk-blue-active.png"); }
+  .cmyk-crosses__text--blue {
+    color: #1DAFEB; }
+  .cmyk-crosses__image--pink {
+    background-image: url("../imgs/cmyk-pink.png"); }
+  .cmyk-crosses__image--pink:hover {
+    background-image: url("../imgs/cmyk-pink-active.png"); }
+  .cmyk-crosses__text--pink {
+    color: #E9168C; }
+  .cmyk-crosses__image--yellow {
+    background-image: url("../imgs/cmyk-yellow.png"); }
+  .cmyk-crosses__image--yellow:hover {
+    background-image: url("../imgs/cmyk-yellow-active.png"); }
+  .cmyk-crosses__text--yellow {
+    color: #F0DE0F; }
+  .cmyk-crosses__image--white {
+    background-image: url("../imgs/cmyk-white.png"); }
+  .cmyk-crosses__image--white:hover {
+    background-image: url("../imgs/cmyk-white-active.png"); }
+  .cmyk-crosses__text--white {
+    color: white; }
+  .cmyk-crosses__image--black {
+    background-image: url("../imgs/cmyk-black.png"); }
+  .cmyk-crosses__image--black:hover {
+    background-image: url("../imgs/cmyk-black-active.png"); }
+  .cmyk-crosses__text--black {
+    color: black; }
+
+.work-examples {
+  color: white;
+  float: right;
+  height: 100%; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .work-examples {
+      max-width: 760px; } }
+  @media only screen and (min-width: 90em) {
+    .work-examples {
+      max-width: 1250px; } }
+  .work-examples__wrapper {
+    float: left;
+    height: 100%;
+    width: 75%; }
+  .work-examples__row-1, .work-examples__row-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 50%;
+    width: 100%; }
+  .work-examples__item {
+    background-color: #3A3A3C;
+    flex: 1; }
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
+      .work-examples__item {
+        margin: 5px 5px 5px 5px; } }
+    @media only screen and (min-width: 90em) {
+      .work-examples__item {
+        margin: 10px 10px 10px 10px; } }
+  .work-examples__category {
+    font: 1em "Futura Light";
+    position: absolute;
+    margin: 10px 0 0 5px; }
+  .work-examples__title {
+    font: 1.2em "Harriet Bold";
+    position: absolute;
+    margin: 30px 0 0 5px; }
+  .work-examples__video {
+    width: 100%;
+    height: 75%; }
+  .work-examples__description {
+    position: relative;
+    width: 100%;
+    background-color: #58585A;
+    height: 25%;
+    bottom: 0%; }
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
+      .work-examples__description {
+        font-size: 0.7em; } }
+    @media only screen and (min-width: 90em) {
+      .work-examples__description {
+        font-size: 1.2em; } }
+    .work-examples__description p {
+      padding: 5px 10px 5px 10px; }
+  .work-examples__color-strip {
+    float: left;
+    position: relative;
+    bottom: 0%;
+    height: 2%;
+    width: 100%;
+    background-color: #1DAFEB; }
+    .work-examples__color-strip:after {
+      content: "";
+      width: 50%;
+      float: right;
+      height: 100%;
+      background-color: #F0DE0F; }
+    .work-examples__color-strip--full-pink {
+      background-color: #E9168C; }
+      .work-examples__color-strip--full-pink:after {
+        background-color: #E9168C; }
+    .work-examples__color-strip--half-pink {
+      background-color: #E9168C; }
+
+/*# sourceMappingURL=style.css.map */
+
+#description-header {
+  font-family: 'Futura';
+  font-size: 27px;
+  font-weight: bold;
+}
+
+#text-column {
+  font-family: 'Futura Light';
+  font-size: 15px;
+  width: 330px;
+  margin: 175px 0 0 200px;
+  color: #FFF;
+}
+
+#content {
+  width: 330px;
+  display: block;
+  clear: both;
+}
