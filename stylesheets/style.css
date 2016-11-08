@@ -7,15 +7,21 @@
 @font-face {
   font-family: 'Harriet Bold';
   src: url("../fonts/Harriet Display Bold.otf"); }
-p {
-  font-family: "Futura Light";
-  margin: 0 0 0 0; }
-
-html, body {
+html, body, header, main, footer {
   overflow: hidden;
   margin: 0 0 0 0;
   box-sizing: border-box;
   height: 100%; }
+
+h1, h2, h3, p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+
+h1, h2, h3 {
+  font-family: "Harriet Bold"; }
+
+p {
+  font-family: "Futura Light"; }
 
 header, main, footer {
   position: fixed;
@@ -56,10 +62,12 @@ footer {
     background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
 
 .nav-top {
+  text-transform: uppercase;
   color: white;
   height: 100%;
   font-family: "Futura Light";
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  white-space: nowrap; }
   .nav-top__menu {
     display: flex;
     flex-wrap: nowrap;
@@ -244,5 +252,63 @@ footer {
         background-color: #EC008C; }
     .work-examples__color-strip--half-pink {
       background-color: #EC008C; }
+
+.copy {
+  float: right;
+  height: 90%;
+  margin: 0 40px 0 0; }
+  .copy h1 {
+    font-size: 2.7em;
+    margin: 0 0 30px 0; }
+  .copy h2 {
+    margin: 60px 0 0 0; }
+  .copy p {
+    margin: 0 0 30px 0; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .copy {
+      width: 350px; } }
+  @media only screen and (min-width: 90em) {
+    .copy {
+      width: 450px;
+      font-size: 1.2em; } }
+
+.icons {
+  float: right;
+  position: relative;
+  height: 10%;
+  margin: 0 40px 0 0; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .icons {
+      width: 350px; } }
+  @media only screen and (min-width: 90em) {
+    .icons {
+      width: 450px; } }
+  .icons__icon {
+    width: 15%;
+    padding-bottom: 15%; }
+  .icons__image {
+    width: 100%;
+    padding-bottom: 100%;
+    cursor: pointer;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition-duration: 1s; }
+    .icons__image--home {
+      background-image: url("../imgs/TAG The Agency website case studies buttons-56.png"); }
+    .icons__image:hover {
+      -ms-transform: rotate(180deg);
+      /* IE 9 */
+      -webkit-transform: rotate(180deg);
+      /* Chrome, Safari, Opera */
+      transform: rotate(180deg); }
+  .icons__text {
+    text-transform: uppercase;
+    font-family: 'Futura';
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    top: 100%;
+    margin: 10px 0 0 0; }
 
 /*# sourceMappingURL=style.css.map */
