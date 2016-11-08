@@ -438,12 +438,12 @@ footer {
 		&--full-width {
 			margin: 0 5px 10px 5px;
 			width: calc(100% - 10px);
-			height: calc(60% - 10px);
+			height: calc(65% - 10px);
 		}
 		&--half-width {
 			width: calc(50% - 10px);
 			margin: 0px 5px 0 5px;
-			height: 40%;
+			height: 35%;
 		}
 		&:after {
 			@include center;
