@@ -25,6 +25,7 @@ $thinking-bg: 'thinking-bg.png';
 $vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
+$home-icon-light: 'home-icon-white.png';
 $play-icon:'play-icon.png';
 $blue: #00AEEF;
 $pink: #EC008C;
@@ -438,6 +439,9 @@ footer {
 				-ms-transform: rotate(180deg); /* IE 9 */
 			    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
 			    transform: rotate(180deg);
+			}
+			&--light {
+				background-image: url($img-path + $home-icon-light);
 			}
 		}
 	}
