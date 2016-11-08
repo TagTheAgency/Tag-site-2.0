@@ -105,90 +105,32 @@ footer {
   .nav-top--dark {
     color: black; }
 
-.icon-bar {
-  font-size: 1.3em;
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  text-align: center;
-  font-family: "Harriet Bold";
-  bottom: 75px; }
-  @media only screen and (min-width: 64em) and (max-width: 90em) {
-    .icon-bar {
-      bottom: 20px; } }
-  @media only screen and (min-width: 90em) {
-    .icon-bar {
-      bottom: 50px; } }
-  .icon-bar icon-bar_borders {
-    left: 50%;
-    transform: translatex(-50%);
-    -webkit-transform: translatex(-50%);
-    position: absolute;
-    height: 100%;
-    width: 720px; }
-  .icon-bar__title-wrapper {
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    position: relative;
-    height: 54px;
-    width: 75%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    margin: 0 auto 0 auto;
-    height: 100%; }
-    @media only screen and (max-width: 64em) {
-      .icon-bar__title-wrapper {
-        width: 90%; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em) {
-      .icon-bar__title-wrapper {
-        width: 50%; } }
-    @media only screen and (min-width: 90em) {
-      .icon-bar__title-wrapper {
-        width: 40%; } }
-  .icon-bar__title-item {
-    margin: 0 10px 0 10px;
-    flex: 1; }
-  .icon-bar__image {
-    cursor: pointer;
-    transition-duration: 1.5s;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    padding-bottom: 100%; }
-  .icon-bar__title {
-    margin: 10px 0 0 0; }
-  .icon-bar__image--blue {
-    background-image: url("../imgs/cmyk-blue.png"); }
-  .icon-bar__image--blue:hover {
-    background-image: url("../imgs/cmyk-blue-active.png"); }
-  .icon-bar__title--blue {
-    color: #1DAFEB; }
-  .icon-bar__image--pink {
-    background-image: url("../imgs/cmyk-pink.png"); }
-  .icon-bar__image--pink:hover {
-    background-image: url("../imgs/cmyk-pink-active.png"); }
-  .icon-bar__title--pink {
-    color: #E9168C; }
-  .icon-bar__image--yellow {
-    background-image: url("../imgs/cmyk-yellow.png"); }
-  .icon-bar__image--yellow:hover {
-    background-image: url("../imgs/cmyk-yellow-active.png"); }
-  .icon-bar__title--yellow {
-    color: #F0DE0F; }
-  .icon-bar__image--white {
-    background-image: url("../imgs/cmyk-white.png"); }
-  .icon-bar__image--white:hover {
-    background-image: url("../imgs/cmyk-white-active.png"); }
-  .icon-bar__title--white {
-    color: white; }
-  .icon-bar__image--black {
-    background-image: url("../imgs/cmyk-black.png"); }
-  .icon-bar__image--black:hover {
-    background-image: url("../imgs/cmyk-black-active.png"); }
-  .icon-bar__title--black {
-    color: black; }
+#description-header {
+  font-family: 'Futura';
+  font-size: 27px;
+  font-weight: bold;
+}
+
+#text-column {
+  font-family: 'Futura Light';
+  font-size: 15px;
+  width: 330px;
+  margin: 40px 0 0 80px;
+  color: #000;
+}
+
+#content {
+  width: 330px;
+  display: block;
+  clear: both;
+}
+
+#thinking-content {
+  background-color: #FFF200;
+  width: 75%;
+  margin: 0 200px;
+  padding: 25px;
+}
 
 .cmyk-crosses {
   font-size: 1.3em;
@@ -336,33 +278,6 @@ footer {
     .work-examples__color-strip--half-pink {
       background-color: #E9168C; }
 
-
-#description-header {
-  font-family: 'Futura';
-  font-size: 27px;
-  font-weight: bold;
-}
-
-#text-column {
-  font-family: 'Futura Light';
-  font-size: 15px;
-  width: 330px;
-  margin: 175px 0 0 200px;
-  color: #FFF;
-}
-
-#content {
-  width: 330px;
-  display: block;
-  clear: both;
-}
-
-#thinking-content {
-  background-color: #FFF200;
-  width: 75%;
-  margin: 0 200px;
-  padding: 25px;
-}
 
 /*# sourceMappingURL=style.css.map */
 
