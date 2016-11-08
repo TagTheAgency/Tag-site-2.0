@@ -336,7 +336,6 @@ footer {
     .work-examples__color-strip--half-pink {
       background-color: #E9168C; }
 
-/*# sourceMappingURL=style.css.map */
 
 #description-header {
   font-family: 'Futura';
@@ -357,3 +356,14 @@ footer {
   display: block;
   clear: both;
 }
+
+#thinking-content {
+  background-color: #FFF200;
+  width: 75%;
+  margin: 0 200px;
+  padding: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
