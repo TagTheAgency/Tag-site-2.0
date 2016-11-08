@@ -22,6 +22,7 @@ $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
+$influencers-bg: 'TAG-The-Agency-website-influencers-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
 $home-icon-light: 'home-icon-white.png';
 $play-icon:'play-icon.png';
@@ -80,7 +81,7 @@ html, body, header, main, footer {
 	height: 100%;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, li, ul, ol {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 }
@@ -139,6 +140,9 @@ footer {
 	}
 	&--production {
 		background-image: url($img-path + $production-bg);
+	}
+	&--influencers {
+		background-image: url($img-path + $influencers-bg);
 	}
 }
 
@@ -463,6 +467,25 @@ footer {
 	}
 }
 
+.influencer-list {
+	margin: 0 0 0 20%;
+	color: white;
+	height: 100%;
+	width: 40%;
+	h3 {
+		font-size: 1.3em;
+		font-family: $body-font;
+		margin: 10px 0 30px 0;
+	}
+	ul {
+		font-family: $body-font;
+		list-style-type: none;
+	}
+	li {
+		font-size: 1.2em;
+		margin: 5px 0 5px 0;
+	}
+}
 
 
 
