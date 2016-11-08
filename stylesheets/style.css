@@ -308,6 +308,8 @@ footer {
         -webkit-transform: rotate(180deg);
         /* Chrome, Safari, Opera */
         transform: rotate(180deg); }
+      .icons__image--home--light {
+        background-image: url("../imgs/home-icon-white.png"); }
   .icons__text {
     text-transform: uppercase;
     font-family: 'Futura';
