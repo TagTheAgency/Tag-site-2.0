@@ -29,6 +29,7 @@ header, main, footer {
 
 main {
   height: 100%;
+  min-height: 100%;
   width: 100%;
   padding-top: 100px;
   padding-bottom: 100px; }
@@ -60,6 +61,8 @@ footer {
       background-position: center; } }
   .background--homepage {
     background-image: url("../imgs/TAG-The-Agency-website-homepage-bg.png"); }
+  .background--production {
+    background-image: url("../imgs/TAG-The-Agency-website-production-bg.png"); }
 
 .nav-top {
   text-transform: uppercase;
@@ -179,20 +182,21 @@ footer {
   .cmyk-crosses__text--black {
     color: #231F20; }
 
-.work-examples {
-  color: white;
+.float-right {
   float: right;
   height: 100%; }
   @media only screen and (min-width: 64em) and (max-width: 90em) {
-    .work-examples {
-      max-width: 760px; } }
+    .float-right {
+      width: 760px; } }
   @media only screen and (min-width: 90em) {
-    .work-examples {
-      max-width: 1250px; } }
-  .work-examples__wrapper {
-    float: left;
-    height: 100%;
-    width: 75%; }
+    .float-right {
+      width: 1250px; } }
+
+.work-examples {
+  color: white;
+  float: left;
+  height: 100%;
+  width: 75%; }
   .work-examples__row-1, .work-examples__row-2 {
     display: flex;
     flex-wrap: nowrap;
@@ -271,6 +275,8 @@ footer {
     .copy {
       width: 450px;
       font-size: 1.2em; } }
+  .copy--light {
+    color: white; }
 
 .icons {
   float: right;
@@ -284,24 +290,24 @@ footer {
     .icons {
       width: 450px; } }
   .icons__icon {
+    float: left;
     width: 15%;
     padding-bottom: 15%; }
   .icons__image {
     width: 100%;
     padding-bottom: 100%;
-    cursor: pointer;
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
     transition-duration: 1s; }
     .icons__image--home {
       background-image: url("../imgs/TAG The Agency website case studies buttons-56.png"); }
-    .icons__image:hover {
-      -ms-transform: rotate(180deg);
-      /* IE 9 */
-      -webkit-transform: rotate(180deg);
-      /* Chrome, Safari, Opera */
-      transform: rotate(180deg); }
+      .icons__image--home:hover {
+        -ms-transform: rotate(180deg);
+        /* IE 9 */
+        -webkit-transform: rotate(180deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(180deg); }
   .icons__text {
     text-transform: uppercase;
     font-family: 'Futura';
@@ -310,5 +316,37 @@ footer {
     text-align: center;
     top: 100%;
     margin: 10px 0 0 0; }
+  .icons--light {
+    color: white; }
+
+.production-videos {
+  float: left;
+  width: 75%;
+  height: 100%; }
+  .production-videos__video {
+    position: relative;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .production-videos__video--full-width {
+      margin: 0 5px 10px 5px;
+      width: calc(100% - 10px);
+      height: calc(60% - 10px); }
+    .production-videos__video--half-width {
+      width: calc(50% - 10px);
+      margin: 0px 5px 0 5px;
+      height: 40%; }
+    .production-videos__video:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      content: "";
+      width: 15%;
+      padding-bottom: 15%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../imgs/play-icon.png"); }
 
 /*# sourceMappingURL=style.css.map */

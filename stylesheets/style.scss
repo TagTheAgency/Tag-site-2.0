@@ -21,7 +21,9 @@ $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
+$production-bg: 'TAG-The-Agency-website-production-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
+$play-icon:'play-icon.png';
 $blue: #00AEEF;
 $pink: #EC008C;
 $yellow: #FFF200;
@@ -53,6 +55,13 @@ $xlarge-breakpoint: em(1920) !default;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: stretch;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
 
 //Copy / Paste for responsive styles
@@ -91,6 +100,7 @@ header, main, footer {
 
 main {
 	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	padding-top: 100px; //Header Height
 	padding-bottom: 100px;
@@ -125,7 +135,10 @@ footer {
 	background-repeat: no-repeat;
 	&--homepage {
 		background-image: url($img-path + $homepage-bg);
-	}	
+	}
+	&--production {
+		background-image: url($img-path + $production-bg);
+	}
 }
 
 .nav-top {
@@ -237,8 +250,7 @@ footer {
 	}
 }
 
-.work-examples {
-	color: white;
+.float-right {
 	float: right;
 	height: 100%;
 	@include respond-to(handhelds) {
@@ -246,17 +258,19 @@ footer {
 	}
 	@include respond-to(medium-screens) {
 		// width: 60%;
-		max-width: 760px;
+		width: 760px;
 	}
 	@include respond-to(wide-screens) {
 		// width: 65%;
-		max-width: 1250px;
+		width: 1250px;
 	}
-	&__wrapper {
-		float: left;
-		height: 100%;
-		width: 75%;
-	}
+}
+
+.work-examples {
+	color: white;
+	float: left;
+	height: 100%;
+	width: 75%;
 	&__row-1, &__row-2 {
 		@include flex-wrapper;
 		height: 50%;
@@ -358,6 +372,9 @@ footer {
 		width: 450px;
 		font-size: 1.2em;
 	}
+	&--light {
+		color: white;
+	}
 }
 
 .icons {
@@ -375,13 +392,13 @@ footer {
 		width: 450px;
 	}
 	&__icon {
+		float: left;
 		width: 15%;
 		padding-bottom: 15%;
 	}
 	&__image {
 		width: 100%;
 		padding-bottom: 100%;
-		cursor: pointer;
 		// height: 100%;
 		background-size: contain;
 		background-position: left;
@@ -389,11 +406,11 @@ footer {
 		transition-duration: 1s;
 		&--home {
 			background-image: url($img-path + $home-icon);
-		}
-		&:hover {
-			-ms-transform: rotate(180deg); /* IE 9 */
-		    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-		    transform: rotate(180deg);
+			&:hover {
+				-ms-transform: rotate(180deg); /* IE 9 */
+			    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+			    transform: rotate(180deg);
+			}
 		}
 	}
 	&__text {
@@ -405,10 +422,42 @@ footer {
 		top: 100%;
 		margin: 10px 0 0 0;
 	}
+	&--light {
+		color: white;
+	}
 }
 
-
-
+.production-videos {
+	float: left;
+	width: 75%;
+	height: 100%;
+	&__video {
+		position: relative;
+		float: left;
+		background-color: rgba(0,0,0,0.5);
+		&--full-width {
+			margin: 0 5px 10px 5px;
+			width: calc(100% - 10px);
+			height: calc(60% - 10px);
+		}
+		&--half-width {
+			width: calc(50% - 10px);
+			margin: 0px 5px 0 5px;
+			height: 40%;
+		}
+		&:after {
+			@include center;
+			display: inline-block;
+			content: "";
+			width: 15%;
+			padding-bottom: 15%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url($img-path + $play-icon);
+		}
+	}
+}
 
 
 
