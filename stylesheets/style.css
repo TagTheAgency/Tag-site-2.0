@@ -72,7 +72,7 @@ footer {
     @media only screen and (max-width: 64em) {
       .nav-top__menu {
         width: 60%; } }
-    @media only screen and (min-width: 79em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
       .nav-top__menu {
         width: 45%; } }
     @media only screen and (min-width: 90em) {
@@ -107,7 +107,7 @@ footer {
   text-align: center;
   font-family: "Harriet Bold";
   bottom: 75px; }
-  @media only screen and (min-width: 79em) and (max-width: 90em) {
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
     .cmyk-crosses {
       bottom: 20px; } }
   @media only screen and (min-width: 90em) {
@@ -122,7 +122,7 @@ footer {
     @media only screen and (max-width: 64em) {
       .cmyk-crosses__wrapper {
         width: 90%; } }
-    @media only screen and (min-width: 79em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
       .cmyk-crosses__wrapper {
         width: 50%; } }
     @media only screen and (min-width: 90em) {
@@ -175,12 +175,12 @@ footer {
   color: white;
   float: right;
   height: 100%; }
-  @media only screen and (min-width: 79em) and (max-width: 90em) {
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
     .work-examples {
-      width: 60%; } }
+      max-width: 760px; } }
   @media only screen and (min-width: 90em) {
     .work-examples {
-      width: 65%; } }
+      max-width: 1250px; } }
   .work-examples__wrapper {
     float: left;
     height: 100%;
@@ -194,43 +194,55 @@ footer {
   .work-examples__item {
     background-color: #3A3A3C;
     flex: 1; }
-    @media only screen and (min-width: 79em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
       .work-examples__item {
         margin: 5px 5px 5px 5px; } }
     @media only screen and (min-width: 90em) {
       .work-examples__item {
         margin: 10px 10px 10px 10px; } }
   .work-examples__category {
-    position: absolute; }
+    font: 1em "Futura Light";
+    position: absolute;
+    margin: 10px 0 0 5px; }
+  .work-examples__title {
+    font: 1.2em "Harriet Bold";
+    position: absolute;
+    margin: 30px 0 0 5px; }
   .work-examples__video {
     width: 100%;
-    height: 80%; }
+    height: 75%; }
   .work-examples__description {
     position: relative;
     width: 100%;
     background-color: #58585A;
-    height: 20%;
+    height: 25%;
     bottom: 0%; }
-    @media only screen and (min-width: 79em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
       .work-examples__description {
         font-size: 0.7em; } }
     @media only screen and (min-width: 90em) {
       .work-examples__description {
-        font-size: 1em; } }
+        font-size: 1.2em; } }
     .work-examples__description p {
       padding: 5px 10px 5px 10px; }
   .work-examples__color-strip {
     float: left;
     position: relative;
     bottom: 0%;
-    height: 10px;
+    height: 2%;
     width: 100%;
     background-color: #00AEEF; }
-  .work-examples__color-strip:after {
-    content: "";
-    width: 50%;
-    float: right;
-    height: 10px;
-    background-color: #FFF200; }
+    .work-examples__color-strip:after {
+      content: "";
+      width: 50%;
+      float: right;
+      height: 100%;
+      background-color: #FFF200; }
+    .work-examples__color-strip--full-pink {
+      background-color: #EC008C; }
+      .work-examples__color-strip--full-pink:after {
+        background-color: #EC008C; }
+    .work-examples__color-strip--half-pink {
+      background-color: #EC008C; }
 
 /*# sourceMappingURL=style.css.map */
