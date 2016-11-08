@@ -7,15 +7,21 @@
 @font-face {
   font-family: 'Harriet Bold';
   src: url("../fonts/Harriet Display Bold.otf"); }
-p {
-  font-family: "Futura Light";
-  margin: 0 0 0 0; }
-
-html, body {
+html, body, header, main, footer {
   overflow: hidden;
   margin: 0 0 0 0;
   box-sizing: border-box;
   height: 100%; }
+
+h1, h2, h3, p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+
+h1, h2, h3 {
+  font-family: "Harriet Bold"; }
+
+p {
+  font-family: "Futura Light"; }
 
 header, main, footer {
   position: fixed;
@@ -23,6 +29,7 @@ header, main, footer {
 
 main {
   height: 100%;
+  min-height: 100%;
   width: 100%;
   padding-top: 100px;
   padding-bottom: 100px; }
@@ -62,10 +69,12 @@ footer {
     background-image: url("../imgs/TAG-The-Agency-website-VR-Studios-bg.png"); }
 
 .nav-top {
+  text-transform: uppercase;
   color: white;
   height: 100%;
   font-family: "Futura Light";
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  white-space: nowrap; }
   .nav-top__menu {
     display: flex;
     flex-wrap: nowrap;
@@ -104,33 +113,6 @@ footer {
       background-image: url("../imgs/TAG_white_1920x1080.png"); }
   .nav-top--dark {
     color: black; }
-
-#description-header {
-  font-family: 'Futura';
-  font-size: 27px;
-  font-weight: bold;
-}
-
-#text-column {
-  font-family: 'Futura Light';
-  font-size: 15px;
-  width: 330px;
-  margin: 40px 0 0 80px;
-  color: #000;
-}
-
-#content {
-  width: 330px;
-  display: block;
-  clear: both;
-}
-
-#thinking-content {
-  background-color: #FFF200;
-  width: 75%;
-  margin: 0 200px;
-  padding: 25px;
-}
 
 .cmyk-crosses {
   font-size: 1.3em;
@@ -178,19 +160,19 @@ footer {
   .cmyk-crosses__image--blue:hover {
     background-image: url("../imgs/cmyk-blue-active.png"); }
   .cmyk-crosses__text--blue {
-    color: #1DAFEB; }
+    color: #00AEEF; }
   .cmyk-crosses__image--pink {
     background-image: url("../imgs/cmyk-pink.png"); }
   .cmyk-crosses__image--pink:hover {
     background-image: url("../imgs/cmyk-pink-active.png"); }
   .cmyk-crosses__text--pink {
-    color: #E9168C; }
+    color: #EC008C; }
   .cmyk-crosses__image--yellow {
     background-image: url("../imgs/cmyk-yellow.png"); }
   .cmyk-crosses__image--yellow:hover {
     background-image: url("../imgs/cmyk-yellow-active.png"); }
   .cmyk-crosses__text--yellow {
-    color: #F0DE0F; }
+    color: #FFF200; }
   .cmyk-crosses__image--white {
     background-image: url("../imgs/cmyk-white.png"); }
   .cmyk-crosses__image--white:hover {
@@ -202,22 +184,23 @@ footer {
   .cmyk-crosses__image--black:hover {
     background-image: url("../imgs/cmyk-black-active.png"); }
   .cmyk-crosses__text--black {
-    color: black; }
+    color: #231F20; }
 
-.work-examples {
-  color: white;
+.float-right {
   float: right;
   height: 100%; }
   @media only screen and (min-width: 64em) and (max-width: 90em) {
-    .work-examples {
-      max-width: 760px; } }
+    .float-right {
+      width: 760px; } }
   @media only screen and (min-width: 90em) {
-    .work-examples {
-      max-width: 1250px; } }
-  .work-examples__wrapper {
-    float: left;
-    height: 100%;
-    width: 75%; }
+    .float-right {
+      width: 1250px; } }
+
+.work-examples {
+  color: white;
+  float: left;
+  height: 100%;
+  width: 75%; }
   .work-examples__row-1, .work-examples__row-2 {
     display: flex;
     flex-wrap: nowrap;
@@ -264,21 +247,110 @@ footer {
     bottom: 0%;
     height: 2%;
     width: 100%;
-    background-color: #1DAFEB; }
+    background-color: #00AEEF; }
     .work-examples__color-strip:after {
       content: "";
       width: 50%;
       float: right;
       height: 100%;
-      background-color: #F0DE0F; }
+      background-color: #FFF200; }
     .work-examples__color-strip--full-pink {
-      background-color: #E9168C; }
+      background-color: #EC008C; }
       .work-examples__color-strip--full-pink:after {
-        background-color: #E9168C; }
+        background-color: #EC008C; }
     .work-examples__color-strip--half-pink {
-      background-color: #E9168C; }
+      background-color: #EC008C; }
 
+.copy {
+  float: right;
+  height: 90%;
+  margin: 0 40px 0 0; }
+  .copy h1 {
+    font-size: 2.7em;
+    margin: 0 0 30px 0; }
+  .copy h2 {
+    margin: 60px 0 0 0; }
+  .copy p {
+    margin: 0 0 30px 0; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .copy {
+      width: 350px; } }
+  @media only screen and (min-width: 90em) {
+    .copy {
+      width: 450px;
+      font-size: 1.2em; } }
+  .copy--light {
+    color: white; }
+
+.icons {
+  float: right;
+  position: relative;
+  height: 10%;
+  margin: 0 40px 0 0; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .icons {
+      width: 350px; } }
+  @media only screen and (min-width: 90em) {
+    .icons {
+      width: 450px; } }
+  .icons__icon {
+    float: left;
+    width: 15%;
+    padding-bottom: 15%; }
+  .icons__image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition-duration: 1s; }
+    .icons__image--home {
+      background-image: url("../imgs/TAG The Agency website case studies buttons-56.png"); }
+      .icons__image--home:hover {
+        -ms-transform: rotate(180deg);
+        /* IE 9 */
+        -webkit-transform: rotate(180deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(180deg); }
+  .icons__text {
+    text-transform: uppercase;
+    font-family: 'Futura';
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    top: 100%;
+    margin: 10px 0 0 0; }
+  .icons--light {
+    color: white; }
+
+.production-videos {
+  float: left;
+  width: 75%;
+  height: 100%; }
+  .production-videos__video {
+    position: relative;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .production-videos__video--full-width {
+      margin: 0 5px 10px 5px;
+      width: calc(100% - 10px);
+      height: calc(65% - 10px); }
+    .production-videos__video--half-width {
+      width: calc(50% - 10px);
+      margin: 0px 5px 0 5px;
+      height: 35%; }
+    .production-videos__video:after {
+      top: 50%;
+      left: 50%;
+      transform: translate(50%, 50%);
+      -webkit-transform: translate(50%, 50%);
+      display: inline-block;
+      content: "";
+      width: 15%;
+      padding-bottom: 15%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../imgs/play-icon.png"); }
 
 /*# sourceMappingURL=style.css.map */
-
-

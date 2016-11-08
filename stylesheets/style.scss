@@ -22,12 +22,14 @@ $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
 $thinking-bg: 'thinking-bg.png';
-$production-bg: 'TAG-The-Agency-website-production-bg.png';
 $vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
-$blue: #1DAFEB;
-$pink: #E9168C;
-$yellow: #F0DE0F;
-$black: black;
+$production-bg: 'TAG-The-Agency-website-production-bg.png';
+$home-icon: 'TAG The Agency website case studies buttons-56.png';
+$play-icon:'play-icon.png';
+$blue: #00AEEF;
+$pink: #EC008C;
+$yellow: #FFF200;
+$black: #231F20;
 $white: white;
 $dark-grey: #3A3A3C;
 $light-grey: #58585A;
@@ -57,6 +59,13 @@ $xlarge-breakpoint: em(1920) !default;
 	align-items: stretch;
 }
 
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
 //Copy / Paste for responsive styles
 
 // @include respond-to(handhelds) {
@@ -65,18 +74,26 @@ $xlarge-breakpoint: em(1920) !default;
 // }
 // @include respond-to(wide-screens) {
 // }
-
-p {
-	font-family: $body-font;
-	margin: 0 0 0 0;
-}
-
-html, body {
+html, body, header, main, footer {
 	overflow: hidden;
 	margin: 0 0 0 0;
 	box-sizing: border-box;
 	height: 100%;
 }
+
+h1, h2, h3, p {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+h1, h2, h3 {
+	font-family: $header-font;
+}
+
+p {
+	font-family: $body-font;
+}
+
 
 header, main, footer {
 	position: fixed;
@@ -85,6 +102,7 @@ header, main, footer {
 
 main {
 	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	padding-top: 100px; //Header Height
 	padding-bottom: 100px;
@@ -132,10 +150,12 @@ footer {
 }
 
 .nav-top {
+	text-transform: uppercase;
 	color: white;	
 	height: 100%;
 	font-family: $body-font;
 	font-size: 1.4em;
+	white-space: nowrap;
 	&__menu {
 		@include flex-wrapper;
 		margin: 0 20px 0 0;
@@ -258,8 +278,7 @@ footer {
 	}
 }
 
-.work-examples {
-	color: white;
+.float-right {
 	float: right;
 	height: 100%;
 	@include respond-to(handhelds) {
@@ -267,17 +286,19 @@ footer {
 	}
 	@include respond-to(medium-screens) {
 		// width: 60%;
-		max-width: 760px;
+		width: 760px;
 	}
 	@include respond-to(wide-screens) {
 		// width: 65%;
-		max-width: 1250px;
+		width: 1250px;
 	}
-	&__wrapper {
-		float: left;
-		height: 100%;
-		width: 75%;
-	}
+}
+
+.work-examples {
+	color: white;
+	float: left;
+	height: 100%;
+	width: 75%;
 	&__row-1, &__row-2 {
 		@include flex-wrapper;
 		height: 50%;
@@ -353,8 +374,117 @@ footer {
 			background-color: $pink;
 		}
 	}
+}
 
+.copy {
+	float: right;
+	height: 90%;
+	margin: 0 40px 0 0;
+	h1 {
+		font-size: 2.7em;
+		margin: 0 0 30px 0;
+	}
+	h2 {
+		margin: 60px 0 0 0;
+	}
+	p {
+		margin: 0 0 30px 0;
+	}
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		width: 350px;
+	}
+	@include respond-to(wide-screens) {
+		width: 450px;
+		font-size: 1.2em;
+	}
+	&--light {
+		color: white;
+	}
+}
 
+.icons {
+	float: right;
+	position: relative;
+	height: 10%;
+	margin: 0 40px 0 0;
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		width: 350px;
+	}
+	@include respond-to(wide-screens) {
+		width: 450px;
+	}
+	&__icon {
+		float: left;
+		width: 15%;
+		padding-bottom: 15%;
+	}
+	&__image {
+		width: 100%;
+		padding-bottom: 100%;
+		// height: 100%;
+		background-size: contain;
+		background-position: left;
+		background-repeat: no-repeat;
+		transition-duration: 1s;
+		&--home {
+			background-image: url($img-path + $home-icon);
+			&:hover {
+				-ms-transform: rotate(180deg); /* IE 9 */
+			    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+			    transform: rotate(180deg);
+			}
+		}
+	}
+	&__text {
+		text-transform: uppercase;
+		font-family: 'Futura';
+		font-weight: bold;
+		width: 100%;
+		text-align: center;
+		top: 100%;
+		margin: 10px 0 0 0;
+	}
+	&--light {
+		color: white;
+	}
+}
+
+.production-videos {
+	float: left;
+	width: 75%;
+	height: 100%;
+	&__video {
+		position: relative;
+		float: left;
+		background-color: rgba(0,0,0,0.5);
+		&--full-width {
+			margin: 0 5px 10px 5px;
+			width: calc(100% - 10px);
+			height: calc(65% - 10px);
+		}
+		&--half-width {
+			width: calc(50% - 10px);
+			margin: 0px 5px 0 5px;
+			height: 35%;
+		}
+		&:after {
+			@include center;
+			display: inline-block;
+			content: "";
+			width: 15%;
+			padding-bottom: 15%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url($img-path + $play-icon);
+		}
+	}
 }
 
 // #work-content {
