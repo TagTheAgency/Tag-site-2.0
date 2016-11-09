@@ -119,7 +119,6 @@ header {
     width: 100%;
     padding-bottom: 100%;
     background-size: contain;
-    background-position: left;
     background-repeat: no-repeat;
     transition-duration: 1s; }
     .icons__image--home {
@@ -275,7 +274,7 @@ header {
   color: white;
   float: left;
   height: 100%;
-  width: 75%; }
+  width: 100%; }
   .work-examples__row-1, .work-examples__row-2 {
     display: flex;
     flex-wrap: nowrap;
@@ -313,9 +312,9 @@ header {
         font-size: 0.7em; } }
     @media only screen and (min-width: 90em) {
       .work-examples__description {
-        font-size: 1.2em; } }
+        font-size: 1.1em; } }
     .work-examples__description p {
-      padding: 5px 10px 5px 10px; }
+      padding: 3px 10px 5px 10px; }
   .work-examples__color-strip {
     float: left;
     position: relative;
