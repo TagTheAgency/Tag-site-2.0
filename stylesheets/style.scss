@@ -25,6 +25,7 @@ $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
 $influencers-bg: 'TAG-The-Agency-website-influencers-bg.png';
 $strategy-bg: 'TAG-The-Agency-website-thinking-strategy-bg.png';
+$vr-bg: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
 $home-icon-light: 'home-icon-white.png';
 $play-icon:'play-icon.png';
@@ -138,6 +139,9 @@ header {
 	&--strategy {
 		background-image: url($img-path + $strategy-bg);
 	}
+	&--vr {
+		background-image: url($img-path + $vr-bg);
+	}
 }
 
 .inner-container {
@@ -202,6 +206,38 @@ header {
 	}
 	&--light {
 		color: white;
+	}
+	&--compact {
+		@include respond-to(handhelds) {
+			// To Add mobile styles when Rosa completes them
+		}
+		@include respond-to(medium-screens) {
+			h1 {
+				font-size: 1.8em;
+				margin: 0 0 2% 0;
+			}
+			h2 {
+				margin: 8% 0 0 0;
+			}
+			p {
+				font-size: 0.9em;
+				margin: 0 0 2.5% 0;
+			}
+		}
+		@include respond-to(wide-screens) {
+			h1 {
+				font-size: 3em;
+				margin: 0 0 3% 0;
+			}
+			h2 {
+				font-size: 2em;
+				margin: 15% 0 0 0;
+			}
+			p {
+				font-size: 1.3em;
+				margin: 0 0 5% 0;
+			}
+		}
 	}
 }
 
@@ -456,7 +492,7 @@ header {
 }
 
 
-.production-videos {
+.videos {
 	float: left;
 	width: 100%;
 	height: 100%;

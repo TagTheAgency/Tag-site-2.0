@@ -56,6 +56,8 @@ header {
     background-image: url("../imgs/TAG-The-Agency-website-influencers-bg.png"); }
   .background--strategy {
     background-image: url("../imgs/TAG-The-Agency-website-thinking-strategy-bg.png"); }
+  .background--vr {
+    background-image: url("../imgs/TAG-The-Agency-website-VR-Studios-bg.png"); }
 
 .inner-container {
   position: absolute;
@@ -106,6 +108,25 @@ header {
       margin: 0 0 8% 0; } }
   .copy--light {
     color: white; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .copy--compact h1 {
+      font-size: 1.8em;
+      margin: 0 0 2% 0; }
+    .copy--compact h2 {
+      margin: 8% 0 0 0; }
+    .copy--compact p {
+      font-size: 0.9em;
+      margin: 0 0 2.5% 0; } }
+  @media only screen and (min-width: 90em) {
+    .copy--compact h1 {
+      font-size: 3em;
+      margin: 0 0 3% 0; }
+    .copy--compact h2 {
+      font-size: 2em;
+      margin: 15% 0 0 0; }
+    .copy--compact p {
+      font-size: 1.3em;
+      margin: 0 0 5% 0; } }
 
 .icons {
   clear: both;
@@ -332,23 +353,23 @@ header {
     .work-examples__color-strip--half-pink {
       background-color: #EC008C; }
 
-.production-videos {
+.videos {
   float: left;
   width: 100%;
   height: 100%; }
-  .production-videos__video {
+  .videos__video {
     position: relative;
     float: left;
     background-color: rgba(0, 0, 0, 0.5); }
-    .production-videos__video--full-width {
+    .videos__video--full-width {
       margin: 0 5px 10px 5px;
       width: calc(100% - 10px);
       height: calc(65% - 10px); }
-    .production-videos__video--half-width {
+    .videos__video--half-width {
       width: calc(50% - 10px);
       margin: 0px 5px 0 5px;
       height: 35%; }
-    .production-videos__video:after {
+    .videos__video:after {
       position: absolute;
       top: 50%;
       left: 50%;
