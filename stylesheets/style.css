@@ -337,7 +337,7 @@ header {
 
 .production-videos {
   float: left;
-  width: 75%;
+  width: 100%;
   height: 100%; }
   .production-videos__video {
     position: relative;
