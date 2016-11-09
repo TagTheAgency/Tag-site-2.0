@@ -62,8 +62,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  clear: both;
-  background-color: purple; }
+  clear: both; }
   @media only screen and (min-width: 64em) and (max-width: 90em) {
     .inner-container {
       width: 960px;
@@ -75,7 +74,6 @@ header {
 
 .media {
   display: inline-block;
-  background-color: blue;
   height: calc(100% - 20px);
   width: calc(60% - 20px);
   margin: 10px 10px 10px 10px; }
@@ -85,24 +83,30 @@ header {
   float: left;
   height: calc(80% - 20px);
   width: calc(40% - 60px);
-  background-color: blue;
   margin: 10px 50px 10px 10px; }
-  .copy h1 {
-    font-size: 2.7em;
-    margin: 0 0 30px 0; }
-  .copy h2 {
-    margin: 60px 0 0 0; }
-  .copy p {
-    margin: 0 0 30px 0; }
+  @media only screen and (min-width: 64em) and (max-width: 90em) {
+    .copy h1 {
+      font-size: 2.7em;
+      margin: 0 0 8% 0; }
+    .copy h2 {
+      margin: 8% 0 0 0; }
+    .copy p {
+      margin: 0 0 5% 0; } }
   @media only screen and (min-width: 90em) {
-    .copy {
-      font-size: 1.2em; } }
+    .copy h1 {
+      font-size: 3em;
+      margin: 0 0 8% 0; }
+    .copy h2 {
+      font-size: 2em;
+      margin: 15% 0 0 0; }
+    .copy p {
+      font-size: 1.3em;
+      margin: 0 0 8% 0; } }
   .copy--light {
     color: white; }
 
 .icons {
   clear: both;
-  background-color: blue;
   float: left;
   width: calc(40% - 60px);
   height: calc(20% - 10px);

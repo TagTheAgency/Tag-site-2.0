@@ -143,7 +143,6 @@ header {
 .inner-container {
 	@include center;
 	clear: both;
-	background-color: purple;
 	@include respond-to(handhelds) {
 	}
 	@include respond-to(medium-screens) {
@@ -158,10 +157,6 @@ header {
 
 .media {
 	display: inline-block;
-	// clear: top;
-	// position: relative;
-	// float: right;
-	background-color: blue;
 	height: calc(100% - 20px);
 	width: calc(60% - 20px);
 	margin: 10px 10px 10px 10px;
@@ -172,25 +167,35 @@ header {
 	float: left;
 	height: calc(80% - 20px); // Minus margins
 	width: calc(40% - 60px); // Minus margins
-	background-color: blue;
 	margin: 10px 50px 10px 10px;
-	h1 {
-		font-size: 2.7em;
-		margin: 0 0 30px 0;
-	}
-	h2 {
-		margin: 60px 0 0 0;
-	}
-	p {
-		margin: 0 0 30px 0;
-	}
 	@include respond-to(handhelds) {
 		// To Add mobile styles when Rosa completes them
 	}
 	@include respond-to(medium-screens) {
+		h1 {
+			font-size: 2.7em;
+			margin: 0 0 8% 0;
+		}
+		h2 {
+			margin: 8% 0 0 0;
+		}
+		p {
+			margin: 0 0 5% 0;
+		}
 	}
 	@include respond-to(wide-screens) {
-		font-size: 1.2em;
+		h1 {
+			font-size: 3em;
+			margin: 0 0 8% 0;
+		}
+		h2 {
+			font-size: 2em;
+			margin: 15% 0 0 0;
+		}
+		p {
+			font-size: 1.3em;
+			margin: 0 0 8% 0;
+		}
 	}
 	&--light {
 		color: white;
@@ -199,9 +204,7 @@ header {
 
 .icons {
 	clear: both;
-	background-color: blue;
 	float: left;
-	// position: relative;
 	width: calc(40% - 60px); // Minus margins
 	height: calc(20% - 10px); // Minus margins
 	margin: 0 50px 10px 10px;
