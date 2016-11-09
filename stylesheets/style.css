@@ -191,34 +191,29 @@ header {
     color: black; }
 
 .cmyk-crosses {
-  font-size: 1.3em;
   position: absolute;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3em;
+  position: relative;
+  width: 70%;
   height: 150px;
   text-align: center;
-  font-family: "Harriet Bold";
-  bottom: 75px; }
+  font-family: "Harriet Bold"; }
   @media only screen and (min-width: 64em) and (max-width: 90em) {
     .cmyk-crosses {
-      bottom: 20px; } }
+      top: 100%; } }
   @media only screen and (min-width: 90em) {
     .cmyk-crosses {
-      bottom: 50px; } }
+      top: 90%; } }
   .cmyk-crosses__wrapper {
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
     margin: 0 auto 0 auto;
-    height: 100%; }
-    @media only screen and (max-width: 64em) {
-      .cmyk-crosses__wrapper {
-        width: 90%; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em) {
-      .cmyk-crosses__wrapper {
-        width: 50%; } }
-    @media only screen and (min-width: 90em) {
-      .cmyk-crosses__wrapper {
-        width: 40%; } }
+    height: 100%;
+    width: 100%; }
   .cmyk-crosses__item {
     margin: 0 10px 0 10px;
     flex: 1; }

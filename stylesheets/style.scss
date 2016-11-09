@@ -308,34 +308,26 @@ header {
 }
 
 .cmyk-crosses {
+	@include center;
 	font-size: 1.3em;
-	position: absolute;
-	width: 100%;
+	position: relative;
+	width: 70%;
 	height: 150px;
 	text-align: center;
 	font-family: $header-font;
-	bottom: 75px;
 	@include respond-to(handhelds) {
 	}
 	@include respond-to(medium-screens) {
-		bottom: 20px;
+		top: 100%;
 	}
 	@include respond-to(wide-screens) {
-		bottom: 50px;
+		top: 90%;
 	}
 	&__wrapper {
 		@include flex-wrapper;
 		margin: 0 auto 0 auto;
 		height: 100%;
-		@include respond-to(handhelds) {
-			width: 90%;
-		}
-		@include respond-to(medium-screens) {
-			width: 50%;
-		}
-		@include respond-to(wide-screens) {
-			width: 40%;
-		}
+		width: 100%;
 	}
 	&__item {
 		margin: 0 10px 0 10px;
