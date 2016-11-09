@@ -13,7 +13,7 @@ html, body, header, main, footer {
   box-sizing: border-box;
   height: 100%; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, li, ul, ol {
   margin: 0 0 0 0;
   padding: 0 0 0 0; }
 
@@ -67,6 +67,8 @@ footer {
     background-image: url("../imgs/TAG-The-Agency-website-production-bg.png"); }
   .background--vr {
     background-image: url("../imgs/TAG-The-Agency-website-VR-Studios-bg.png"); }
+  .background--influencers {
+    background-image: url("../imgs/TAG-The-Agency-website-influencers-bg.png"); }
 
 .nav-top {
   text-transform: uppercase;
@@ -464,5 +466,21 @@ footer {
   padding: 25px;
   display: block;
   clear: both; }
+
+.influencer-list {
+  margin: 0 0 0 20%;
+  color: white;
+  height: 100%;
+  width: 40%; }
+  .influencer-list h3 {
+    font-size: 1.3em;
+    font-family: "Futura Light";
+    margin: 10px 0 30px 0; }
+  .influencer-list ul {
+    font-family: "Futura Light";
+    list-style-type: none; }
+  .influencer-list li {
+    font-size: 1.2em;
+    margin: 5px 0 5px 0; }
 
 /*# sourceMappingURL=style.css.map */
