@@ -25,6 +25,7 @@ $thinking-bg: 'thinking-bg.png';
 $vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
 $influencers-bg: 'TAG-The-Agency-website-influencers-bg.png';
+$strategy-bg: 'TAG-The-Agency-website-thinking-strategy-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
 $home-icon-light: 'home-icon-white.png';
 $play-icon:'play-icon.png';
@@ -151,6 +152,9 @@ footer {
 	}
 	&--influencers {
 		background-image: url($img-path + $influencers-bg);
+	}
+	&--strategy {
+		background-image: url($img-path + $strategy-bg);
 	}
 }
 
