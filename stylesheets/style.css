@@ -71,6 +71,8 @@ header {
     .inner-container {
       width: 1440px;
       height: 720px; } }
+  .inner-container--strategy-page {
+    background-color: #FFF200; }
 
 .media {
   display: inline-block;
