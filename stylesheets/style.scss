@@ -295,6 +295,21 @@ footer {
 	}
 }
 
+.vr-container {
+	height: 100%;
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		// width: 60%;
+		width: 760px;
+	}
+	@include respond-to(wide-screens) {
+		// width: 65%;
+		width: 1250px;
+	}
+}
+
 .work-examples {
 	color: white;
 	float: left;
@@ -406,6 +421,87 @@ footer {
 	}
 }
 
+.vr-copy {
+	height: 90%;
+	margin: 0 40px 0 80px;
+	h1 {
+		font-size: 2.7em;
+		margin: 0 0 30px 0;
+	}
+	h2 {
+		margin: 60px 0 0 0;
+	}
+	p {
+		margin: 0 0 30px 0;
+	}
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		width: 350px;
+	}
+	@include respond-to(wide-screens) {
+		width: 450px;
+		font-size: 1.2em;
+	}
+	&--light {
+		color: white;
+	}
+}
+
+
+.vr-icons {
+	position: relative;
+	height: 10%;
+	margin: 0 40px 0 40px;
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		width: 350px;
+	}
+	@include respond-to(wide-screens) {
+		width: 600px;
+	}
+	&__icon {
+		float: left;
+		width: 15%;
+		padding-bottom: 15%;
+	}
+	&__image {
+		width: 100%;
+		padding-bottom: 100%;
+		// height: 100%;
+		background-size: contain;
+		background-position: left;
+		background-repeat: no-repeat;
+		transition-duration: 1s;
+		&--home {
+			background-image: url($img-path + $home-icon);
+			&:hover {
+				-ms-transform: rotate(180deg); /* IE 9 */
+			    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+			    transform: rotate(180deg);
+			}
+			&--light {
+				background-image: url($img-path + $home-icon-light);
+			}
+		}
+	}
+	&__text {
+		text-transform: uppercase;
+		font-family: 'Futura';
+		font-weight: bold;
+		width: 100%;
+		text-align: center;
+		top: 100%;
+		margin: 10px 0 0 0;
+	}
+	&--light {
+		color: white;
+	}
+}
+
 .icons {
 	float: right;
 	position: relative;
@@ -491,10 +587,28 @@ footer {
 	}
 }
 
+.vr-content #description-header {
+  font-family: 'Futura';
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.vr-content #text-column {
+  font-family: 'Futura Light';
+  font-size: 15px;
+  width: 330px;
+  margin: 40px 0 0 80px;
+  color: #FFF;
+}
+
 #description-header {
   font-family: 'Futura';
   font-size: 27px;
   font-weight: bold;
+}
+
+.strategy-content #text-column {
+	color: #000;
 }
 
 #text-column {
@@ -502,7 +616,6 @@ footer {
   font-size: 15px;
   width: 330px;
   margin: 40px 0 0 80px;
-  color: #000;
 }
 
 #content {
@@ -516,6 +629,8 @@ footer {
   width: 75%;
   margin: 0 200px;
   padding: 25px;
+  display: block;
+  clear: both;
 }
 
 // #work-content {
