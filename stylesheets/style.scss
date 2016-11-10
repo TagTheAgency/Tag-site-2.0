@@ -22,8 +22,6 @@ $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
-$thinking-bg: 'thinking-bg.png';
-$vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
 $influencers-bg: 'TAG-The-Agency-website-influencers-bg.png';
 $strategy-bg: 'TAG-The-Agency-website-thinking-strategy-bg.png';
@@ -132,14 +130,8 @@ header {
 	&--homepage {
 		background-image: url($img-path + $homepage-bg);
 	}
-	&--strategy {
-		background-image: url($img-path + $thinking-bg);
-	}
 	&--production {
 		background-image: url($img-path + $production-bg);
-	}
-	&--vr {
-		background-image: url($img-path + $vr-md);
 	}
 	&--influencers {
 		background-image: url($img-path + $influencers-bg);
@@ -351,26 +343,6 @@ header {
 	}
 }
 
-@mixin center {
-	top: 50%;
-	left: 50%;
-	transform: translate(50%,50%);
-	-webkit-transform: translate(50%,50%); }
-@mixin center-vertically() {
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%); }
-@mixin center-horizontally() {
-	left: 50%;
-	transform: translatex(-50%);
-	-webkit-transform: translatex(-50%); }
-@mixin hover-text-shadow {
-	text-shadow: 0px 3px 5px black;
-}
-@mixin hover-box-shadow {
-	box-shadow: -3px 3px 5px black;
-}
-
 .cmyk-crosses {
 	@include center;
 	font-size: 1.3em;
@@ -423,21 +395,6 @@ header {
 
 .float-right {
 	float: right;
-	height: 100%;
-	@include respond-to(handhelds) {
-		// To Add mobile styles when Rosa completes them
-	}
-	@include respond-to(medium-screens) {
-		// width: 60%;
-		width: 760px;
-	}
-	@include respond-to(wide-screens) {
-		// width: 65%;
-		width: 1250px;
-	}
-}
-
-.vr-container {
 	height: 100%;
 	@include respond-to(handhelds) {
 		// To Add mobile styles when Rosa completes them
@@ -534,60 +491,8 @@ header {
 	}
 }
 
-.icons {
-	float: right;
-	position: relative;
-	height: 10%;
-	margin: 0 40px 0 0;
-	@include respond-to(handhelds) {
-		// To Add mobile styles when Rosa completes them
-	}
-	@include respond-to(medium-screens) {
-		width: 350px;
-	}
-	@include respond-to(wide-screens) {
-		width: 450px;
-	}
-	&__icon {
-		float: left;
-		width: 15%;
-		padding-bottom: 15%;
-	}
-	&__image {
-		width: 100%;
-		padding-bottom: 100%;
-		// height: 100%;
-		background-size: contain;
-		background-position: left;
-		background-repeat: no-repeat;
-		transition-duration: 1s;
-		&--home {
-			background-image: url($img-path + $home-icon);
-			&:hover {
-				-ms-transform: rotate(180deg); /* IE 9 */
-			    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-			    transform: rotate(180deg);
-			}
-			&--light {
-				background-image: url($img-path + $home-icon-light);
-			}
-		}
-	}
-	&__text {
-		text-transform: uppercase;
-		font-family: 'Futura';
-		font-weight: bold;
-		width: 100%;
-		text-align: center;
-		top: 100%;
-		margin: 10px 0 0 0;
-	}
-	&--light {
-		color: white;
-	}
-}
 
-.production-videos {
+.videos {
 	float: left;
 	width: 100%;
 	height: 100%;
@@ -619,195 +524,6 @@ header {
 	}
 }
 
-.vr-content #description-header {
-  font-family: 'Futura';
-  font-size: 27px;
-  font-weight: bold;
-}
-
-.vr-content #text-column {
-  font-family: 'Futura Light';
-  font-size: 15px;
-  width: 330px;
-  margin: 40px 0 0 80px;
-  color: #FFF;
-}
-
-#description-header {
-  font-family: 'Futura';
-  font-size: 27px;
-  font-weight: bold;
-}
-
-.strategy-content #text-column {
-	color: #000;
-}
-
-#text-column {
-  font-family: 'Futura Light';
-  font-size: 15px;
-  width: 330px;
-  margin: 40px 0 0 80px;
-}
-
-#content {
-  width: 330px;
-  display: block;
-  clear: both;
-}
-
-#thinking-content {
-  background-color: #FFF200;
-  width: 75%;
-  margin: 0 200px;
-  padding: 25px;
-  display: block;
-  clear: both;
-}
-
-// #work-content {
-// 	$right-media-wrapper-width: 600px;
-// 	$video-wrapper-spacing: 10px;
-// 	$video-wrapper-width: ($right-media-wrapper-width - ($video-wrapper-spacing * 3)) / 3;
-// 	@extend .content;
-// 	#left-text-container {
-// 		float: left;
-// 		width: 45%;
-// 		height: 100%;
-// 		#left-text-wrapper {
-// 			box-sizing: border-box;
-// 			height: 100%;
-// 			padding-left: 30%;
-// 			padding-right: 10%;
-// 			padding-top: 50px;
-// 			h1 {
-// 				margin: 0 0 10px 0;
-// 				font-family: 'Harriet Bold';
-// 				font-size: $header-font-size; }
-// 			p {	
-// 				margin: 0 0 40px 0;
-// 				font-size: $body-font-size;
-// 				font-family: 'Futura Light'; }
-// 			h2 {
-// 				margin: 70px 0 0 0;
-// 				font-size: $header-font-size * 0.75; } } }
-// 	#right-media-container {
-// 		float: left;
-// 		width: 55%; 
-// 		height: 100%; 
-// 		#right-media-wrapper {
-// 			box-sizing: border-box;
-// 			height: 100%;
-// 			width: $right-media-wrapper-width;
-// 			// padding-right: 40%;
-// 			padding-top: 100px; 
-// 			.video-media-wrapper {
-// 				float: left;
-// 				height: 45%;
-// 				width: $video-wrapper-width;
-// 				margin: 0 $video-wrapper-spacing $video-wrapper-spacing 0;
-// 				background-color: #3A3A3C;
-// 				.video-media-bottom {
-// 					height: 25%; 
-// 					top: 75%;
-// 					position: relative;
-// 					width: 100%;
-// 					background-color: #58585A; 
-// 					.video-media-bottom-color-bars { 
-// 						position: relative;
-// 						height: 11%;
-// 						top: 90%;
-// 						width: 50%;
-// 						float: left;
-// 						background-color: $blue; }
-// 					.video-media-bottom-color-bars:nth-child(even) { 
-// 						background-color: $yellow; }
-// 					.video-media-bottom-color-bars.pink { 
-// 					 	background-color: $pink; } } }
-// 			#video-media-nav {
-// 					margin: 0 10px 0 0;
-// 					position: relative;
-// 					float: right;
-// 					bottom: 0%;
-// 					width: 110px;
-// 					height: 50px;
-// 					.arrow:hover {
-// 						color: $yellow;
-// 						border-color: $yellow; }
-// 					.arrow:nth-child(2) {
-// 						margin-left: 10px; }
-// 					.arrow {
-// 						display: block;
-// 						cursor: pointer;
-// 						transition-duration: 1s;
-// 						font-family: 'Futura Light';
-// 						font-size: 35px;
-// 						opacity: 0.7;
-// 						line-height: 50px;
-// 						text-align: center;
-// 						color: #58585A;
-// 						box-sizing: border-box;
-// 						border-radius: 50%;
-// 						border: 2px solid #58585A;
-// 						float: left;
-// 						width: 50px;
-// 						height: 100%; } } } } }
-// //////////////////////////////////////////////////////////////////////
-// #homepage-footer {
-// 	@extend #footer;
-// 	height: 210px;
-// }
-// #footer {
-// 	@extend #footer;
-// 	#bottom-nav-bar {
-// 		@include center-horizontally;
-// 		position: absolute;
-// 		height: inherit;
-// 		width: 720px;
-// 			#menu-wrapper {
-// 			@include center-vertically;
-// 			position: relative;
-// 			height: 72px;
-// 			width: 100%;
-// 				#blue {
-// 					color: $blue;
-// 					border-color: $blue; }
-// 				#pink {
-// 					color: $pink;
-// 					border-color: $pink; }
-// 				#yellow {
-// 					color: $yellow;
-// 					border-color: $yellow; }
-// 				#black {
-// 					color: black;
-// 					border-color: black; }
-// 				.menu-item {
-// 					transition-duration: 1s;
-// 					font-family: 'Futura';
-// 					@extend .menu-item;
-// 					-webkit-box-sizing: border-box; 
-// 					-moz-box-sizing: border-box;    
-// 					box-sizing: border-box;
-// 					margin-left: 5%;
-// 					margin-right: 5%;
-// 					width: 10%;
-// 					border-radius: 50%;
-// 					border: 7px solid white;
-// 					float: left;
-// 					.bottom-nav-titles {
-// 						white-space: nowrap;
-// 						font-family: 'Futura';
-// 						top: 70px;
-// 						@include center-horizontally;
-// 						position: relative;
-// 						display: inline-block;
-// 						font-size: 17px;
-// 						text-align: center; } } 	
-// 				.menu-item:hover {
-// 					@include hover-text-shadow;
-// 					@include hover-box-shadow; } } } }
-//
-// ///////////////////////////////////////////////////////////////
 .influencer-list {
 	margin: 0 0 0 20%;
 	color: white;
@@ -828,9 +544,6 @@ header {
 	}
 }
 
-<<<<<<< HEAD
-
-=======
 .thinking-background {
 	z-index: -1;
 	position: absolute;
@@ -840,4 +553,3 @@ header {
 	height: calc(100% - 100px);
 	margin: 0 50px 0 50px;
 }
->>>>>>> 9452366765e2f9b82f47bdb830b2167f39cdbaec
