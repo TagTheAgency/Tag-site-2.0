@@ -17,6 +17,7 @@ $browser-context: 16;
 
 $body-font: 'Futura Light';
 $header-font: 'Harriet Bold';
+$header-height: 100px;
 $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
@@ -26,6 +27,7 @@ $vr-md: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
 $influencers-bg: 'TAG-The-Agency-website-influencers-bg.png';
 $strategy-bg: 'TAG-The-Agency-website-thinking-strategy-bg.png';
+$vr-bg: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
 $home-icon-light: 'home-icon-white.png';
 $play-icon:'play-icon.png';
@@ -77,7 +79,8 @@ $xlarge-breakpoint: em(1920) !default;
 // }
 // @include respond-to(wide-screens) {
 // }
-html, body, header, main, footer {
+
+html, body, header, main {
 	overflow: hidden;
 	margin: 0 0 0 0;
 	box-sizing: border-box;
@@ -98,7 +101,7 @@ p {
 }
 
 
-header, main, footer {
+header, main {
 	position: fixed;
 	box-sizing: border-box;
 }
@@ -109,23 +112,11 @@ main {
 	width: 100%;
 	padding-top: 100px; //Header Height
 	padding-bottom: 100px;
-	@include respond-to(handhelds) {
-		padding-top: 150px; // Header Height on mobile
-	}
 }
 
 header { 
   width: 100%;
   height: 100px;
-  @include respond-to(handhelds) {
-  	height: 150px;
-  }
-}
-
-footer {
-	bottom: 0;
-	height: 100px;
-	width: 100%;
 }
 
 .background {
@@ -155,6 +146,157 @@ footer {
 	}
 	&--strategy {
 		background-image: url($img-path + $strategy-bg);
+	}
+	&--vr {
+		background-image: url($img-path + $vr-bg);
+	}
+}
+
+.inner-container {
+	@include center;
+	clear: both;
+	@include respond-to(handhelds) {
+	}
+	@include respond-to(medium-screens) {
+		width: 960px;
+		height: 470px;
+	}
+	@include respond-to(wide-screens) {
+		width: 1440px;
+		height: 720px;
+	}
+	&--strategy-page {
+		background-color: $yellow;
+	}
+}
+
+.media {
+	display: inline-block;
+	height: calc(100% - 20px);
+	width: calc(60% - 20px);
+	margin: 10px 10px 10px 10px;
+}
+
+.copy {
+	clear: both;
+	float: left;
+	height: calc(80% - 20px); // Minus margins
+	width: calc(40% - 60px); // Minus margins
+	margin: 10px 50px 10px 10px;
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+		h1 {
+			font-size: 2.7em;
+			margin: 0 0 8% 0;
+		}
+		h2 {
+			margin: 8% 0 0 0;
+		}
+		p {
+			margin: 0 0 5% 0;
+		}
+	}
+	@include respond-to(wide-screens) {
+		h1 {
+			font-size: 3em;
+			margin: 0 0 8% 0;
+		}
+		h2 {
+			font-size: 2em;
+			margin: 15% 0 0 0;
+		}
+		p {
+			font-size: 1.3em;
+			margin: 0 0 8% 0;
+		}
+	}
+	&--light {
+		color: white;
+	}
+	&--compact {
+		@include respond-to(handhelds) {
+			// To Add mobile styles when Rosa completes them
+		}
+		@include respond-to(medium-screens) {
+			h1 {
+				font-size: 1.8em;
+				margin: 0 0 2% 0;
+			}
+			h2 {
+				margin: 8% 0 0 0;
+			}
+			p {
+				font-size: 0.9em;
+				margin: 0 0 2.5% 0;
+			}
+		}
+		@include respond-to(wide-screens) {
+			h1 {
+				font-size: 3em;
+				margin: 0 0 3% 0;
+			}
+			h2 {
+				font-size: 2em;
+				margin: 15% 0 0 0;
+			}
+			p {
+				font-size: 1.3em;
+				margin: 0 0 5% 0;
+			}
+		}
+	}
+}
+
+.icons {
+	clear: both;
+	float: left;
+	width: calc(40% - 60px); // Minus margins
+	height: calc(20% - 10px); // Minus margins
+	margin: 0 50px 10px 10px;
+	@include respond-to(handhelds) {
+		// To Add mobile styles when Rosa completes them
+	}
+	@include respond-to(medium-screens) {
+	}
+	@include respond-to(wide-screens) {
+	}
+	&__icon {
+		float: left;
+		width: 15%;
+		padding-bottom: 15%;
+	}
+	&__image {
+		width: 100%;
+		padding-bottom: 100%;
+		// height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		transition-duration: 1s;
+		&--home {
+			background-image: url($img-path + $home-icon);
+			&:hover {
+				-ms-transform: rotate(180deg); /* IE 9 */
+			    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+			    transform: rotate(180deg);
+			}
+			&--light {
+				background-image: url($img-path + $home-icon-light);
+			}
+		}
+	}
+	&__text {
+		text-transform: uppercase;
+		font-family: 'Futura';
+		font-weight: bold;
+		width: 100%;
+		text-align: center;
+		top: 100%;
+		margin: 10px 0 0 0;
+	}
+	&--light {
+		color: white;
 	}
 }
 
@@ -230,34 +372,26 @@ footer {
 }
 
 .cmyk-crosses {
+	@include center;
 	font-size: 1.3em;
-	position: absolute;
-	width: 100%;
+	position: relative;
+	width: 70%;
 	height: 150px;
 	text-align: center;
 	font-family: $header-font;
-	bottom: 75px;
 	@include respond-to(handhelds) {
 	}
 	@include respond-to(medium-screens) {
-		bottom: 20px;
+		top: 100%;
 	}
 	@include respond-to(wide-screens) {
-		bottom: 50px;
+		top: 90%;
 	}
 	&__wrapper {
 		@include flex-wrapper;
 		margin: 0 auto 0 auto;
 		height: 100%;
-		@include respond-to(handhelds) {
-			width: 90%;
-		}
-		@include respond-to(medium-screens) {
-			width: 50%;
-		}
-		@include respond-to(wide-screens) {
-			width: 40%;
-		}
+		width: 100%;
 	}
 	&__item {
 		margin: 0 10px 0 10px;
@@ -322,7 +456,7 @@ footer {
 	color: white;
 	float: left;
 	height: 100%;
-	width: 75%;
+	width: 100%;
 	&__row-1, &__row-2 {
 		@include flex-wrapper;
 		height: 50%;
@@ -368,10 +502,10 @@ footer {
 			font-size: 0.7em;
 		}
 		@include respond-to(wide-screens) {
-			font-size: 1.2em;
+			font-size: 1.1em;
 		}
 		p {
-			padding: 5px 10px 5px 10px;
+			padding: 3px 10px 5px 10px;
 		}
 	}
 	&__color-strip {
@@ -397,116 +531,6 @@ footer {
 		&--half-pink {
 			background-color: $pink;
 		}
-	}
-}
-
-.copy {
-	float: right;
-	height: 90%;
-	margin: 0 40px 0 0;
-	h1 {
-		font-size: 2.7em;
-		margin: 0 0 30px 0;
-	}
-	h2 {
-		margin: 60px 0 0 0;
-	}
-	p {
-		margin: 0 0 30px 0;
-	}
-	@include respond-to(handhelds) {
-		// To Add mobile styles when Rosa completes them
-	}
-	@include respond-to(medium-screens) {
-		width: 350px;
-	}
-	@include respond-to(wide-screens) {
-		width: 450px;
-		font-size: 1.2em;
-	}
-	&--light {
-		color: white;
-	}
-}
-
-.vr-copy {
-	height: 90%;
-	margin: 0 40px 0 80px;
-	h1 {
-		font-size: 2.7em;
-		margin: 0 0 30px 0;
-	}
-	h2 {
-		margin: 60px 0 0 0;
-	}
-	p {
-		margin: 0 0 30px 0;
-	}
-	@include respond-to(handhelds) {
-		// To Add mobile styles when Rosa completes them
-	}
-	@include respond-to(medium-screens) {
-		width: 350px;
-	}
-	@include respond-to(wide-screens) {
-		width: 450px;
-		font-size: 1.2em;
-	}
-	&--light {
-		color: white;
-	}
-}
-
-
-.vr-icons {
-	position: relative;
-	height: 10%;
-	margin: 0 40px 0 40px;
-	@include respond-to(handhelds) {
-		// To Add mobile styles when Rosa completes them
-	}
-	@include respond-to(medium-screens) {
-		width: 350px;
-	}
-	@include respond-to(wide-screens) {
-		width: 600px;
-	}
-	&__icon {
-		float: left;
-		width: 15%;
-		padding-bottom: 15%;
-	}
-	&__image {
-		width: 100%;
-		padding-bottom: 100%;
-		// height: 100%;
-		background-size: contain;
-		background-position: left;
-		background-repeat: no-repeat;
-		transition-duration: 1s;
-		&--home {
-			background-image: url($img-path + $home-icon);
-			&:hover {
-				-ms-transform: rotate(180deg); /* IE 9 */
-			    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-			    transform: rotate(180deg);
-			}
-			&--light {
-				background-image: url($img-path + $home-icon-light);
-			}
-		}
-	}
-	&__text {
-		text-transform: uppercase;
-		font-family: 'Futura';
-		font-weight: bold;
-		width: 100%;
-		text-align: center;
-		top: 100%;
-		margin: 10px 0 0 0;
-	}
-	&--light {
-		color: white;
 	}
 }
 
@@ -565,7 +589,7 @@ footer {
 
 .production-videos {
 	float: left;
-	width: 75%;
+	width: 100%;
 	height: 100%;
 	&__video {
 		position: relative;
@@ -804,4 +828,16 @@ footer {
 	}
 }
 
+<<<<<<< HEAD
 
+=======
+.thinking-background {
+	z-index: -1;
+	position: absolute;
+	background-color: $yellow;
+	width: calc(100% - 100px);
+	// height: 100%;
+	height: calc(100% - 100px);
+	margin: 0 50px 0 50px;
+}
+>>>>>>> 9452366765e2f9b82f47bdb830b2167f39cdbaec
