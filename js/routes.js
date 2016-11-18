@@ -1,5 +1,3 @@
-console.log("ran routes.js");
-
 var app = angular.module('app', ['ngRoute']);
 
 app.config(function($routeProvider) {
