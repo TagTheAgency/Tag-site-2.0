@@ -1,15 +1,23 @@
+console.log("ran routes.js");
+
 var app = angular.module('app', ['ngRoute']);
 
 app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl: "/home-refactor.html"
+		templateUrl: "partials/home.html"
 	})
 	.when('/production', {
-		templateUrl : "production.html"
+		templateUrl : "partials/production.html"
 	})
 	.when('/vr', {
-		templateUrl : "vr.html"
+		templateUrl : "partials/vr.html"
+	})
+	.when('/influencers', {
+		templateUrl : "partials/influencers.html"
+	})
+	.when('/strategy', {
+		templateUrl : "partials/strategy.html"
 	})
 	.otherwise({
 		redirectTo: '/'
