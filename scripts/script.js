@@ -2,21 +2,24 @@ var tagApp = angular.module('tagApp', ['ngRoute']);
 
 tagApp.config(function($routeProvider) {
     $routeProvider
-
-        .when('/', {
-            templateUrl : 'pages/home.html',
-            controller  : 'mainController'
-        })
-
-        .when('/about', {
-            templateUrl : 'pages/about.html',
-            controller  : 'mainController'
-        })
-
-        .when('/contact', {
-            templateUrl : 'pages/contact.html',
-            controller  : 'mainController'
-        });
+    .when('/', {
+        templateUrl: "../pages/home.html"
+    })
+    .when('/production', {
+        templateUrl : "../pages/production.html"
+    })
+    .when('/vr', {
+        templateUrl : "../pages/vr.html"
+    })
+    .when('/influencers', {
+        templateUrl : "../pages/influencers.html"
+    })
+    .when('/strategy', {
+        templateUrl : "../pages/strategy.html"
+    })
+    .otherwise({
+        redirectTo: '/'
+    });
 });
 
 tagApp.controller('mainController', function($scope) {
