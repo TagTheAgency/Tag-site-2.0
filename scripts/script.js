@@ -3,10 +3,10 @@ var tagApp = angular.module('tagApp', ['ngRoute']);
 tagApp.config(function($routeProvider) {
     $routeProvider
     .when('/', {
-        templateUrl: "../pages/home.html"
+        templateUrl: "../pages/home.html",
     })
     .when('/production', {
-        templateUrl : "../pages/production.html"
+        templateUrl : "../pages/production.html",
     })
     .when('/vr', {
         templateUrl : "../pages/vr.html"
@@ -22,6 +22,8 @@ tagApp.config(function($routeProvider) {
     });
 });
 
-tagApp.controller('mainController', function($scope) {
-    // $scope.message = 'Hi';
+tagApp.controller('mainController', function($scope, $location) {
+    $scope.go = function (path) {
+      $location.path(path);
+    };
 });

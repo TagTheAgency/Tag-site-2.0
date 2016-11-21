@@ -119,6 +119,7 @@ header {
 }
 
 .background {
+	@include center;
 	@include respond-to(handhelds) {
 		background-position: 60% 0;
 	}
@@ -147,7 +148,6 @@ header {
 
 .inner-container {
 	transition-duration: 0.5s;
-	// transition-duration: 0.5s;
 	@include center;
 	clear: both;
 	@include respond-to(handhelds) {
