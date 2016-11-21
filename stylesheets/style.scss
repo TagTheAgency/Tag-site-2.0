@@ -274,6 +274,7 @@ header {
 		background-repeat: no-repeat;
 		transition-duration: 1s;
 		&--home {
+			cursor: pointer;
 			background-image: url($img-path + $home-icon);
 			&:hover {
 				-ms-transform: rotate(180deg); /* IE 9 */

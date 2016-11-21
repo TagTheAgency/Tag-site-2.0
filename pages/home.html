@@ -15,7 +15,7 @@
 				<li class="nav-top__menu-item">Store</li>
 				<li class="nav-top__menu-item">Contact Us</li>
 			</ul>
-			<div class="nav-top__logo nav-top__logo--light"></div>
+			<div class="nav-top__logo nav-top__logo--light" ng-click="go('/')"></div>
 			<div class="nav-top__burger-icon">
 				<span></span>
 				<span></span>
@@ -28,19 +28,19 @@
 		<div class="inner-container">		
 			<div class="cmyk-crosses">
 				<div class="cmyk-crosses__wrapper">
-					<div class="cmyk-crosses__item">
+					<div class="cmyk-crosses__item" ng-click="go('/production')">
 						<div class="cmyk-crosses__image cmyk-crosses__image--blue"></div>
 						<div class="cmyk-crosses__text--blue">Doing</div>
 					</div>
-					<div class="cmyk-crosses__item">
+					<div class="cmyk-crosses__item" ng-click="go('/vr')">
 						<div class="cmyk-crosses__image cmyk-crosses__image--pink"></div>
 						<div class="cmyk-crosses__text--pink">VR Studio</div>
 					</div>
-					<div class="cmyk-crosses__item">
+					<div class="cmyk-crosses__item" ng-click="go('/strategy')">
 						<div class="cmyk-crosses__image cmyk-crosses__image--yellow"></div>
 						<div class="cmyk-crosses__text--yellow">Thinking</div>
 					</div>
-					<div class="cmyk-crosses__item">
+					<div class="cmyk-crosses__item" ng-click="go('/work')">
 						<div class="cmyk-crosses__image cmyk-crosses__image--white"></div>
 						<div class="cmyk-crosses__text--white">Done</div>
 					</div>
