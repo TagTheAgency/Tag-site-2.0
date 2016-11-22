@@ -67,14 +67,16 @@ header {
 .inner-container {
   transition-duration: 0.5s;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  position: relative;
   clear: both; }
   @media only screen and (max-width: 64em) {
     .inner-container {
+      box-sizing: border-box;
+      height: calc(100% - 100px);
       width: 100%;
-      height: 100%; } }
+      padding: 50px 10px 10px 10px; } }
   @media only screen and (min-width: 64em) and (max-width: 90em) {
     .inner-container {
       width: 960px;
@@ -83,60 +85,97 @@ header {
     .inner-container {
       width: 1440px;
       height: 720px; } }
-  .inner-container--strategy-page {
-    background-color: #FFF200; }
 
 .media {
+  position: relative;
   display: inline-block;
   height: calc(100% - 20px);
   width: calc(60% - 20px);
   margin: 10px 10px 10px 10px; }
+  @media only screen and (max-width: 64em) {
+    .media {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 50%;
+      margin: 0 0 0 0; } }
 
 .copy {
   clear: both;
-  float: left;
-  height: calc(80% - 20px);
-  width: calc(40% - 60px);
-  margin: 10px 50px 10px 10px; }
+  float: left; }
+  @media only screen and (max-width: 64em) {
+    .copy {
+      width: 100%;
+      height: 35%; }
+      .copy h1 {
+        font-size: 2.8em;
+        margin: 0 0 2% 0; }
+      .copy h2 {
+        margin: 2% 0 0 0; }
+      .copy p {
+        font-size: 2.2em;
+        margin: 0 0 2% 0; } }
   @media only screen and (min-width: 64em) and (max-width: 90em) {
-    .copy h1 {
-      font-size: 2.7em;
-      margin: 0 0 8% 0; }
-    .copy h2 {
-      margin: 8% 0 0 0; }
-    .copy p {
-      margin: 0 0 5% 0; } }
+    .copy {
+      height: calc(80% - 20px);
+      width: calc(40% - 60px);
+      margin: 10px 50px 10px 10px; }
+      .copy h1 {
+        font-size: 2.7em;
+        margin: 0 0 8% 0; }
+      .copy h2 {
+        margin: 8% 0 0 0; }
+      .copy p {
+        margin: 0 0 5% 0; } }
   @media only screen and (min-width: 90em) {
-    .copy h1 {
-      font-size: 3em;
-      margin: 0 0 8% 0; }
-    .copy h2 {
-      font-size: 2em;
-      margin: 15% 0 0 0; }
-    .copy p {
-      font-size: 1.3em;
-      margin: 0 0 8% 0; } }
+    .copy {
+      height: calc(80% - 20px);
+      width: calc(40% - 60px);
+      margin: 10px 50px 10px 10px; }
+      .copy h1 {
+        font-size: 3em;
+        margin: 0 0 8% 0; }
+      .copy h2 {
+        font-size: 2em;
+        margin: 15% 0 0 0; }
+      .copy p {
+        font-size: 1.3em;
+        margin: 0 0 8% 0; } }
   .copy--light {
     color: white; }
-  @media only screen and (min-width: 64em) and (max-width: 90em) {
-    .copy--compact h1 {
-      font-size: 1.8em;
-      margin: 0 0 2% 0; }
-    .copy--compact h2 {
-      margin: 8% 0 0 0; }
-    .copy--compact p {
-      font-size: 0.9em;
-      margin: 0 0 2.5% 0; } }
-  @media only screen and (min-width: 90em) {
-    .copy--compact h1 {
-      font-size: 3em;
-      margin: 0 0 3% 0; }
-    .copy--compact h2 {
-      font-size: 2em;
-      margin: 15% 0 0 0; }
-    .copy--compact p {
-      font-size: 1.3em;
-      margin: 0 0 5% 0; } }
+  .copy--compact {
+    overflow: scroll; }
+    @media only screen and (max-width: 64em) {
+      .copy--compact h1 {
+        font-size: 1.8em;
+        margin: 0 0 2% 0; }
+      .copy--compact h2 {
+        margin: 2% 0 0 0; }
+      .copy--compact p {
+        font-size: 0.7em;
+        margin: 0 0 1% 0; } }
+    @media only screen and (min-width: 64em) and (max-width: 90em) {
+      .copy--compact h1 {
+        font-size: 1.8em;
+        margin: 0 0 2% 0; }
+      .copy--compact h2 {
+        margin: 8% 0 0 0; }
+      .copy--compact p {
+        font-size: 0.9em;
+        margin: 0 0 2.5% 0; } }
+    @media only screen and (min-width: 90em) {
+      .copy--compact h1 {
+        font-size: 3em;
+        margin: 0 0 3% 0; }
+      .copy--compact h2 {
+        font-size: 2em;
+        margin: 15% 0 0 0; }
+      .copy--compact p {
+        font-size: 1.3em;
+        margin: 0 0 5% 0; } }
 
 .icons {
   clear: both;
@@ -144,10 +183,23 @@ header {
   width: calc(40% - 60px);
   height: calc(20% - 10px);
   margin: 0 50px 10px 10px; }
+  @media only screen and (max-width: 64em) {
+    .icons {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%; } }
   .icons__icon {
     float: left;
     width: 15%;
     padding-bottom: 15%; }
+    @media only screen and (max-width: 64em) {
+      .icons__icon {
+        margin: auto 0 auto 0;
+        flex: 1; } }
   .icons__image {
     width: 100%;
     padding-bottom: 100%;
@@ -348,16 +400,6 @@ header {
   .cmyk-crosses__text--black {
     color: #231F20; }
 
-.float-right {
-  float: right;
-  height: 100%; }
-  @media only screen and (min-width: 64em) and (max-width: 90em) {
-    .float-right {
-      width: 760px; } }
-  @media only screen and (min-width: 90em) {
-    .float-right {
-      width: 1250px; } }
-
 .work-examples {
   color: white;
   float: left;
@@ -435,10 +477,16 @@ header {
       margin: 0 5px 10px 5px;
       width: calc(100% - 10px);
       height: calc(65% - 10px); }
+      @media only screen and (max-width: 64em) {
+        .videos__video--full-width {
+          height: 100%; } }
     .videos__video--half-width {
       width: calc(50% - 10px);
       margin: 0px 5px 0 5px;
       height: 35%; }
+      @media only screen and (max-width: 64em) {
+        .videos__video--half-width {
+          display: none; } }
     .videos__video:after {
       position: absolute;
       top: 50%;
