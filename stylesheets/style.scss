@@ -46,10 +46,10 @@ $xlarge-breakpoint: em(1920) !default;
 
 @mixin respond-to($media) {
   @if $media == handhelds {
-    @media only screen and (max-width: $small-breakpoint) { @content; }
+    @media only screen and (max-width: $small-breakpoint) and (orientation: portrait) { @content; }
   }
   @else if $media == medium-screens {
-    @media only screen and (min-width: $small-breakpoint) and (max-width: $large-breakpoint) { @content; }
+    @media only screen and (min-width: $small-breakpoint) and (max-width: $large-breakpoint), (orientation: landscape) { @content; }
   }
   @else if $media == wide-screens {
     @media only screen and (min-width: $large-breakpoint) { @content; }
@@ -164,6 +164,7 @@ header {
 		padding: 50px 10px 10px 10px;
 	}
 	@include respond-to(medium-screens) {
+		margin-top: -20px;
 		width: 960px;
 		height: 470px;
 	}
@@ -208,7 +209,8 @@ header {
 		}
 	}
 	@include respond-to(medium-screens) {
-		height: calc(80% - 20px); // Minus margins
+		display: inline-block;
+		// height: calc(80% - 20px); // Minus margins
 		width: calc(40% - 60px); // Minus margins
 		margin: 10px 50px 10px 10px;
 		h1 {
@@ -223,7 +225,8 @@ header {
 		}
 	}
 	@include respond-to(wide-screens) {
-		height: calc(80% - 20px); // Minus margins
+		display: inline-block;
+		// height: calc(80% - 20px); // Minus margins
 		width: calc(40% - 60px); // Minus margins
 		margin: 10px 50px 10px 10px;
 		h1 {
@@ -288,8 +291,11 @@ header {
 }
 
 .icons {
+	position: relative;
+	top: calc(-20% - 10px); // Quick fix
+	left: 0;
 	clear: both;
-	float: left;
+	// float: left;
 	width: calc(40% - 60px); // Minus margins
 	height: calc(20% - 10px); // Minus margins
 	margin: 0 50px 10px 10px;
@@ -471,7 +477,7 @@ header {
 	height: 150px;
 	text-align: center;
 	font-family: $header-font;
-	top: 100%;
+	top: 80%;
 	@include respond-to(handhelds) {
 		width: 100%;
 		top: 75%;

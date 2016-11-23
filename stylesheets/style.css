@@ -50,7 +50,7 @@ header {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
-  @media only screen and (max-width: 64em) {
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
     .background {
       background-position: 60% 0; } }
   .background--homepage {
@@ -71,14 +71,15 @@ header {
   transform: translateX(-50%);
   position: relative;
   clear: both; }
-  @media only screen and (max-width: 64em) {
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
     .inner-container {
       box-sizing: border-box;
       height: calc(100% - 100px);
       width: 100%;
       padding: 50px 10px 10px 10px; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em) {
+  @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
     .inner-container {
+      margin-top: -20px;
       width: 960px;
       height: 470px; } }
   @media only screen and (min-width: 90em) {
@@ -92,7 +93,7 @@ header {
   height: calc(100% - 20px);
   width: calc(60% - 20px);
   margin: 10px 10px 10px 10px; }
-  @media only screen and (max-width: 64em) {
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
     .media {
       position: absolute;
       left: 50%;
@@ -106,7 +107,7 @@ header {
 .copy {
   clear: both;
   float: left; }
-  @media only screen and (max-width: 64em) {
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
     .copy {
       width: 100%;
       height: 35%; }
@@ -118,9 +119,9 @@ header {
       .copy p {
         font-size: 2.2em;
         margin: 0 0 2% 0; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em) {
+  @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
     .copy {
-      height: calc(80% - 20px);
+      display: inline-block;
       width: calc(40% - 60px);
       margin: 10px 50px 10px 10px; }
       .copy h1 {
@@ -132,7 +133,7 @@ header {
         margin: 0 0 5% 0; } }
   @media only screen and (min-width: 90em) {
     .copy {
-      height: calc(80% - 20px);
+      display: inline-block;
       width: calc(40% - 60px);
       margin: 10px 50px 10px 10px; }
       .copy h1 {
@@ -148,7 +149,7 @@ header {
     color: white; }
   .copy--compact {
     overflow: scroll; }
-    @media only screen and (max-width: 64em) {
+    @media only screen and (max-width: 64em) and (orientation: portrait) {
       .copy--compact h1 {
         font-size: 1.8em;
         margin: 0 0 2% 0; }
@@ -157,7 +158,7 @@ header {
       .copy--compact p {
         font-size: 0.7em;
         margin: 0 0 1% 0; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
       .copy--compact h1 {
         font-size: 1.8em;
         margin: 0 0 2% 0; }
@@ -178,12 +179,14 @@ header {
         margin: 0 0 5% 0; } }
 
 .icons {
+  position: relative;
+  top: calc(-20% - 10px);
+  left: 0;
   clear: both;
-  float: left;
   width: calc(40% - 60px);
   height: calc(20% - 10px);
   margin: 0 50px 10px 10px; }
-  @media only screen and (max-width: 64em) {
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
     .icons {
       display: flex;
       flex-wrap: nowrap;
@@ -196,7 +199,7 @@ header {
     float: left;
     width: 15%;
     padding-bottom: 15%; }
-    @media only screen and (max-width: 64em) {
+    @media only screen and (max-width: 64em) and (orientation: portrait) {
       .icons__icon {
         margin: auto 0 auto 0;
         flex: 1; } }
@@ -245,11 +248,11 @@ header {
     float: right;
     text-align: center;
     list-style-type: none; }
-    @media only screen and (max-width: 64em) {
+    @media only screen and (max-width: 64em) and (orientation: portrait) {
       .nav-top__menu {
         display: none;
         width: 60%; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
       .nav-top__menu {
         width: 45%; } }
     @media only screen and (min-width: 90em) {
@@ -266,7 +269,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
-    @media only screen and (max-width: 64em) {
+    @media only screen and (max-width: 64em) and (orientation: portrait) {
       .nav-top__logo {
         width: 150px; } }
     .nav-top__logo--dark {
@@ -323,7 +326,7 @@ header {
       transform: rotate(-45deg); }
     .nav-top__burger-icon:hover span:nth-child(4) {
       opacity: 0; }
-    @media only screen and (min-width: 64em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
       .nav-top__burger-icon {
         display: none; } }
     @media only screen and (min-width: 90em) {
@@ -343,8 +346,8 @@ header {
   height: 150px;
   text-align: center;
   font-family: "Harriet Bold";
-  top: 100%; }
-  @media only screen and (max-width: 64em) {
+  top: 80%; }
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
     .cmyk-crosses {
       width: 100%;
       top: 75%; } }
@@ -414,7 +417,7 @@ header {
   .work-examples__item {
     background-color: #3A3A3C;
     flex: 1; }
-    @media only screen and (min-width: 64em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
       .work-examples__item {
         margin: 5px 5px 5px 5px; } }
     @media only screen and (min-width: 90em) {
@@ -437,7 +440,7 @@ header {
     background-color: #58585A;
     height: 25%;
     bottom: 0%; }
-    @media only screen and (min-width: 64em) and (max-width: 90em) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
       .work-examples__description {
         font-size: 0.7em; } }
     @media only screen and (min-width: 90em) {
@@ -477,14 +480,14 @@ header {
       margin: 0 5px 10px 5px;
       width: calc(100% - 10px);
       height: calc(65% - 10px); }
-      @media only screen and (max-width: 64em) {
+      @media only screen and (max-width: 64em) and (orientation: portrait) {
         .videos__video--full-width {
           height: 100%; } }
     .videos__video--half-width {
       width: calc(50% - 10px);
       margin: 0px 5px 0 5px;
       height: 35%; }
-      @media only screen and (max-width: 64em) {
+      @media only screen and (max-width: 64em) and (orientation: portrait) {
         .videos__video--half-width {
           display: none; } }
     .videos__video:after {
