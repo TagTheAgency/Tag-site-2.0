@@ -180,9 +180,9 @@ header {
 
 .icons {
   position: relative;
-  top: calc(-20% - 10px);
   left: 0;
   clear: both;
+  float: left;
   width: calc(40% - 60px);
   height: calc(20% - 10px);
   margin: 0 50px 10px 10px; }
@@ -195,6 +195,10 @@ header {
       left: 50%;
       transform: translateX(-50%);
       width: 60%; } }
+  @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+    .icons {
+      float: none;
+      top: calc(-20% - 10px); } }
   .icons__icon {
     float: left;
     width: 15%;
