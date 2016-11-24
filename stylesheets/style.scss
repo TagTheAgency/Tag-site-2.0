@@ -633,16 +633,20 @@ header {
 			}
 		}
 		&:after {
-			@include center;
-			display: inline-block;
-			content: "";
-			width: 15%;
-			padding-bottom: 15%;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-image: url($img-path + $play-icon);
+			// @include center;
+			// display: inline-block;
+			// content: "";
+			// width: 15%;
+			// padding-bottom: 15%;
+			// background-size: cover;
+			// background-repeat: no-repeat;
+			// background-position: center;
+			// background-image: url($img-path + $play-icon);
 		}
+	}
+	&_iframe {
+		width: 100%;
+		height: 100%;
 	}
 }
 
