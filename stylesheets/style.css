@@ -23,6 +23,14 @@ h1, h2, h3 {
 p {
   font-family: "Futura Light"; }
 
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%; }
+
 header, main {
   position: fixed;
   box-sizing: border-box; }
@@ -60,7 +68,7 @@ header {
   .background--influencers {
     background-image: url("../imgs/TAG-The-Agency-website-influencers-bg.png"); }
   .background--strategy {
-    background-image: url("../imgs/TAG-The-Agency-website-thinking-strategy-bg.png"); }
+    background-image: url("../imgs/upload_11_10_2016_at_2_19_10_PM.png"); }
   .background--vr {
     background-image: url("../imgs/TAG-The-Agency-website-VR-Studios-bg.png"); }
 
@@ -436,8 +444,9 @@ header {
     position: absolute;
     margin: 30px 0 0 5px; }
   .work-examples__video {
+    padding-top: 50px;
     width: 100%;
-    height: 75%; }
+    height: calc(75% - 50px); }
   .work-examples__description {
     position: relative;
     width: 100%;
@@ -521,5 +530,51 @@ header {
   width: calc(100% - 100px);
   height: calc(100% - 100px);
   margin: 0 50px 0 50px; }
+
+.info-pages {
+  padding-top: 5%;
+  width: 100%;
+  height: 100%; }
+  .info-pages h1 {
+    font-family: 'Harriet Regular';
+    text-align: center; }
+  .info-pages p {
+    font-family: 'Harriet Regular';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    position: relative;
+    margin: 5% 0 0 0;
+    text-align: center; }
+  .info-pages__content {
+    margin-top: 5%;
+    position: relative;
+    height: 50%;
+    width: 100%; }
+
+.team__members-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+  height: 40%; }
+.team__item {
+  height: 100%;
+  flex: 1;
+  margin: 0 10px 0 10px;
+  text-align: center; }
+.team__image {
+  background-image: url("../imgs/Mabel 2.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  width: 100%;
+  padding-bottom: 100%; }
+.team__name {
+  margin: 2% 0 0 0;
+  font-family: "Harriet Bold"; }
+.team__role {
+  margin: 1% 0 0 0;
+  font-family: "Harriet Regular"; }
 
 /*# sourceMappingURL=style.css.map */

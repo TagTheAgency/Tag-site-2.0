@@ -24,7 +24,7 @@ $logo-light: 'TAG_white_1920x1080.png';
 $homepage-bg: 'TAG-The-Agency-website-homepage-bg.png';
 $production-bg: 'TAG-The-Agency-website-production-bg.png';
 $influencers-bg: 'TAG-The-Agency-website-influencers-bg.png';
-$strategy-bg: 'TAG-The-Agency-website-thinking-strategy-bg.png';
+$strategy-bg: 'upload_11_10_2016_at_2_19_10_PM.png';
 $vr-bg: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
 $home-icon-light: 'home-icon-white.png';
@@ -38,6 +38,7 @@ $dark-grey: #3A3A3C;
 $light-grey: #58585A;
 $colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); //Used in @each loop for cmyk crosses colors
 
+$mabel-image: 'Mabel 2.jpg';
 
 $small-breakpoint: em(1024) !default;
 $medium-breakpoint:  em(1264) !default;
@@ -102,6 +103,12 @@ h1, h2, h3 {
 
 p {
 	font-family: $body-font;
+}
+
+img {
+	@include center;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 
@@ -559,8 +566,9 @@ header {
 		margin: 30px 0 0 5px;
 	}
 	&__video {
+		padding-top: 50px;
 		width: 100%;
-		height: 75%;
+		height: calc(75% - 50px);
 	}
 	&__description {
 		position: relative;
@@ -679,3 +687,64 @@ header {
 	height: calc(100% - 100px);
 	margin: 0 50px 0 50px;
 }
+
+.info-pages {
+	padding-top: 5%;
+	width: 100%;
+	height: 100%;
+	h1 {
+		font-family: 'Harriet Regular';
+		// margin: 5% 0 0 0;
+		text-align: center;
+	}
+	p {
+		font-family: 'Harriet Regular';
+		@include center-horizontal;
+		width: 40%;
+		position: relative;
+		margin: 5% 0 0 0;
+		text-align: center;
+	}
+
+	&__content {
+		margin-top: 5%;
+		position: relative;
+		height: 50%;
+		width: 100%;
+	}
+}
+
+.team {
+	&__members-wrapper {	
+		@include flex-wrapper;
+		width: 100%;
+		height: 40%;
+	}
+	&__item {
+		height: 100%;
+		flex: 1;
+		margin: 0 10px 0 10px;
+		text-align: center;
+	}
+	&__image {
+		background-image: url($img-path + $mabel-image);
+		background-size: cover;
+		border-radius: 50%;
+		width: 100%;
+		padding-bottom: 100%;
+	}
+	&__name {
+		margin: 2% 0 0 0;
+		font-family: 'Harriet Bold'
+	}
+	&__role {
+		margin: 1% 0 0 0;
+		font-family: 'Harriet Regular'
+	}
+}
+
+
+
+
+
+

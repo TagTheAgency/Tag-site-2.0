@@ -5,7 +5,7 @@ tagApp.config(function($routeProvider) {
     .when('/', {
         templateUrl: "../pages/home.html",
     })
-    .when('/production', {
+    .when('/doing', {
         templateUrl : "../pages/production.html",
     })
     .when('/vr', {
@@ -14,11 +14,14 @@ tagApp.config(function($routeProvider) {
     .when('/influencers', {
         templateUrl : "../pages/influencers.html"
     })
-    .when('/strategy', {
+    .when('/thinking', {
         templateUrl : "../pages/strategy.html"
     })
-    .when('/work', {
+    .when('/done', {
         templateUrl : "../pages/work.html"
+    })
+    .when('/who', {
+        templateUrl : "../pages/who.html"
     })
     .otherwise({
         redirectTo: '/'
