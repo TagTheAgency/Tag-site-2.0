@@ -9,15 +9,11 @@
 	src: url('../fonts/Harriet Display Bold.otf'); }
 
 $browser-context: 16;
+
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
 
-// $small-breakpoint:  em(640)  !default;
-
-$body-font: 'Futura Light';
-$header-font: 'Harriet Bold';
-$header-height: 100px;
 $img-path: '../imgs/';
 $logo-dark: 'TAG_logo_tag_black_blacktag.png';
 $logo-light: 'TAG_white_1920x1080.png';
@@ -29,6 +25,11 @@ $vr-bg: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
 $home-icon-light: 'home-icon-white.png';
 $play-icon:'play-icon.png';
+$mabel-image: 'Mabel 2.jpg';
+
+$body-font: 'Futura Light';
+$header-font: 'Harriet Bold';
+$header-height: 100px;
 $blue: #00AEEF;
 $pink: #EC008C;
 $yellow: #FFF200;
@@ -37,8 +38,6 @@ $white: white;
 $dark-grey: #3A3A3C;
 $light-grey: #58585A;
 $colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); //Used in @each loop for cmyk crosses colors
-
-$mabel-image: 'Mabel 2.jpg';
 
 $small-breakpoint: em(1024) !default;
 $medium-breakpoint:  em(1264) !default;
@@ -50,7 +49,7 @@ $xlarge-breakpoint: em(1920) !default;
     @media only screen and (max-width: $small-breakpoint) and (orientation: portrait) { @content; }
   }
   @else if $media == medium-screens {
-    @media only screen and (min-width: $small-breakpoint) and (max-width: $large-breakpoint), (orientation: landscape) { @content; }
+    @media only screen and (min-width: $small-breakpoint) and (max-width: $large-breakpoint), (max-width: $small-breakpoint) and (orientation: landscape) { @content; }
   }
   @else if $media == wide-screens {
     @media only screen and (min-width: $large-breakpoint) { @content; }
@@ -110,7 +109,6 @@ img {
 	max-width: 100%;
 	max-height: 100%;
 }
-
 
 header, main {
 	position: fixed;
@@ -385,6 +383,7 @@ header {
 		}
 	}
 	&__menu-item {
+		cursor: pointer;
 		margin: auto 0 auto 0;
 		flex: 1;
 	}
@@ -564,6 +563,9 @@ header {
 		font: 1.2em $header-font;
 		position: absolute;
 		margin: 30px 0 0 5px;
+		@include respond-to(medium-screens) {
+			font-size: 1em;
+		}
 	}
 	&__video {
 		padding-top: 50px;
@@ -711,6 +713,25 @@ header {
 		position: relative;
 		height: 50%;
 		width: 100%;
+	}
+	@include respond-to(medium-screens) {
+		padding-top: 2%;
+		p {
+			font-size: 0.95em;
+			font-family: 'Harriet Regular';
+			@include center-horizontal;
+			width: 60%;
+			position: relative;
+			margin: 2% 0 0 0;
+			text-align: center;
+		}
+
+		&__content {
+			margin-top: 2%;
+			position: relative;
+			height: 50%;
+			width: 100%;
+		}
 	}
 }
 

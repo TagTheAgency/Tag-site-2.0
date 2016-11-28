@@ -85,7 +85,7 @@ header {
       height: calc(100% - 100px);
       width: 100%;
       padding: 50px 10px 10px 10px; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .inner-container {
       margin-top: -20px;
       width: 960px;
@@ -127,7 +127,7 @@ header {
       .copy p {
         font-size: 2.2em;
         margin: 0 0 2% 0; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .copy {
       display: inline-block;
       width: calc(40% - 60px);
@@ -166,7 +166,7 @@ header {
       .copy--compact p {
         font-size: 0.7em;
         margin: 0 0 1% 0; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .copy--compact h1 {
         font-size: 1.8em;
         margin: 0 0 2% 0; }
@@ -203,7 +203,7 @@ header {
       left: 50%;
       transform: translateX(-50%);
       width: 60%; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .icons {
       float: none;
       top: calc(-20% - 10px); } }
@@ -264,13 +264,14 @@ header {
       .nav-top__menu {
         display: none;
         width: 60%; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .nav-top__menu {
         width: 45%; } }
     @media only screen and (min-width: 90em) {
       .nav-top__menu {
         width: 30%; } }
   .nav-top__menu-item {
+    cursor: pointer;
     margin: auto 0 auto 0;
     flex: 1; }
   .nav-top__logo {
@@ -338,7 +339,7 @@ header {
       transform: rotate(-45deg); }
     .nav-top__burger-icon:hover span:nth-child(4) {
       opacity: 0; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .nav-top__burger-icon {
         display: none; } }
     @media only screen and (min-width: 90em) {
@@ -429,7 +430,7 @@ header {
   .work-examples__item {
     background-color: #3A3A3C;
     flex: 1; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .work-examples__item {
         margin: 5px 5px 5px 5px; } }
     @media only screen and (min-width: 90em) {
@@ -443,6 +444,9 @@ header {
     font: 1.2em "Harriet Bold";
     position: absolute;
     margin: 30px 0 0 5px; }
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+      .work-examples__title {
+        font-size: 1em; } }
   .work-examples__video {
     padding-top: 50px;
     width: 100%;
@@ -453,7 +457,7 @@ header {
     background-color: #58585A;
     height: 25%;
     bottom: 0%; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (orientation: landscape) {
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .work-examples__description {
         font-size: 0.7em; } }
     @media only screen and (min-width: 90em) {
@@ -552,6 +556,24 @@ header {
     position: relative;
     height: 50%;
     width: 100%; }
+  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    .info-pages {
+      padding-top: 2%; }
+      .info-pages p {
+        font-size: 0.95em;
+        font-family: 'Harriet Regular';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        position: relative;
+        margin: 2% 0 0 0;
+        text-align: center; }
+      .info-pages__content {
+        margin-top: 2%;
+        position: relative;
+        height: 50%;
+        width: 100%; } }
 
 .team__members-wrapper {
   display: flex;
