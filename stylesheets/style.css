@@ -91,7 +91,7 @@ header {
   @media only screen and (min-width: 90em) {
     .inner-container {
       width: 1440px;
-      height: 720px; } }
+      height: 650px; } }
 
 .media {
   position: relative;
@@ -208,7 +208,8 @@ header {
   .icons__icon {
     float: left;
     width: 15%;
-    padding-bottom: 15%; }
+    padding-bottom: 15%;
+    margin: 0 20px 0 0; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .icons__icon {
         margin: auto 0 auto 0;
@@ -216,6 +217,7 @@ header {
   .icons__image {
     width: 100%;
     padding-bottom: 100%;
+    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
     transition-duration: 1s; }
@@ -230,6 +232,8 @@ header {
         transform: rotate(180deg); }
       .icons__image--home--light {
         background-image: url("../imgs/home-icon-white.png"); }
+    .icons__image--app {
+      background-image: url("../imgs/Download_on_the_App_Store_Badge_US-UK_135x40.svg"); }
   .icons__text {
     text-transform: uppercase;
     font-family: 'Futura';

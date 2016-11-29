@@ -25,6 +25,7 @@ $vr-bg: 'TAG-The-Agency-website-VR-Studios-bg.png';
 $home-icon: 'TAG The Agency website case studies buttons-56.png';
 $home-icon-light: 'home-icon-white.png';
 $play-icon:'play-icon.png';
+$app-icon:'Download_on_the_App_Store_Badge_US-UK_135x40.svg';
 $mabel-image: 'Mabel 2.jpg';
 
 $body-font: 'Futura Light';
@@ -176,7 +177,7 @@ header {
 	}
 	@include respond-to(wide-screens) {
 		width: 1440px;
-		height: 720px;
+		height: 650px;
 	}
 }
 
@@ -318,6 +319,7 @@ header {
 		float: left;
 		width: 15%;
 		padding-bottom: 15%;
+		margin: 0 20px 0 0;
 		@include respond-to(handhelds) {
 			margin: auto 0 auto 0;
 			flex: 1;
@@ -327,6 +329,7 @@ header {
 		width: 100%;
 		padding-bottom: 100%;
 		// height: 100%;
+		background-position: bottom;
 		background-size: contain;
 		background-repeat: no-repeat;
 		transition-duration: 1s;
@@ -341,6 +344,9 @@ header {
 			&--light {
 				background-image: url($img-path + $home-icon-light);
 			}
+		}
+		&--app {
+			background-image: url($img-path + $app-icon);
 		}
 	}
 	&__text {
