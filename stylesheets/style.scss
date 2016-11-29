@@ -320,6 +320,7 @@ header {
 		width: 15%;
 		padding-bottom: 15%;
 		margin: 0 20px 0 0;
+		cursor: pointer;
 		@include respond-to(handhelds) {
 			margin: auto 0 auto 0;
 			flex: 1;
@@ -334,7 +335,6 @@ header {
 		background-repeat: no-repeat;
 		transition-duration: 1s;
 		&--home {
-			cursor: pointer;
 			background-image: url($img-path + $home-icon);
 			&:hover {
 				-ms-transform: rotate(180deg); /* IE 9 */

@@ -28,8 +28,12 @@ tagApp.config(function($routeProvider) {
     });
 });
 
-tagApp.controller('mainController', function($scope, $location) {
+tagApp.controller('mainController', function($scope, $location, $window) {
     $scope.go = function (path) {
       $location.path(path);
     };
+
+    $scope.openTab = function (url) {
+        $window.open(url, '_blank');
+    }
 });

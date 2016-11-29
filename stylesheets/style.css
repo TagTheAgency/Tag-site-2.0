@@ -209,7 +209,8 @@ header {
     float: left;
     width: 15%;
     padding-bottom: 15%;
-    margin: 0 20px 0 0; }
+    margin: 0 20px 0 0;
+    cursor: pointer; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .icons__icon {
         margin: auto 0 auto 0;
@@ -222,7 +223,6 @@ header {
     background-repeat: no-repeat;
     transition-duration: 1s; }
     .icons__image--home {
-      cursor: pointer;
       background-image: url("../imgs/TAG The Agency website case studies buttons-56.png"); }
       .icons__image--home:hover {
         -ms-transform: rotate(180deg);
