@@ -173,7 +173,7 @@ header {
 	@include respond-to(medium-screens) {
 		// margin-top: -20px;
 		width: 960px;
-		height: 400px;
+		height: 430px;
 	}
 	@include respond-to(wide-screens) {
 		width: 1440px;
@@ -302,7 +302,7 @@ header {
 	top: calc(-20% - 10px); // Quick fix
 	left: 0;
 	clear: both;
-	// float: left;
+	float: left;
 	width: calc(40% - 60px); // Minus margins
 	height: calc(20% - 10px); // Minus margins
 	margin: 0 50px 10px 10px;
@@ -373,7 +373,7 @@ header {
 	&__menu {
 		transition-duration: 0.5s;
 		@include flex-wrapper;
-		margin: 0 20px 0 0;
+		margin: 0 40px 0 0;
 		height: 100%;
 		float: right;
 		text-align: center;
@@ -383,21 +383,21 @@ header {
 			width: 60%;
 		}
 		@include respond-to(medium-screens) {
-			width: 45%;
+			width: 55%;
 		}
 		@include respond-to(wide-screens) {
-			width: 30%;
+			width: 40%;
 		}
 	}
 	&__menu-item {
 		cursor: pointer;
 		margin: auto 0 auto 0;
 		flex: 1;
+		&--active {
+			font-family: 'Futura';
+		}
 	}
 	&__logo {
-		@include respond-to(handhelds) {
-			width: 150px;
-		}
 		float: left;
 		margin: 0 0 0 20px;
 		width: 100px;
@@ -405,6 +405,9 @@ header {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		@include respond-to(handhelds) {
+			width: 150px;
+		}
 		&--dark {
 			background-image: url($img-path + $logo-dark);
 		}

@@ -36,4 +36,5 @@ tagApp.controller('mainController', function($scope, $location, $window) {
     $scope.openTab = function (url) {
         $window.open(url, '_blank');
     }
+
 });
