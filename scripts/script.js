@@ -32,6 +32,55 @@ tagApp.config(function($routeProvider) {
 });
 
 tagApp.controller('mainController', function($scope, $location, $window) {
+    
+    $scope.staffObj = {
+        jess: {
+            name: 'Jess Bovey',
+            thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/jess/1.jpg',
+            role: 'GM Operations'
+        },
+        jaime: {
+            name: 'Jaime Parlett',
+            thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/jaime/1.jpg',
+            role: 'Account Director'
+        },
+        mabel: {
+            name: 'Mabel',
+            thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/mabel/1.jpg',
+            role: 'Head of Security'
+        },
+        rosa: {
+            name: 'Rosa Santana',
+            thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/rosa/1.jpg',
+            role: 'Designer'
+        },
+        anna: {
+            name: 'Anna Vallance',
+            thumbnail: '',
+            role: 'Account Manager'
+        },
+        madeline: {
+            name: 'Madeline Taylor',
+            thumbnail: '',
+            role: 'Designer'
+        },
+        dan: {
+            name: 'Dan Harris',
+            thumbnail: '',
+            role: 'Video Production'
+        },
+        ira: {
+            name: 'Ira Ritchie Meek',
+            thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/ira/1.jpg',
+            role: 'Developer'
+        },
+        tom: {
+            name: 'Tom Rediy',
+            thumbnail: '',
+            role: 'Head of Innovation'
+        }
+    }
+
     $scope.go = function (path) {
       $location.path(path);
     };

@@ -704,7 +704,7 @@ header {
 }
 
 .info-pages {
-	padding-top: 5%;
+	// padding-top: 5%;
 	width: 100%;
 	height: 100%;
 	h1 {
@@ -761,8 +761,9 @@ header {
 		text-align: center;
 	}
 	&__image {
-		background-image: url($img-path + $mabel-image);
+		// background-image: url($img-path + $mabel-image);
 		background-size: cover;
+		background-position: center;
 		border-radius: 50%;
 		width: 100%;
 		padding-bottom: 100%;

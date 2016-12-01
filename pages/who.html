@@ -12,8 +12,8 @@
 			<li class="nav-top__menu-item nav-top__menu-item--active" ng-click="go('/who')">Who</li>
 			<li class="nav-top__menu-item" ng-click="go('/how')">How</li>
 			<li class="nav-top__menu-item" ng-click="go('/partners')">Partners</li>
-			<li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li>
-			<li class="nav-top__menu-item" ng-click="go('/store')">Store</li>
+			<!-- <li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li> -->
+			<!-- <li class="nav-top__menu-item" ng-click="go('/store')">Store</li> -->
 			<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
 			</ul>
 			<div class="nav-top__logo nav-top__logo--dark" ng-click="go('/')"></div>
@@ -33,7 +33,13 @@
 				<div class="info-pages__content">
 					<div class="team">
 						<div class="team__members-wrapper">
-							<div class="team__item">
+							<div class="team__item" ng-repeat="person in staffObj">
+								<div class="team__image" style="background-image: url({{person.thumbnail}});"></div>
+								<div class="team__name">{{person.name}}</div>
+								<div class="team__role">{{person.role}}</div>
+							</div>
+
+							<!-- <div class="team__item">
 								<div class="team__image"></div>
 								<div class="team__name">Jess Bovey</div>
 								<div class="team__role">GM Operations</div>
@@ -77,7 +83,7 @@
 								<div class="team__image"></div>
 								<div class="team__name">Tom Reidy</div>
 								<div class="team__role">Head of Innovation</div>
-							</div>
+							</div> -->
 						</div>
 						<div class="team__bottom-copy">
 							<p>Lorem ipsum dolor sit amet, singulis voluptatum intellegebat mea cu, sea ex porro etiam. Ne eum bonorum propriae efficiantur. Agam facer nobis in sit, ut dolores recteque sapientem sea. Pri ignota rationibus at. Eu nec esse dicat, odio inciderint ea nec. Eu qui noster tractatos accommodare. Eum recteque dissentiunt ex, sea natum autem at. Quas delicata at sea. Augue eruditi conceptam an sed, an eos reque utroque persequeris. Vel alia concludaturque an, eam in enim nostrud veritus. Regione nostrum mea ex, pro ea quod meis sadipscing, nec id dolor graeci.</p>
