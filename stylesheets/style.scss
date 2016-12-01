@@ -159,6 +159,33 @@ header {
 	}
 }
 
+.fade-animation { // Transition between pages
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// right: 0;
+	// height: 100%;
+	// opacity: 1;
+	&.ng-enter, &.ng-leave {
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	&.ng {
+		&-enter {
+		    opacity: 0;
+		}
+		&-enter-active {
+		    opacity: 1;
+		}
+		&-leave {
+		    opacity: 1;
+		}
+		&-leave-active {
+		    opacity: 0;
+		}
+	}
+}
+
 .inner-container {
 	transition-duration: 0.5s;
 	// @include center-horizontal;
@@ -762,12 +789,25 @@ header {
 		text-align: center;
 	}
 	&__image {
+		cursor: pointer;
 		// background-image: url($img-path + $mabel-image);
 		background-size: cover;
 		background-position: center;
 		border-radius: 50%;
 		width: 100%;
 		padding-bottom: 100%;
+		-webkit-filter: grayscale(1);
+		-moz-filter: grayscale(1);
+		-o-filter: grayscale(1);
+		-ms-filter: grayscale(1);
+		filter: grayscale(1);
+		&:hover {
+			-webkit-filter: none;
+			-moz-filter: none;
+			-o-filter: none;
+			-ms-filter: none;
+			filter: none;
+		}
 	}
 	&__name {
 		margin: 2% 0 0 0;

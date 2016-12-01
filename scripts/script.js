@@ -1,4 +1,4 @@
-var tagApp = angular.module('tagApp', ['ngRoute']);
+var tagApp = angular.module('tagApp', ['ngRoute', 'ngAnimate']);
 
 tagApp.config(function($routeProvider) {
     $routeProvider
@@ -53,6 +53,11 @@ tagApp.controller('mainController', function($scope, $location, $window) {
     }
     
     $scope.staffObj = {
+        mabel: {
+            name: 'Mabel',
+            thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/mabel/1.jpg',
+            role: 'Head of Security'
+        },
         jess: {
             name: 'Jess Bovey',
             thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/jess/1.jpg',
@@ -62,11 +67,6 @@ tagApp.controller('mainController', function($scope, $location, $window) {
             name: 'Jaime Parlett',
             thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/jaime/1.jpg',
             role: 'Account Director'
-        },
-        mabel: {
-            name: 'Mabel',
-            thumbnail: 'https://1793699979.rsc.cdn77.org/team-photos/mabel/1.jpg',
-            role: 'Head of Security'
         },
         rosa: {
             name: 'Rosa Santana',
