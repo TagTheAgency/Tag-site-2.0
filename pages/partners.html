@@ -31,11 +31,12 @@
 				<h1>TAG Partners</h1>
 				<p>We are strong believers in a team. In our team we work with industry experts who help to strengthen the solutions we provide to our clients and we trust these companies like we trust our own team. We are proud to work alongside the following brands; good folks doing amazing things!</p>
 				<div class="info-pages__content">
-					<div class="partners">
-						<div class="partners__item"></div>
-						<div class="partners__item"></div>
-						<div class="partners__item"></div>
-						<div class="partners__item"></div>
+					<div class="partners__item-wrapper">
+						<div class="partners" ng-repeat="partner in partnersObj">			
+							<div class="partners__item">
+								<img class="partners__image"  src="{{partner.logo}}"/>
+							</div>
+						</div>
 					</div>
 				</div>
 		</div>

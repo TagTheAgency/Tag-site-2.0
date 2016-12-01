@@ -32,6 +32,25 @@ tagApp.config(function($routeProvider) {
 });
 
 tagApp.controller('mainController', function($scope, $location, $window) {
+    $scope.go = function (path) {
+      $location.path(path);
+    };
+
+    $scope.openTab = function (url) {
+        $window.open(url, '_blank');
+    }
+
+    $scope.partnersObj = {
+        haeberlin: {
+            logo: 'https://1793699979.rsc.cdn77.org/partners/haeberlin/logo.png'
+        },
+        matai: {
+            logo: 'https://1793699979.rsc.cdn77.org/partners/matai/logo.png'
+        },
+        syengage: {
+            logo: 'https://1793699979.rsc.cdn77.org/partners/sy-engage/logo.png'
+        }
+    }
     
     $scope.staffObj = {
         jess: {
@@ -81,12 +100,5 @@ tagApp.controller('mainController', function($scope, $location, $window) {
         }
     }
 
-    $scope.go = function (path) {
-      $location.path(path);
-    };
-
-    $scope.openTab = function (url) {
-        $window.open(url, '_blank');
-    }
 
 });
