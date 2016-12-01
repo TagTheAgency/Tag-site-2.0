@@ -23,6 +23,9 @@ tagApp.config(function($routeProvider) {
     .when('/who', {
         templateUrl : "../pages/who.html"
     })
+    .when('/partners', {
+        templateUrl : "../pages/partners.html"
+    })
     .otherwise({
         redirectTo: '/'
     });

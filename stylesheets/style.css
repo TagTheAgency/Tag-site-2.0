@@ -219,11 +219,11 @@ header {
   .icons__image {
     width: 100%;
     padding-bottom: 100%;
-    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
     transition-duration: 1s; }
     .icons__image--home {
+      background-position: bottom;
       background-image: url("../imgs/TAG The Agency website case studies buttons-56.png"); }
       .icons__image--home:hover {
         -ms-transform: rotate(180deg);
@@ -234,6 +234,8 @@ header {
       .icons__image--home--light {
         background-image: url("../imgs/home-icon-white.png"); }
     .icons__image--app {
+      width: 250%;
+      background-position: center;
       background-image: url("../imgs/Download_on_the_App_Store_Badge_US-UK_135x40.svg"); }
   .icons__text {
     text-transform: uppercase;
@@ -603,5 +605,17 @@ header {
 .team__role {
   margin: 1% 0 0 0;
   font-family: "Harriet Regular"; }
+
+.partners {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch; }
+  .partners__item {
+    margin: 0 50px 0 50px;
+    height: 100%;
+    flex: 1;
+    background-color: red; }
 
 /*# sourceMappingURL=style.css.map */
