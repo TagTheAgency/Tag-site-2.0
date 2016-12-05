@@ -34,7 +34,8 @@
 					<div class="team">
 						<div class="team__members-wrapper">
 							<div class="team__item" ng-repeat="person in staffObj">
-								<div class="team__image" style="background-image: url({{person.thumbnail}});"></div>
+								<div class="team__image" style="background-image: url({{person.thumbnail}});" ng-click="getCurrentStaffObj($event); go('/staff')"  data-id="{{person.id}}">
+								</div>
 								<div class="team__name">{{person.name}}</div>
 								<div class="team__role">{{person.role}}</div>
 							</div>
