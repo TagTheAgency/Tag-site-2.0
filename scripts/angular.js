@@ -61,10 +61,13 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
             logo: 'https://1793699979.rsc.cdn77.org/partners/haeberlin/logo.png'
         },
         matai: {
-            logo: 'https://1793699979.rsc.cdn77.org/partners/matai/logo.png'
+            logo: 'https://1793699979.rsc.cdn77.org/partners/matai/logo.jpg'
         },
         syengage: {
             logo: 'https://1793699979.rsc.cdn77.org/partners/sy-engage/logo.png'
+        },
+        relationshipunlimited: {
+            logo: 'https://1793699979.rsc.cdn77.org/partners/relationship-unlimited/logo.png'
         }
     }
 

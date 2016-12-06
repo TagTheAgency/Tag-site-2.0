@@ -124,7 +124,8 @@ header {
   @media only screen and (min-width: 90em) {
     .inner-container {
       width: 1440px;
-      height: 650px; } }
+      max-height: 760px;
+      min-height: 650px; } }
 
 .media {
   position: relative;
@@ -395,7 +396,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.3em;
-  position: relative;
+  position: absolute;
   width: 70%;
   height: 150px;
   text-align: center;
@@ -579,6 +580,7 @@ header {
   margin: 0 50px 0 50px; }
 
 .info-pages {
+  position: absolute;
   width: 100%;
   height: 100%; }
   .info-pages h1 {
@@ -591,12 +593,12 @@ header {
     transform: translateX(-50%);
     width: 40%;
     position: relative;
-    margin: 5% 0 0 0;
+    margin: 2% 0 0 0;
     text-align: center; }
   .info-pages__content {
-    margin-top: 5%;
+    margin-top: 2%;
     position: relative;
-    height: 50%;
+    height: 75%;
     width: 100%; }
   @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .info-pages {
@@ -659,6 +661,11 @@ header {
     border-radius: 50%;
     position: relative;
     margin: 0 0 20px 0; }
+  .personal__images-wrapper {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 50%; }
 
 .partners {
   width: 100%; }
