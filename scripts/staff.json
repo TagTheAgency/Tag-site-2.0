@@ -4,62 +4,80 @@
         "name": "Mabel",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/mabel/1.jpg",
         "role": "Head of Security",
-        "bio": "With the massive task of maintaining staff happiness Mabel spends most of her time making the staff smile and feel relaxed. So much cute packed into a small and fancy dog, she is sure to to soften the hardest of hearts. When she is not spreading joy at the agency you can find Mabel sleeping in the sun, chasing her tail and or taking long walks on the beach."
+        "bio": "With the massive task of maintaining staff happiness Mabel spends most of her time making the staff smile and feel relaxed. So much cute packed into a small and fancy dog, she is sure to to soften the hardest of hearts. When she is not spreading joy at the agency you can find Mabel sleeping in the sun, chasing her tail and or taking long walks on the beach.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/mabel/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/CMYK.png"]
     },
     "jess": {
         "id": 2, 
         "name": "Jess Bovey",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/jess/1.jpg",
         "role": "GM Operations",
-        "bio": "With over 10 years in the digital, social and agency world, Jess has the depth of experience matched by few. Efficient and savvy which comes from living and breathing digital and social. When Jess isn’t making sure TAG is running a tight game she is balancing a busy house, looking after her handsome little man, making sure her partner doesn’t buy too many car parts and runs a rather successful blog."
+        "bio": "With over 10 years in the digital, social and agency world, Jess has the depth of experience matched by few. Efficient and savvy which comes from living and breathing digital and social. When Jess isn’t making sure TAG is running a tight game she is balancing a busy house, looking after her handsome little man, making sure her partner doesn’t buy too many car parts and runs a rather successful blog.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/jess/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/CMYK.png"]
     },
     "jaime": {
         "id": 3, 
         "name": "Jaime Parlett",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/jaime/1.jpg",
         "role": "Account Director",
-        "bio": "Around here the saying “if at first you don’t succeed, try doing what your Account Director told you to do” is what we should live by. Instead we skip that and just listen to Jaime. With a wealth of experience in the world of digital advertising and client management, her cool, calm and collected approach makes sure everything is delivered on time and on budget; always with a touch of style. When Jaime isn’t looking after our key clients she blogs on fashion and loves long walks on the beach with Mabel; she has the world's cutest dog."
+        "bio": "Around here the saying “if at first you don’t succeed, try doing what your Account Director told you to do” is what we should live by. Instead we skip that and just listen to Jaime. With a wealth of experience in the world of digital advertising and client management, her cool, calm and collected approach makes sure everything is delivered on time and on budget; always with a touch of style. When Jaime isn’t looking after our key clients she blogs on fashion and loves long walks on the beach with Mabel; she has the world's cutest dog.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/jaime/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/CMYK.png"]
     },
     "rosa": {
         "id": 4, 
         "name": "Rosa Santana",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/rosa/1.jpg",
         "role": "Designer",
-        "bio": "The Super Senior Designer of the agency; powered by sunshine, all things pink and “super awesome”. Rosa has the unique combination of design, strategy and international experience. Where most designers get lost in the ‘look’, Rosa sees the perfect balance in both form and function, enabling her to deliver complex design challenges with simplicity, style and a dash of awesome. Outside of the agency Rosa is in the endless pursuit sunshine and waves to keep her inspiration flowing."
+        "bio": "The Super Senior Designer of the agency; powered by sunshine, all things pink and “super awesome”. Rosa has the unique combination of design, strategy and international experience. Where most designers get lost in the ‘look’, Rosa sees the perfect balance in both form and function, enabling her to deliver complex design challenges with simplicity, style and a dash of awesome. Outside of the agency Rosa is in the endless pursuit sunshine and waves to keep her inspiration flowing.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/rosa/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/CMYK.png"]
     },
     "anna": {
         "id": 5, 
         "name": "Anna Vallance",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/anna/1.jpg",
         "role": "Account Manager",
-        "bio": "Quick wit, creative smarts, and an eye for detail make a brilliant combination for the delivery of our solutions for clients. Anna is our Account Manager and is responsible for running client projects, content development and making sure the memes flow! When Anna isn’t at the agency, you will find her reading the classics or developing her own projects with her exceptional writing skills."
+        "bio": "Quick wit, creative smarts, and an eye for detail make a brilliant combination for the delivery of our solutions for clients. Anna is our Account Manager and is responsible for running client projects, content development and making sure the memes flow! When Anna isn’t at the agency, you will find her reading the classics or developing her own projects with her exceptional writing skills.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/anna/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/anna/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/anna/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/anna/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/anna/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/anna/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/anna/CMYK.png"]
     },
     "madeline": {
         "id": 6, 
         "name": "Madeline Taylor",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/madeline/1.jpg",
         "role": "Designer",
-        "bio": "If you think it, Maddy can create it; there’s nothing that Maddy can’t turn into a digital masterpiece. With natural talent for creating art in the traditional form of pencil and paper and then digitising it and taking it to a mind-blowing level. Even when she is not at the agency Maddy is creating, making and experimenting with art."
+        "bio": "If you think it, Maddy can create it; there’s nothing that Maddy can’t turn into a digital masterpiece. With natural talent for creating art in the traditional form of pencil and paper and then digitising it and taking it to a mind-blowing level. Even when she is not at the agency Maddy is creating, making and experimenting with art.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/madeline/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/CMYK.png"]
     },
     "dan": {
         "id": 7, 
         "name": "Dan Harris",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/dan/1.jpg",
         "role": "Video Production",
-        "bio": "Capturing beautiful moments in motion, Dan runs the video production for the agency. Calm, cool and never stressed, Dan delivers stunning creations for our clients. When not at the agency, Dan is still behind the lens, often found creating indie films, shooting music videos or seeing how to get the best elevation shots from a drone."
+        "bio": "Capturing beautiful moments in motion, Dan runs the video production for the agency. Calm, cool and never stressed, Dan delivers stunning creations for our clients. When not at the agency, Dan is still behind the lens, often found creating indie films, shooting music videos or seeing how to get the best elevation shots from a drone.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/dan/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/CMYK.png"]
     },
     "ira": {
         "id": 8, 
         "name": "Ira Ritchie Meek",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/ira/1.jpg",
         "role": "Developer",
-        "bio": "Ira has an amazing appetite to learn, build, create and challenge. Ira is our Lead Developer who can build technology that works, and works well. Fussy on beautiful code and a passion for making complex things look simple; combine that with a view that ‘anything is possible’ in the world of the internet makes for an epic mindset for delivering innovation through code. Outside of the agency Ira is coding and creating commerce, some of the team are a little suspicious that Rami Malek’s character in Mr Robot may have been inspired by our mild mannered genus that is Ira."
+        "bio": "Ira has an amazing appetite to learn, build, create and challenge. Ira is our Lead Developer who can build technology that works, and works well. Fussy on beautiful code and a passion for making complex things look simple; combine that with a view that ‘anything is possible’ in the world of the internet makes for an epic mindset for delivering innovation through code. Outside of the agency Ira is coding and creating commerce, some of the team are a little suspicious that Rami Malek’s character in Mr Robot may have been inspired by our mild mannered genus that is Ira.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/ira/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/CMYK.png"]
     },
     "tom": {
         "id": 9, 
         "name": "Tom Reidy",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/tom/1.jpg",
         "role": "Head of Innovation",
-        "bio": "‘Institutional thought is the enemy as it restricts the freedom of innovation…’ Yea, he’s not allowed in direct sunlight in case he starts to sparkle and don’t ask him about the future of social and digital medias. He loves the mix of digital creativity and technical solutions almost as much as he loves a good selfie. If he’s not providing innovative solutions with the latest digital tech for TAG clients, he’s either playing with his toys or with his four kids and their toys, basically Peter Pan, but with greying hair and not so troubled by crocodiles."
+        "bio": "‘Institutional thought is the enemy as it restricts the freedom of innovation…’ Yea, he’s not allowed in direct sunlight in case he starts to sparkle and don’t ask him about the future of social and digital medias. He loves the mix of digital creativity and technical solutions almost as much as he loves a good selfie. If he’s not providing innovative solutions with the latest digital tech for TAG clients, he’s either playing with his toys or with his four kids and their toys, basically Peter Pan, but with greying hair and not so troubled by crocodiles.",
+        "img-path": "https://1793699979.rsc.cdn77.org",
+        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/tom/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/tom/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/tom/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/tom/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/tom/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/tom/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/tom/CMYK.png"]
     }
 }
