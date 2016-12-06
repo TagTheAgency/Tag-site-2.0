@@ -72,7 +72,6 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
         if (hover == true) {
             $($event.target).css({"background-image": "url(" + person.images[person.images.length -1] + ")"})
         } else if (hover == false) {
-            console.log('leave')
             $($event.target).css({"background-image": "url(" + person.images[0] + ")"})
         }
     }
