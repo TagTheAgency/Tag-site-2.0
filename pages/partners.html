@@ -33,9 +33,15 @@
 				<div class="info-pages__content">
 					<div class="partners__item-wrapper">
 						<div class="partners" ng-repeat="partner in partnersObj">			
-							<div class="partners__item">
+							<div class="partners__item" data-id="{{partner.id}}">
 								<img class="partners__image"  src="{{partner.logo}}"/>
 							</div>
+						</div>
+					</div>
+					<div class="partners__copy">
+						<div class="partners__copy-wrapper">
+							<h2>Relationship Unlimited</h2>
+							<p>Specialists in SalesForce.com implementation, customisation and marketing automation. We work with the Relationship Unlimited team to deliver premier marketing automation, built and developed on their world class methodologies and development systems.</p>
 						</div>
 					</div>
 				</div>

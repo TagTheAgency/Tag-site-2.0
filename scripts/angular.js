@@ -39,6 +39,10 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
         $scope.staffObj = response.data
     })
 
+    dataService.getPartners(function (response) {
+        $scope.partnersObj = response.data
+    })
+
     $scope.go = function (path) {
       $location.path(path);
     };
@@ -47,28 +51,13 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
         $window.open(url, '_blank');
     }
 
-    $scope.getCurrentStaffObj =function ($event) {
-        staff_id = $event.target.dataset.id
-        $.each($scope.staffObj, function(i, val) {
-          if (val.id == staff_id) {
-            $scope.current_staff = val
-          }
-        });
-    }
-
-    $scope.partnersObj = {
-        haeberlin: {
-            logo: 'https://1793699979.rsc.cdn77.org/partners/haeberlin/logo.png'
-        },
-        matai: {
-            logo: 'https://1793699979.rsc.cdn77.org/partners/matai/logo.jpg'
-        },
-        syengage: {
-            logo: 'https://1793699979.rsc.cdn77.org/partners/sy-engage/logo.png'
-        },
-        relationshipunlimited: {
-            logo: 'https://1793699979.rsc.cdn77.org/partners/relationship-unlimited/logo.png'
-        }
+    $scope.getCurrentObj =function (object, $event) {
+        // $.each(object, function(i, val) {
+            // console.log(val)
+          // if (val.id == $scope.object.id) {
+            $scope.currentObj = object
+          // }
+        // });
     }
 
     $scope.toggleDisplay = function (person, hover, $event) {
@@ -88,6 +77,12 @@ angular.module('tagApp')
         this.getStaffBios = function(cb) {
           $http({
               url: 'scripts/staff.json', 
+              method: "GET"
+          }).then(cb)
+        };
+        this.getPartners = function(cb) {
+          $http({
+              url: 'scripts/partners.json', 
               method: "GET"
           }).then(cb)
         };

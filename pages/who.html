@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>Tag</title>
-	<!-- <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"> -->
 </head>
-<body>
+<body> -->
 	<header>
 		<div class="nav-top nav-top--dark">
 			<ul class="nav-top__menu">
@@ -34,7 +33,7 @@
 					<div class="team">
 						<div class="team__members-wrapper">
 							<div class="team__item" ng-repeat="person in staffObj">
-								<div class="team__image" style="background-image: url({{person.images[0]}});" ng-click="getCurrentStaffObj($event); go('/staff')" ng-mouseenter="toggleDisplay(person, true, $event)" ng-mouseleave="toggleDisplay(person, false, $event)" data-id="{{person.id}}"></div>
+								<div class="team__image" style="background-image: url({{person.images[0]}});" ng-click="getCurrentObj(person, $event); go('/staff')" ng-mouseenter="toggleDisplay(person, true, $event)" ng-mouseleave="toggleDisplay(person, false, $event)" data-id="{{person.id}}"></div>
 								<div class="team__name">{{person.name}}</div>
 								<div class="team__role">{{person.role}}</div>
 							</div>
@@ -49,5 +48,5 @@
 	</main>
 	<footer>
 	</footer>
-</body>
-</html>
+<!-- </body> -->
+<!-- </html> -->

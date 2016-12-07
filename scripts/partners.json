@@ -1,0 +1,26 @@
+{
+    "haeberlin": {
+        "id": 1,
+        "name": "Haeberlin",
+        "copy": "Management consultants that are second to none. The team at Haeberlin specialise in the hard strategies and tactics in business. TAG works to support them in brand and visualisation of complex data and information.",
+        "logo": "https://1793699979.rsc.cdn77.org/partners/haeberlin/logo.png"
+    },
+    "matai": {
+        "id": 2,
+        "name": "Matai",
+        "copy": "TAG specalise in the online world, Matai specialise in the real world, making sure our clients' communication is getting to the right people at the right time, in the right way.",
+        "logo": "https://1793699979.rsc.cdn77.org/partners/matai/logo.jpg"
+    },
+    "relationshipunlimited": {
+        "id": 3,
+        "name": "Relationship Unlimited",
+        "copy": "Specialists in SalesForce.com implementation, customisation and marketing automation. We work with the Relationship Unlimited team to deliver premier marketing automation, built and developed on their world class methodologies and development systems.",
+        "logo": "https://1793699979.rsc.cdn77.org/partners/relationship-unlimited/logo.png"
+    },
+    "syengage": {
+        "id": 4,
+        "name": "syENGAGE",
+        "copy": "The leading New Zealand experts on social media and the Asian market. We work with the team at syENGAGE to leverage your brand into the Asian market; with their focus on Asia and our focus on Australasia, we have all your bases covered!",
+        "logo": "https://1793699979.rsc.cdn77.org/partners/sy-engage/logo.png"
+    }
+}
