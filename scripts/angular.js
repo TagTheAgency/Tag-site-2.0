@@ -35,6 +35,8 @@ tagApp.config(function($routeProvider) {
 });
 
 tagApp.controller('mainController', function($scope, $location, $window, dataService, $http) {
+    $scope.hideCopy = true
+
     dataService.getStaffBios(function (response) {
         $scope.staffObj = response.data
     })
@@ -49,6 +51,15 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
 
     $scope.openTab = function (url) {
         $window.open(url, '_blank');
+    }
+
+    $scope.addClass = function(class_name, $event) {
+        $($event.target).addClass(class_name)
+    }
+
+    $scope.removeClass = function (class_name, $event) {
+        // console.log($('.' + $event.target.classList[0]))
+        $('.' + $event.target.classList[0]).removeClass(class_name)
     }
 
     $scope.getCurrentObj =function (object, $event) {

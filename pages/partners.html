@@ -30,18 +30,18 @@
 			<div class="info-pages">
 				<h1>TAG Partners</h1>
 				<p>We are strong believers in a team. In our team we work with industry experts who help to strengthen the solutions we provide to our clients and we trust these companies like we trust our own team. We are proud to work alongside the following brands; good folks doing amazing things!</p>
-				<div class="info-pages__content">
+				<div class="info-pages__content" ng-click="hide_copy = true">
 					<div class="partners__item-wrapper">
 						<div class="partners" ng-repeat="partner in partnersObj">			
 							<div class="partners__item" data-id="{{partner.id}}">
-								<img class="partners__image"  src="{{partner.logo}}"/>
+								<img class="partners__image"  src="{{partner.logo}}" ng-click="getCurrentObj(partner, $event); removeClass('partners__image--active', $event); addClass('partners__image--active', $event);"/>
 							</div>
 						</div>
 					</div>
-					<div class="partners__copy">
+					<div class="partners__copy" ng-show="hide_copy">
 						<div class="partners__copy-wrapper">
-							<h2>Relationship Unlimited</h2>
-							<p>Specialists in SalesForce.com implementation, customisation and marketing automation. We work with the Relationship Unlimited team to deliver premier marketing automation, built and developed on their world class methodologies and development systems.</p>
+							<h2>{{currentObj.name}}</h2>
+							<p>{{currentObj.copy}}</p>
 						</div>
 					</div>
 				</div>
