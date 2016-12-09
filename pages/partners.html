@@ -34,7 +34,7 @@
 					<div class="partners__item-wrapper">
 						<div class="partners" ng-repeat="partner in partnersObj">			
 							<div class="partners__item" data-id="{{partner.id}}">
-								<img class="partners__image"  src="{{partner.logo}}" ng-click="getCurrentObj(partner, $event); removeClass('partners__image--active', $event); addClass('partners__image--active', $event);"/>
+								<img class="partners__image"  src="{{partner.logo}}" ng-click="getCurrentObj(partner, $event); addActiveClass('partners__image--active', $event);"/>
 							</div>
 						</div>
 					</div>

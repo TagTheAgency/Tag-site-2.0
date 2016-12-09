@@ -53,22 +53,13 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
         $window.open(url, '_blank');
     }
 
-    $scope.addClass = function(class_name, $event) {
+    $scope.addActiveClass = function(class_name, $event) {
+        $('.' + $event.target.classList[0]).removeClass(class_name)
         $($event.target).addClass(class_name)
     }
 
-    $scope.removeClass = function (class_name, $event) {
-        // console.log($('.' + $event.target.classList[0]))
-        $('.' + $event.target.classList[0]).removeClass(class_name)
-    }
-
     $scope.getCurrentObj =function (object, $event) {
-        // $.each(object, function(i, val) {
-            // console.log(val)
-          // if (val.id == $scope.object.id) {
             $scope.currentObj = object
-          // }
-        // });
     }
 
     $scope.toggleDisplay = function (person, hover, $event) {
@@ -80,7 +71,6 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
     }
 
 });
-
 
 
 angular.module('tagApp')

@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//FONTS/////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @font-face {
     font-family: 'Futura Light';
     src: url('../fonts/Futura (Light).ttf'); }
@@ -8,13 +12,16 @@
 	font-family: 'Harriet Bold';
 	src: url('../fonts/Harriet Display Bold.otf'); }
 
-$browser-context: 16;
+$body-font: 'Futura Light';
+$header-font: 'Harriet Bold';
 
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
-}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//IMAGE VARIABLES///////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 $img-path: '../imgs/';
+
 $logo-dark: 'logos/TAG_logo_tag_black_blacktag.png';
 $logo-light: 'logos/TAG_white_1920x1080.png';
 $homepage-bg: 'backgrounds/TAG-The-Agency-website-homepage-bg.png';
@@ -29,8 +36,10 @@ $app-icon:'icons/Download_on_the_App_Store_Badge_US-UK_135x40.svg';
 $loading-yellow-icon: 'icons/ring-yellow.svg';
 $loading-black-icon: 'icons/ring-black.svg';
 
-$body-font: 'Futura Light';
-$header-font: 'Harriet Bold';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//VARIABLES/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 $header-height: 100px;
 $blue: #00AEEF;
 $pink: #EC008C;
@@ -41,6 +50,16 @@ $dark-grey: #3A3A3C;
 $light-grey: #58585A;
 $colors-list: (blue:$blue, pink:$pink, yellow:$yellow, white:$white, black:$black); //Used in @each loop for cmyk crosses colors
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//RESPONSIVE SETTINGS///////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
 $small-breakpoint: em(1024) !default;
 $medium-breakpoint:  em(1264) !default;
 $large-breakpoint:  em(1440) !default;
@@ -50,6 +69,9 @@ $xlarge-breakpoint: em(1920) !default;
   @if $media == handhelds {
     @media only screen and (max-width: $small-breakpoint) and (orientation: portrait) { @content; }
   }
+  @if $media == handhelds-landscape {
+    @media only screen and (max-width: $small-breakpoint) and (orientation: landscape) { @content; }
+  }
   @else if $media == medium-screens {
     @media only screen and (min-width: $small-breakpoint) and (max-width: $large-breakpoint), (max-width: $small-breakpoint) and (orientation: landscape) { @content; }
   }
@@ -58,10 +80,28 @@ $xlarge-breakpoint: em(1920) !default;
   }
 }
 
+// Copy / Paste for responsive styles
+
+// @include respond-to(handhelds) {
+// }
+// @include respond-to(medium-screens) {
+// }
+// @include respond-to(wide-screens) {
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//MIXINS////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @mixin flex-wrapper {
+	padding: 0;
+	margin: 0;
+	display: -webkit-box;
 	display: flex;
+	display: -webkit-flex;
 	flex-wrap: nowrap;
 	align-items: stretch;
+	-ms-box-orient: horizontal;
 }
 
 @mixin center {
@@ -77,14 +117,23 @@ $xlarge-breakpoint: em(1920) !default;
 	transform: translateX(-50%);
 }
 
-//Copy / Paste for responsive styles
+@mixin loading-icon {
+	@include center;
+	display: block;
+	content: "";
+	// position: relative;
+	width: 15%;
+	padding-bottom: 15%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -1;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPScxMDBweCcgaGVpZ2h0PScxMDBweCcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiIGNsYXNzPSJ1aWwtcmluZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9Im5vbmUiIGNsYXNzPSJiayI+PC9yZWN0PjxkZWZzPjxmaWx0ZXIgaWQ9InVpbC1yaW5nLXNoYWRvdyIgeD0iLTEwMCUiIHk9Ii0xMDAlIiB3aWR0aD0iMzAwJSIgaGVpZ2h0PSIzMDAlIj48ZmVPZmZzZXQgcmVzdWx0PSJvZmZPdXQiIGluPSJTb3VyY2VHcmFwaGljIiBkeD0iMCIgZHk9IjAiPjwvZmVPZmZzZXQ+PGZlR2F1c3NpYW5CbHVyIHJlc3VsdD0iYmx1ck91dCIgaW49Im9mZk91dCIgc3RkRGV2aWF0aW9uPSIwIj48L2ZlR2F1c3NpYW5CbHVyPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImJsdXJPdXQiIG1vZGU9Im5vcm1hbCI+PC9mZUJsZW5kPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBkPSJNMTAsNTBjMCwwLDAsMC41LDAuMSwxLjRjMCwwLjUsMC4xLDEsMC4yLDEuN2MwLDAuMywwLjEsMC43LDAuMSwxLjFjMC4xLDAuNCwwLjEsMC44LDAuMiwxLjJjMC4yLDAuOCwwLjMsMS44LDAuNSwyLjggYzAuMywxLDAuNiwyLjEsMC45LDMuMmMwLjMsMS4xLDAuOSwyLjMsMS40LDMuNWMwLjUsMS4yLDEuMiwyLjQsMS44LDMuN2MwLjMsMC42LDAuOCwxLjIsMS4yLDEuOWMwLjQsMC42LDAuOCwxLjMsMS4zLDEuOSBjMSwxLjIsMS45LDIuNiwzLjEsMy43YzIuMiwyLjUsNSw0LjcsNy45LDYuN2MzLDIsNi41LDMuNCwxMC4xLDQuNmMzLjYsMS4xLDcuNSwxLjUsMTEuMiwxLjZjNC0wLjEsNy43LTAuNiwxMS4zLTEuNiBjMy42LTEuMiw3LTIuNiwxMC00LjZjMy0yLDUuOC00LjIsNy45LTYuN2MxLjItMS4yLDIuMS0yLjUsMy4xLTMuN2MwLjUtMC42LDAuOS0xLjMsMS4zLTEuOWMwLjQtMC42LDAuOC0xLjMsMS4yLTEuOSBjMC42LTEuMywxLjMtMi41LDEuOC0zLjdjMC41LTEuMiwxLTIuNCwxLjQtMy41YzAuMy0xLjEsMC42LTIuMiwwLjktMy4yYzAuMi0xLDAuNC0xLjksMC41LTIuOGMwLjEtMC40LDAuMS0wLjgsMC4yLTEuMiBjMC0wLjQsMC4xLTAuNywwLjEtMS4xYzAuMS0wLjcsMC4xLTEuMiwwLjItMS43QzkwLDUwLjUsOTAsNTAsOTAsNTBzMCwwLjUsMCwxLjRjMCwwLjUsMCwxLDAsMS43YzAsMC4zLDAsMC43LDAsMS4xIGMwLDAuNC0wLjEsMC44LTAuMSwxLjJjLTAuMSwwLjktMC4yLDEuOC0wLjQsMi44Yy0wLjIsMS0wLjUsMi4xLTAuNywzLjNjLTAuMywxLjItMC44LDIuNC0xLjIsMy43Yy0wLjIsMC43LTAuNSwxLjMtMC44LDEuOSBjLTAuMywwLjctMC42LDEuMy0wLjksMmMtMC4zLDAuNy0wLjcsMS4zLTEuMSwyYy0wLjQsMC43LTAuNywxLjQtMS4yLDJjLTEsMS4zLTEuOSwyLjctMy4xLDRjLTIuMiwyLjctNSw1LTguMSw3LjEgYy0wLjgsMC41LTEuNiwxLTIuNCwxLjVjLTAuOCwwLjUtMS43LDAuOS0yLjYsMS4zTDY2LDg3LjdsLTEuNCwwLjVjLTAuOSwwLjMtMS44LDAuNy0yLjgsMWMtMy44LDEuMS03LjksMS43LTExLjgsMS44TDQ3LDkwLjggYy0xLDAtMi0wLjItMy0wLjNsLTEuNS0wLjJsLTAuNy0wLjFMNDEuMSw5MGMtMS0wLjMtMS45LTAuNS0yLjktMC43Yy0wLjktMC4zLTEuOS0wLjctMi44LTFMMzQsODcuN2wtMS4zLTAuNiBjLTAuOS0wLjQtMS44LTAuOC0yLjYtMS4zYy0wLjgtMC41LTEuNi0xLTIuNC0xLjVjLTMuMS0yLjEtNS45LTQuNS04LjEtNy4xYy0xLjItMS4yLTIuMS0yLjctMy4xLTRjLTAuNS0wLjYtMC44LTEuNC0xLjItMiBjLTAuNC0wLjctMC44LTEuMy0xLjEtMmMtMC4zLTAuNy0wLjYtMS4zLTAuOS0yYy0wLjMtMC43LTAuNi0xLjMtMC44LTEuOWMtMC40LTEuMy0wLjktMi41LTEuMi0zLjdjLTAuMy0xLjItMC41LTIuMy0wLjctMy4zIGMtMC4yLTEtMC4zLTItMC40LTIuOGMtMC4xLTAuNC0wLjEtMC44LTAuMS0xLjJjMC0wLjQsMC0wLjcsMC0xLjFjMC0wLjcsMC0xLjIsMC0xLjdDMTAsNTAuNSwxMCw1MCwxMCw1MHoiIGZpbGw9IiNGRkYyMDAiIGZpbHRlcj0idXJsKCN1aWwtcmluZy1zaGFkb3cpIj48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgZnJvbT0iMCA1MCA1MCIgdG89IjM2MCA1MCA1MCIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGR1cj0iMXMiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L3BhdGg+PC9zdmc+');
+}
 
-// @include respond-to(handhelds) {
-// }
-// @include respond-to(medium-screens) {
-// }
-// @include respond-to(wide-screens) {
-// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//STYLES////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 html, body, header, main {
 	overflow: hidden;
@@ -122,7 +171,7 @@ main {
 	height: 100%;
 	min-height: 100%;
 	width: 100%;
-	padding-top: 100px; //Header Height
+	padding-top: $header-height;
 }
 
 header {
@@ -136,7 +185,6 @@ header {
 }
 
 .background {
-	@include center;
 	@include respond-to(handhelds) {
 		background-position: 60% 0;
 	}
@@ -163,25 +211,6 @@ header {
 	}
 }
 
-.loading-icon {
-	@include center;
-	position: absolute;
-	width: 15%;
-	padding-bottom: 15%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	z-index: -1;
-	&--black {
-	background-image: url($img-path + $loading-black-icon);
-
-	}
-	&--yellow {
-		background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPScxMDBweCcgaGVpZ2h0PScxMDBweCcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiIGNsYXNzPSJ1aWwtcmluZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9Im5vbmUiIGNsYXNzPSJiayI+PC9yZWN0PjxkZWZzPjxmaWx0ZXIgaWQ9InVpbC1yaW5nLXNoYWRvdyIgeD0iLTEwMCUiIHk9Ii0xMDAlIiB3aWR0aD0iMzAwJSIgaGVpZ2h0PSIzMDAlIj48ZmVPZmZzZXQgcmVzdWx0PSJvZmZPdXQiIGluPSJTb3VyY2VHcmFwaGljIiBkeD0iMCIgZHk9IjAiPjwvZmVPZmZzZXQ+PGZlR2F1c3NpYW5CbHVyIHJlc3VsdD0iYmx1ck91dCIgaW49Im9mZk91dCIgc3RkRGV2aWF0aW9uPSIwIj48L2ZlR2F1c3NpYW5CbHVyPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImJsdXJPdXQiIG1vZGU9Im5vcm1hbCI+PC9mZUJsZW5kPjwvZmlsdGVyPjwvZGVmcz48cGF0aCBkPSJNMTAsNTBjMCwwLDAsMC41LDAuMSwxLjRjMCwwLjUsMC4xLDEsMC4yLDEuN2MwLDAuMywwLjEsMC43LDAuMSwxLjFjMC4xLDAuNCwwLjEsMC44LDAuMiwxLjJjMC4yLDAuOCwwLjMsMS44LDAuNSwyLjggYzAuMywxLDAuNiwyLjEsMC45LDMuMmMwLjMsMS4xLDAuOSwyLjMsMS40LDMuNWMwLjUsMS4yLDEuMiwyLjQsMS44LDMuN2MwLjMsMC42LDAuOCwxLjIsMS4yLDEuOWMwLjQsMC42LDAuOCwxLjMsMS4zLDEuOSBjMSwxLjIsMS45LDIuNiwzLjEsMy43YzIuMiwyLjUsNSw0LjcsNy45LDYuN2MzLDIsNi41LDMuNCwxMC4xLDQuNmMzLjYsMS4xLDcuNSwxLjUsMTEuMiwxLjZjNC0wLjEsNy43LTAuNiwxMS4zLTEuNiBjMy42LTEuMiw3LTIuNiwxMC00LjZjMy0yLDUuOC00LjIsNy45LTYuN2MxLjItMS4yLDIuMS0yLjUsMy4xLTMuN2MwLjUtMC42LDAuOS0xLjMsMS4zLTEuOWMwLjQtMC42LDAuOC0xLjMsMS4yLTEuOSBjMC42LTEuMywxLjMtMi41LDEuOC0zLjdjMC41LTEuMiwxLTIuNCwxLjQtMy41YzAuMy0xLjEsMC42LTIuMiwwLjktMy4yYzAuMi0xLDAuNC0xLjksMC41LTIuOGMwLjEtMC40LDAuMS0wLjgsMC4yLTEuMiBjMC0wLjQsMC4xLTAuNywwLjEtMS4xYzAuMS0wLjcsMC4xLTEuMiwwLjItMS43QzkwLDUwLjUsOTAsNTAsOTAsNTBzMCwwLjUsMCwxLjRjMCwwLjUsMCwxLDAsMS43YzAsMC4zLDAsMC43LDAsMS4xIGMwLDAuNC0wLjEsMC44LTAuMSwxLjJjLTAuMSwwLjktMC4yLDEuOC0wLjQsMi44Yy0wLjIsMS0wLjUsMi4xLTAuNywzLjNjLTAuMywxLjItMC44LDIuNC0xLjIsMy43Yy0wLjIsMC43LTAuNSwxLjMtMC44LDEuOSBjLTAuMywwLjctMC42LDEuMy0wLjksMmMtMC4zLDAuNy0wLjcsMS4zLTEuMSwyYy0wLjQsMC43LTAuNywxLjQtMS4yLDJjLTEsMS4zLTEuOSwyLjctMy4xLDRjLTIuMiwyLjctNSw1LTguMSw3LjEgYy0wLjgsMC41LTEuNiwxLTIuNCwxLjVjLTAuOCwwLjUtMS43LDAuOS0yLjYsMS4zTDY2LDg3LjdsLTEuNCwwLjVjLTAuOSwwLjMtMS44LDAuNy0yLjgsMWMtMy44LDEuMS03LjksMS43LTExLjgsMS44TDQ3LDkwLjggYy0xLDAtMi0wLjItMy0wLjNsLTEuNS0wLjJsLTAuNy0wLjFMNDEuMSw5MGMtMS0wLjMtMS45LTAuNS0yLjktMC43Yy0wLjktMC4zLTEuOS0wLjctMi44LTFMMzQsODcuN2wtMS4zLTAuNiBjLTAuOS0wLjQtMS44LTAuOC0yLjYtMS4zYy0wLjgtMC41LTEuNi0xLTIuNC0xLjVjLTMuMS0yLjEtNS45LTQuNS04LjEtNy4xYy0xLjItMS4yLTIuMS0yLjctMy4xLTRjLTAuNS0wLjYtMC44LTEuNC0xLjItMiBjLTAuNC0wLjctMC44LTEuMy0xLjEtMmMtMC4zLTAuNy0wLjYtMS4zLTAuOS0yYy0wLjMtMC43LTAuNi0xLjMtMC44LTEuOWMtMC40LTEuMy0wLjktMi41LTEuMi0zLjdjLTAuMy0xLjItMC41LTIuMy0wLjctMy4zIGMtMC4yLTEtMC4zLTItMC40LTIuOGMtMC4xLTAuNC0wLjEtMC44LTAuMS0xLjJjMC0wLjQsMC0wLjcsMC0xLjFjMC0wLjcsMC0xLjIsMC0xLjdDMTAsNTAuNSwxMCw1MCwxMCw1MHoiIGZpbGw9IiNGRkYyMDAiIGZpbHRlcj0idXJsKCN1aWwtcmluZy1zaGFkb3cpIj48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgZnJvbT0iMCA1MCA1MCIgdG89IjM2MCA1MCA1MCIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGR1cj0iMXMiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L3BhdGg+PC9zdmc+');
-
-	}
-}
-
 .fade-animation { // Transition between pages
 	&.ng-enter, &.ng-leave {
 		-webkit-transition: all 1s ease;
@@ -204,14 +233,17 @@ header {
 }
 
 .inner-container {
-	transition-duration: 0.5s;
 	@include center;
-	clear: both;
 	@include respond-to(handhelds) {
 		box-sizing: border-box;
 		height: calc(100% - 100px); //header height
 		width: 100%;
 		padding: 50px 10px 10px 10px;
+	}
+	@include respond-to(handhelds-landscape) {
+		padding-top: $header-height;
+		height: calc(100% - 100px); //header height
+		width: 100%;
 	}
 	@include respond-to(medium-screens) {
 		width: 1020px;
@@ -294,68 +326,24 @@ header {
 	&--light {
 		color: white;
 	}
-	&--compact {
-		overflow: scroll;
-		@include respond-to(handhelds) {
-			h1 {
-				font-size: 1.8em;
-				margin: 0 0 2% 0;
-			}
-			h2 {
-				margin: 2% 0 0 0;
-			}
-			p {
-				font-size: 0.7em;
-				margin: 0 0 1% 0;
-			}
-		}
-		@include respond-to(medium-screens) {
-			h1 {
-				font-size: 1.8em;
-				margin: 0 0 2% 0;
-			}
-			h2 {
-				margin: 8% 0 0 0;
-			}
-			p {
-				font-size: 0.9em;
-				margin: 0 0 2.5% 0;
-			}
-		}
-		@include respond-to(wide-screens) {
-			h1 {
-				font-size: 3em;
-				margin: 0 0 3% 0;
-			}
-			h2 {
-				font-size: 2em;
-				margin: 15% 0 0 0;
-			}
-			p {
-				font-size: 1.3em;
-				margin: 0 0 5% 0;
-			}
-		}
-	}
 }
 
 .icons {
-	position: relative;
-	top: calc(-20% - 10px); // Quick fix
-	left: 0;
-	clear: both;
-	float: left;
+	position: absolute;
+	top: 500px;
 	width: calc(40% - 60px); // Minus margins
 	height: calc(20% - 10px); // Minus margins
 	margin: 0 50px 10px 10px;
 	@include respond-to(handhelds) {
-		@include flex-wrapper;
-		@include center-horizontal;
+		position: relative;
 		width: 60%;
+		top: 75px;
+		// top: 600px;
 	}
 	@include respond-to(medium-screens) {
-		float: none;
-		top: calc(-20% - 10px); // Quick fix
+		// float: left;
+		position: relative;
+		top: 75px;
 	}
 	&__icon {
 		float: left;
@@ -364,8 +352,7 @@ header {
 		margin: 0 20px 0 0;
 		cursor: pointer;
 		@include respond-to(handhelds) {
-			margin: auto 0 auto 0;
-			flex: 1;
+			// margin: auto 0 auto 0;
 		}
 	}
 	&__image {
@@ -586,6 +573,7 @@ header {
 }
 
 .work-examples {
+	position: absolute;
 	color: white;
 	float: left;
 	height: 100%;
@@ -771,6 +759,12 @@ header {
 		height: 75%;
 		width: 100%;
 	}
+	@include respond-to(handhelds) {
+		font-size: 1.5em;
+		p {
+			width: 65%;
+		}
+	}
 	@include respond-to(medium-screens) {
 		padding-top: 2%;
 		p {
@@ -779,15 +773,16 @@ header {
 			@include center-horizontal;
 			width: 60%;
 			position: relative;
-			margin: 2% 0 0 0;
+			margin: 5px 0 0 0;
 			text-align: center;
 		}
 
 		&__content {
-			margin-top: 2%;
+			@include center-horizontal;
+			margin-top: 5px;
 			position: relative;
 			height: 50%;
-			width: 100%;
+			width: 90%;
 		}
 	}
 }
@@ -797,12 +792,23 @@ header {
 		@include flex-wrapper;
 		width: 100%;
 		height: 40%;
+		@include respond-to(handhelds) {
+			height: 80%;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
 	}
 	&__item {
 		height: 100%;
 		flex: 1;
 		margin: 0 10px 0 10px;
 		text-align: center;
+		@include respond-to(handhelds) {
+			flex: 0 0 auto;
+			height: 150px;
+			width: 150px;
+			margin: 0 10px 120px 10px;
+		}
 	}
 	&__image {
 		position: relative;
@@ -813,10 +819,16 @@ header {
 		border-radius: 50%;
 		width: 100%;
 		padding-bottom: 100%;
+		@include respond-to(handhelds) {
+			height: 150px;
+			width: 150px;
+			padding-bottom: 0;
+		}
 		&--hover {
 			position: absolute;
 			display: none;
 		}
+
 	}
 	&__name {
 		margin: 2% 0 0 0;
@@ -843,6 +855,9 @@ header {
 }
 
 .personal-images {
+	@include respond-to(medium-screens) {
+		top: 300px;
+	}
 	position: absolute;
 	top: 365px;
 	width: 100%;
@@ -878,6 +893,9 @@ header {
 		@include center-horizontal;
 		@include flex-wrapper;	
 		position: relative;
+		@include respond-to(handhelds-landscape) {
+			margin-top: 40px;
+		}
 	}
 	&__item {
 		height: 100%;
@@ -899,6 +917,15 @@ header {
 	    }
 	}
 	&__copy {
+		@include respond-to(handhelds) {
+			width: 70%;
+			padding-bottom: 70%;
+			font-size: 1.5em;
+		}
+		@include respond-to(handhelds-landscape) {
+			width: 40%;
+			padding-bottom: 15%;
+		}
 		// box-sizing: border-box;
 		@include center-horizontal;
 		-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.25);
