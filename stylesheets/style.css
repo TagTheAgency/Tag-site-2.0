@@ -61,7 +61,7 @@ header {
     .background {
       background-position: 60% 0; } }
   .background--homepage {
-    background-image: url("../imgs/backgrounds/TAG-The-Agency-website-homepage-bg.png"); }
+    background-image: url("../imgs/backgrounds/iStock-502779284.jpg"); }
   .background--production {
     background-image: url("../imgs/backgrounds/TAG-The-Agency-website-production-bg.png"); }
   .background--influencers {
@@ -199,7 +199,7 @@ header {
     transition-duration: 1s; }
     .icons__image--home {
       background-position: bottom;
-      background-image: url("../imgs/icons/TAG The Agency website case studies buttons-56.png"); }
+      background-image: url("../imgs/icons/icon-56.png"); }
       .icons__image--home:hover {
         -ms-transform: rotate(180deg);
         /* IE 9 */
@@ -373,7 +373,7 @@ header {
   .cmyk-crosses__image {
     cursor: pointer;
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     width: 100%;
     padding-bottom: 100%; }
   .cmyk-crosses__text {
@@ -383,31 +383,36 @@ header {
   .cmyk-crosses__image--blue:hover {
     background-image: url("../imgs//icons/cmyk-blue-active.png"); }
   .cmyk-crosses__text--blue {
-    color: #00AEEF; }
+    color: #00AEEF;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
   .cmyk-crosses__image--pink {
     background-image: url("../imgs//icons/cmyk-pink.png"); }
   .cmyk-crosses__image--pink:hover {
     background-image: url("../imgs//icons/cmyk-pink-active.png"); }
   .cmyk-crosses__text--pink {
-    color: #EC008C; }
+    color: #EC008C;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
   .cmyk-crosses__image--yellow {
     background-image: url("../imgs//icons/cmyk-yellow.png"); }
   .cmyk-crosses__image--yellow:hover {
     background-image: url("../imgs//icons/cmyk-yellow-active.png"); }
   .cmyk-crosses__text--yellow {
-    color: #FFF200; }
+    color: #FFF200;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
   .cmyk-crosses__image--white {
     background-image: url("../imgs//icons/cmyk-white.png"); }
   .cmyk-crosses__image--white:hover {
     background-image: url("../imgs//icons/cmyk-white-active.png"); }
   .cmyk-crosses__text--white {
-    color: white; }
+    color: white;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
   .cmyk-crosses__image--black {
     background-image: url("../imgs//icons/cmyk-black.png"); }
   .cmyk-crosses__image--black:hover {
     background-image: url("../imgs//icons/cmyk-black-active.png"); }
   .cmyk-crosses__text--black {
-    color: #231F20; }
+    color: #231F20;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
 
 .work-examples {
   position: absolute;

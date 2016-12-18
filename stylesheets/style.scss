@@ -24,12 +24,12 @@ $img-path: '../imgs/';
 
 $logo-dark: 'logos/TAG_logo_tag_black_blacktag.png';
 $logo-light: 'logos/TAG_white_1920x1080.png';
-$homepage-bg: 'backgrounds/TAG-The-Agency-website-homepage-bg.png';
+$homepage-bg: 'backgrounds/iStock-502779284.jpg';
 $production-bg: 'backgrounds/TAG-The-Agency-website-production-bg.png';
 $influencers-bg: 'backgrounds/TAG-The-Agency-website-influencers-bg.png';
 $strategy-bg: 'backgrounds/upload_11_10_2016_at_2_19_10_PM.png';
 $vr-bg: 'backgrounds/TAG-The-Agency-website-VR-Studios-bg.png';
-$home-icon: 'icons/TAG The Agency website case studies buttons-56.png';
+$home-icon: 'icons/icon-56.png';
 $home-icon-light: 'icons/home-icon-white.png';
 $play-icon:'play-icon.png';
 $app-icon:'icons/Download_on_the_App_Store_Badge_US-UK_135x40.svg';
@@ -552,7 +552,7 @@ header {
 		cursor: pointer;
 		// transition-duration: 1.5s;
 		background-position: center;
-		background-size: cover;
+		background-size: 100%;
 		width: 100%;
 		padding-bottom: 100%;
 	}
@@ -568,6 +568,7 @@ header {
 		}
 		&__text--#{$color} {
 			color: $hex;
+			text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
 		}
 	}
 }
