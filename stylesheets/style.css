@@ -189,7 +189,7 @@ header {
     float: left;
     width: 15%;
     padding-bottom: 15%;
-    margin: 0 20px 0 0;
+    margin: 0 5px 0 0;
     cursor: pointer; }
   .icons__image {
     width: 100%;
@@ -209,9 +209,20 @@ header {
       .icons__image--home--light {
         background-image: url("../imgs/icons/home-icon-white.png"); }
     .icons__image--app {
+      margin-left: 50px;
       width: 250%;
       background-position: center;
       background-image: url("../imgs/icons/Download_on_the_App_Store_Badge_US-UK_135x40.svg"); }
+    .icons__image--back {
+      background-image: url("../imgs/icons/Icon-71.png"); }
+      .icons__image--back--light {
+        -webkit-filter: invert(1);
+        filter: invert(1); }
+    .icons__image--forward {
+      background-image: url("../imgs/icons/Icon-72.png"); }
+      .icons__image--forward--light {
+        -webkit-filter: invert(1);
+        filter: invert(1); }
   .icons__text {
     text-transform: uppercase;
     font-family: 'Futura';
@@ -272,7 +283,7 @@ header {
     background-position: center; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .nav-top__logo {
-        width: 150px; } }
+        width: 200px; } }
     .nav-top__logo--dark {
       background-image: url("../imgs/logos/TAG_logo_tag_black_blacktag.png"); }
     .nav-top__logo--light {
@@ -383,36 +394,31 @@ header {
   .cmyk-crosses__image--blue:hover {
     background-image: url("../imgs//icons/cmyk-blue-active.png"); }
   .cmyk-crosses__text--blue {
-    color: #00AEEF;
-    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
+    color: #00AEEF; }
   .cmyk-crosses__image--pink {
     background-image: url("../imgs//icons/cmyk-pink.png"); }
   .cmyk-crosses__image--pink:hover {
     background-image: url("../imgs//icons/cmyk-pink-active.png"); }
   .cmyk-crosses__text--pink {
-    color: #EC008C;
-    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
+    color: #EC008C; }
   .cmyk-crosses__image--yellow {
     background-image: url("../imgs//icons/cmyk-yellow.png"); }
   .cmyk-crosses__image--yellow:hover {
     background-image: url("../imgs//icons/cmyk-yellow-active.png"); }
   .cmyk-crosses__text--yellow {
-    color: #FFF200;
-    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
+    color: #FFF200; }
   .cmyk-crosses__image--white {
     background-image: url("../imgs//icons/cmyk-white.png"); }
   .cmyk-crosses__image--white:hover {
     background-image: url("../imgs//icons/cmyk-white-active.png"); }
   .cmyk-crosses__text--white {
-    color: white;
-    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
+    color: white; }
   .cmyk-crosses__image--black {
     background-image: url("../imgs//icons/cmyk-black.png"); }
   .cmyk-crosses__image--black:hover {
     background-image: url("../imgs//icons/cmyk-black-active.png"); }
   .cmyk-crosses__text--black {
-    color: #231F20;
-    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5); }
+    color: #231F20; }
 
 .work-examples {
   position: absolute;

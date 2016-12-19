@@ -35,6 +35,8 @@ $play-icon:'play-icon.png';
 $app-icon:'icons/Download_on_the_App_Store_Badge_US-UK_135x40.svg';
 $loading-yellow-icon: 'icons/ring-yellow.svg';
 $loading-black-icon: 'icons/ring-black.svg';
+$back-icon: 'icons/Icon-71.png';
+$forward-icon: 'icons/Icon-72.png';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //VARIABLES/////////////////////////////////////////////////////////////////////////////////////////////////
@@ -349,7 +351,7 @@ header {
 		float: left;
 		width: 15%;
 		padding-bottom: 15%;
-		margin: 0 20px 0 0;
+		margin: 0 5px 0 0;
 		cursor: pointer;
 		@include respond-to(handhelds) {
 			// margin: auto 0 auto 0;
@@ -375,10 +377,25 @@ header {
 			}
 		}
 		&--app {
+			margin-left: 50px;
 			width: 250%;
 			// width: 20%;
 			background-position: center;
 			background-image: url($img-path + $app-icon);
+		}
+		&--back {
+			&--light {
+				-webkit-filter: invert(1);
+				filter: invert(1);
+			}
+			background-image: url($img-path + $back-icon);
+		}
+		&--forward {
+			&--light {
+				-webkit-filter: invert(1);
+				filter: invert(1);
+			}
+			background-image: url($img-path + $forward-icon);
 		}
 	}
 	&__text {
@@ -439,7 +456,7 @@ header {
 		background-repeat: no-repeat;
 		background-position: center;
 		@include respond-to(handhelds) {
-			width: 150px;
+			width: 200px;
 		}
 		&--dark {
 			background-image: url($img-path + $logo-dark);
@@ -568,7 +585,6 @@ header {
 		}
 		&__text--#{$color} {
 			color: $hex;
-			text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
 		}
 	}
 }
