@@ -93,7 +93,7 @@ header {
       box-sizing: border-box;
       height: calc(100% - 100px);
       width: 100%;
-      padding: 50px 10px 10px 10px; } }
+      padding: 100px 50px 50px 50px; } }
   @media only screen and (max-width: 64em) and (orientation: landscape) {
     .inner-container {
       padding-top: 100px;
@@ -268,7 +268,7 @@ header {
         width: 40%; } }
   .nav-top__menu-item {
     cursor: pointer;
-    margin: auto 0 auto 0;
+    margin: auto 10px auto 10px;
     flex: 1; }
     .nav-top__menu-item--active {
       font-family: 'Futura'; }
@@ -426,6 +426,9 @@ header {
   float: left;
   height: 100%;
   width: 100%; }
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
+    .work-examples {
+      margin-top: 100px; } }
   .work-examples__row-1, .work-examples__row-2 {
     padding: 0;
     margin: 0;
@@ -437,24 +440,33 @@ header {
     -ms-box-orient: horizontal;
     height: 50%;
     width: 100%; }
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
+    .work-examples__row-2 {
+      display: none; } }
   .work-examples__item {
     position: relative;
-    background-color: #3A3A3C;
+    background-color: black;
     flex: 1; }
+    @media only screen and (max-width: 64em) and (orientation: portrait) {
+      .work-examples__item {
+        margin: 0 5px 0 5px;
+        height: 100%; } }
     @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .work-examples__item {
+        height: calc(100% - 10px);
         margin: 5px 5px 5px 5px; } }
     @media only screen and (min-width: 90em) {
       .work-examples__item {
+        height: calc(100% - 20px);
         margin: 10px 10px 10px 10px; } }
   .work-examples__category {
     font: 1em "Futura Light";
     position: absolute;
-    margin: 10px 0 0 5px; }
+    margin: 7px 0 0 5px; }
   .work-examples__title {
     font: 1.2em "Harriet Bold";
     position: absolute;
-    margin: 30px 0 0 5px; }
+    margin: 20px 0 0 5px; }
     @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .work-examples__title {
         font-size: 1em; } }
@@ -462,12 +474,12 @@ header {
     z-index: 1;
     padding-top: 50px;
     width: 100%;
-    height: calc(75% - 50px); }
+    height: calc(85% - 50px); }
   .work-examples__description {
     position: relative;
     width: 100%;
-    background-color: #58585A;
-    height: 25%;
+    background-color: black;
+    height: 15%;
     bottom: 0%; }
     @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .work-examples__description {
@@ -481,7 +493,7 @@ header {
     float: left;
     position: relative;
     bottom: 0%;
-    height: 2%;
+    height: 3%;
     width: 100%;
     background-color: #00AEEF; }
     .work-examples__color-strip:after {
@@ -556,6 +568,7 @@ header {
     text-align: center; }
   .info-pages p {
     font-family: 'Harriet Regular';
+    font-size: 1.3em;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -564,7 +577,7 @@ header {
     margin: 10px 0 0 0;
     text-align: center; }
   .info-pages__content {
-    margin-top: 10px;
+    margin-top: 5%;
     position: absolute;
     height: 75%;
     width: 100%; }
@@ -644,6 +657,9 @@ header {
 .team__role {
   margin: 1% 0 0 0;
   font-family: "Harriet Regular"; }
+.team__bottom-copy {
+  margin: 5% 0 0 0;
+  font-size: 1.3em; }
 
 .personal {
   height: 100%;

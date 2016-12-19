@@ -240,7 +240,7 @@ header {
 		box-sizing: border-box;
 		height: calc(100% - 100px); //header height
 		width: 100%;
-		padding: 50px 10px 10px 10px;
+		padding: 100px 50px 50px 50px;
 	}
 	@include respond-to(handhelds-landscape) {
 		padding-top: $header-height;
@@ -440,7 +440,7 @@ header {
 	}
 	&__menu-item {
 		cursor: pointer;
-		margin: auto 0 auto 0;
+		margin: auto 10px auto 10px;
 		flex: 1;
 		&--active {
 			font-family: 'Futura';
@@ -590,6 +590,9 @@ header {
 }
 
 .work-examples {
+	@include respond-to(handhelds) {
+		margin-top: 100px;
+	}
 	position: absolute;
 	color: white;
 	float: left;
@@ -600,29 +603,38 @@ header {
 		height: 50%;
 		width: 100%;
 	}
+	&__row-2 {
+		@include respond-to(handhelds) {
+			display: none;
+		}
+	}
 	&__item {
 		position: relative;
-		background-color: $dark-grey;
+		// background-color: $dark-grey;
+		background-color: black;
 		flex: 1;
 		@include respond-to(handhelds) {
-			// To Add mobile styles when Rosa completes them
+			margin: 0 5px 0 5px;
+			height: 100%;
 		}
 		@include respond-to(medium-screens) {
+			height: calc(100% - 10px);
 			margin: 5px 5px 5px 5px;
 		}
 		@include respond-to(wide-screens) {
+			height: calc(100% - 20px);
 			margin: 10px 10px 10px 10px;
 		}
 	}
 	&__category {
 		font: 1em $body-font;
 		position: absolute;
-		margin: 10px 0 0 5px;
+		margin: 7px 0 0 5px;
 	}
 	&__title {
 		font: 1.2em $header-font;
 		position: absolute;
-		margin: 30px 0 0 5px;
+		margin: 20px 0 0 5px;
 		@include respond-to(medium-screens) {
 			font-size: 1em;
 		}
@@ -631,13 +643,14 @@ header {
 		z-index: 1;
 		padding-top: 50px;
 		width: 100%;
-		height: calc(75% - 50px);
+		height: calc(85% - 50px);
 	}
 	&__description {
 		position: relative;
 		width: 100%;
-		background-color: $light-grey;
-		height: 25%;
+		// background-color: $light-grey;
+		background-color: black;
+		height: 15%;
 		bottom: 0%;
 		@include respond-to(handhelds) {
 			// To Add mobile styles when Rosa completes them
@@ -656,7 +669,7 @@ header {
 		float: left;
 		position: relative;
 		bottom: 0%;
-		height: 2%;
+		height: 3%;
 		width: 100%;
 		background-color: $blue;
 		&:after {
@@ -763,6 +776,7 @@ header {
 	}
 	p {
 		font-family: 'Harriet Regular';
+		font-size: 1.3em;
 		@include center-horizontal;
 		width: 40%;
 		position: relative;
@@ -771,7 +785,7 @@ header {
 	}
 
 	&__content {
-		margin-top: 10px;
+		margin-top: 5%;
 		position: absolute;
 		height: 75%;
 		width: 100%;
@@ -854,6 +868,10 @@ header {
 	&__role {
 		margin: 1% 0 0 0;
 		font-family: 'Harriet Regular'
+	}
+	&__bottom-copy {
+		margin: 5% 0 0 0;
+		font-size: 1.3em;
 	}
 }
 
