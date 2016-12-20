@@ -29,6 +29,9 @@ tagApp.config(function($routeProvider) {
     .when('/staff', {
         templateUrl : "../pages/personal.html"
     })
+    .when('/what', {
+        templateUrl : "../pages/what.html",
+    })
     .otherwise({
         redirectTo: '/'
     });
@@ -36,6 +39,7 @@ tagApp.config(function($routeProvider) {
 
 tagApp.controller('mainController', function($scope, $location, $window, dataService, $http) {
     $scope.hideCopy = true
+    // $scope.what_imagurl
 
     dataService.getStaffBios(function (response) {
         $scope.staffObj = response.data
