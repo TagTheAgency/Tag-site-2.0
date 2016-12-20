@@ -76,6 +76,8 @@ header {
     background-image: url("../imgs/backgrounds/upload_11_10_2016_at_2_19_10_PM.png"); }
   .background--vr {
     background-image: url("../imgs/backgrounds/TAG-The-Agency-website-VR-Studios-bg.png"); }
+  .background--contact {
+    background-image: url("../imgs/backgrounds/TAG The Agency website contact us bg_WHAT copy 7.png"); }
 
 .fade-animation.ng-enter, .fade-animation.ng-leave {
   -webkit-transition: all 1s ease;

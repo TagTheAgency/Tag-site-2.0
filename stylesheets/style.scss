@@ -28,6 +28,7 @@ $homepage-bg: 'backgrounds/TAG-The-Agency-website-homepage-bg.png';
 $production-bg: 'backgrounds/TAG-The-Agency-website-production-bg.png';
 $influencers-bg: 'backgrounds/TAG-The-Agency-website-influencers-bg.png';
 $strategy-bg: 'backgrounds/upload_11_10_2016_at_2_19_10_PM.png';
+$contact-bg: 'backgrounds/TAG The Agency website contact us bg_WHAT copy 7.png';
 $vr-bg: 'backgrounds/TAG-The-Agency-website-VR-Studios-bg.png';
 $home-icon: 'icons/icon-56.png';
 $home-icon-light: 'icons/home-icon-white.png';
@@ -214,6 +215,9 @@ header {
 	}
 	&--vr {
 		background-image: url($img-path + $vr-bg);
+	}
+	&--contact {
+		background-image: url($img-path + $contact-bg);
 	}
 }
 
