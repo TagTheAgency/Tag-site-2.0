@@ -849,4 +849,49 @@ header {
       width: 850px;
       height: 600px; } }
 
+.contact-form {
+  width: 100%;
+  height: 800px; }
+  .contact-form form {
+    width: 100%;
+    height: 100%; }
+  .contact-form span {
+    font-size: 4em;
+    font-family: "Harriet Bold"; }
+  .contact-form__input {
+    font-size: 3em;
+    margin: 0 0 30px 0;
+    padding: 0 0 0 10px;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 10px;
+    height: 100px;
+    width: 100%;
+    opacity: 0.75; }
+    .contact-form__input--name {
+      background-color: #00AEEF; }
+    .contact-form__input--email {
+      background-color: #EC008C; }
+    .contact-form__input--phone {
+      background-color: #FFF200; }
+    .contact-form__input--message {
+      height: 300px;
+      background-color: #00AEEF; }
+  .contact-form__submit {
+    opacity: 0.75;
+    font-family: 'Futura';
+    background-color: #231F20;
+    font-size: 2em;
+    line-height: 100px;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    color: #FFF200; }
+    .contact-form__submit:hover {
+      color: #231F20;
+      background-color: #FFF200; }
+
 /*# sourceMappingURL=style.css.map */
