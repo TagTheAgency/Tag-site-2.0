@@ -89,7 +89,7 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
         };
         $.ajax({
             type: "POST",
-            url: "mail.php",
+            url: "scripts/mail.php",
             data: data,
             success: function(){
                 console.log('success!!!!!')
