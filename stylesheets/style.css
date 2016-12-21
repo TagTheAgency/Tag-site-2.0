@@ -57,8 +57,8 @@ header {
     transition: 0s !important; }
 
 .background {
+  position: fixed;
   z-index: -1;
-  position: absolute;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -852,12 +852,26 @@ header {
 .contact-form {
   width: 100%;
   height: 800px; }
+  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    .contact-form {
+      width: 400px;
+      height: 500px; } }
+  @media only screen and (min-width: 90em) {
+    .contact-form {
+      width: 500px;
+      height: 600px; } }
   .contact-form form {
     width: 100%;
     height: 100%; }
   .contact-form span {
     font-size: 4em;
     font-family: "Harriet Bold"; }
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+      .contact-form span {
+        font-size: 1.5em; } }
+    @media only screen and (min-width: 90em) {
+      .contact-form span {
+        font-size: 2em; } }
   .contact-form__input {
     font-size: 3em;
     margin: 0 0 30px 0;
@@ -869,6 +883,7 @@ header {
     border-radius: 10px;
     height: 100px;
     width: 100%;
+    max-width: 100%;
     opacity: 0.75; }
     .contact-form__input--name {
       background-color: #00AEEF; }
@@ -879,6 +894,18 @@ header {
     .contact-form__input--message {
       height: 300px;
       background-color: #00AEEF; }
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+      .contact-form__input {
+        height: 50px;
+        margin: 0 0 10px 0; }
+        .contact-form__input--message {
+          height: 100px; } }
+    @media only screen and (min-width: 90em) {
+      .contact-form__input {
+        height: 50px;
+        margin: 0 0 20px 0; }
+        .contact-form__input--message {
+          height: 150px; } }
   .contact-form__submit {
     opacity: 0.75;
     font-family: 'Futura';
@@ -893,5 +920,15 @@ header {
     .contact-form__submit:hover {
       color: #231F20;
       background-color: #FFF200; }
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+      .contact-form__submit {
+        font-size: 1.2em;
+        line-height: 50px;
+        height: 50px; } }
+    @media only screen and (min-width: 90em) {
+      .contact-form__submit {
+        font-size: 1.5em;
+        line-height: 50px;
+        height: 50px; } }
 
 /*# sourceMappingURL=style.css.map */

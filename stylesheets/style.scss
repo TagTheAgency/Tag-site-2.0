@@ -192,11 +192,12 @@ header {
 }
 
 .background {
+	position: fixed;
 	@include respond-to(handhelds) {
 		background-position: 60% 0;
 	}
 	z-index: -1;
-	position: absolute;
+	// position: absolute;
 	height: 100%;
 	width: 100%;
 	background-size: cover;
@@ -1077,13 +1078,27 @@ header {
 .contact-form {
 	width: 100%;
 	height: 800px;
+	@include respond-to(medium-screens) {
+		width: 400px;
+		height: 500px;
+	}
+	@include respond-to(wide-screens) {
+		width: 500px;
+		height: 600px;
+	}
 	form {
 		width: 100%;
 		height: 100%;
 	}
 	span {
 		font-size: 4em;
-		font-family: "Harriet Bold"
+		font-family: "Harriet Bold";
+		@include respond-to(medium-screens) {
+			font-size: 1.5em;
+		}
+		@include respond-to(wide-screens) {
+			font-size: 2em;
+		}
 	}
 	&__input {
 		font-size: 3em;
@@ -1096,6 +1111,7 @@ header {
 		border-radius: 10px;
 		height: 100px;
 		width: 100%;
+		max-width: 100%;
 		opacity: 0.75;
 		&--name {
 			background-color: $blue;
@@ -1109,6 +1125,20 @@ header {
 		&--message {
 			height: 300px;
 			background-color: $blue;
+		}
+		@include respond-to(medium-screens) {
+			height: 50px;
+			margin: 0 0 10px 0;
+			&--message {
+				height: 100px;
+			}
+		}
+		@include respond-to(wide-screens) {
+			height: 50px;
+			margin: 0 0 20px 0;
+			&--message {
+				height: 150px;
+			}
 		}
 	}
 	&__submit {
@@ -1125,6 +1155,16 @@ header {
 		&:hover {
 			color: $black;
 			background-color: $yellow;
+		}
+		@include respond-to(medium-screens) {
+			font-size: 1.2em;
+			line-height: 50px;
+			height: 50px;
+		}
+		@include respond-to(wide-screens) {
+			font-size: 1.5em;
+			line-height: 50px;
+			height: 50px;
 		}
 	}
 } 
