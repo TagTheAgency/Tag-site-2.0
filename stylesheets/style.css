@@ -907,6 +907,7 @@ header {
         .contact-form__input--message {
           height: 150px; } }
   .contact-form__submit {
+    cursor: pointer;
     opacity: 0.75;
     font-family: 'Futura';
     background-color: #231F20;

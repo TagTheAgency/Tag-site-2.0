@@ -80,6 +80,23 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
         }
     }
 
+    $scope.sendEmail = function () {
+        var data = {
+            name: $(".contact-form__input--name").val(),
+            email: $(".contact-form__input--email").val(),
+            phone: $(".contact-form__input--phone").val(),
+            message: $(".contact-form__input--message").val()
+        };
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: data,
+            success: function(){
+                console.log('success!!!!!')
+            }
+        });
+    }
+
 });
 
 
