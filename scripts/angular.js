@@ -95,6 +95,7 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
                 console.log('success!!!!!')
             }
         });
+        return false;
     }
 
 });
