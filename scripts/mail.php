@@ -17,16 +17,16 @@ if($_POST){
 	          "email": "ira@tagtheagency.com"
 	        }
 	      ],
-	      "subject": "Hello World from the SendGrid PHP Library!"
+	      "subject": "Enquiry from Tag Website"
 	    }
 	  ],
 	  "from": {
-	    "email": "test@example.com"
+	    "email": ',$email,'
 	  },
 	  "content": [
 	    {
 	      "type": "text/plain",
-	      "value": "Hello, Email!"
+	      "value":',$message,'
 	    }
 	  ]
 	}');
