@@ -190,7 +190,7 @@ header {
     .icons {
       position: relative;
       width: 60%;
-      top: 75px; } }
+      top: 65px; } }
   @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .icons {
       position: relative;
@@ -339,19 +339,19 @@ header {
       top: calc(50% - 10px); }
     .nav-top__burger-icon span:nth-child(4) {
       top: calc(100% - 30px); }
-    .nav-top__burger-icon:hover span:nth-child(1) {
+    .nav-top__burger-icon--active span:nth-child(1) {
       opacity: 0; }
-    .nav-top__burger-icon:hover span:nth-child(2) {
+    .nav-top__burger-icon--active span:nth-child(2) {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg); }
-    .nav-top__burger-icon:hover span:nth-child(3) {
+    .nav-top__burger-icon--active span:nth-child(3) {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
-    .nav-top__burger-icon:hover span:nth-child(4) {
+    .nav-top__burger-icon--active span:nth-child(4) {
       opacity: 0; }
     @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .nav-top__burger-icon {
@@ -602,7 +602,8 @@ header {
     .info-pages {
       font-size: 1.5em; }
       .info-pages p {
-        width: 65%; } }
+        width: 85%;
+        margin-bottom: 100px; } }
   @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .info-pages {
       padding-top: 2%; }
@@ -699,6 +700,10 @@ header {
   height: 320px;
   padding: 10px 10px 10px 10px;
   box-sizing: border-box; }
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
+    .personal-images {
+      height: 300px;
+      top: 600px; } }
   @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .personal-images {
       height: 300px;
@@ -738,6 +743,9 @@ header {
     align-items: stretch;
     -ms-box-orient: horizontal;
     position: relative; }
+    @media only screen and (max-width: 64em) and (orientation: portrait) {
+      .partners__item-wrapper {
+        height: 30%; } }
     @media only screen and (max-width: 64em) and (orientation: landscape) {
       .partners__item-wrapper {
         margin-top: 40px; } }
@@ -771,7 +779,7 @@ header {
     text-align: center; }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .partners__copy {
-        width: 70%;
+        width: 80%;
         padding-bottom: 70%;
         font-size: 1.5em; } }
     @media only screen and (max-width: 64em) and (orientation: landscape) {
@@ -955,9 +963,37 @@ header {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 64em) and (orientation: portrait) {
+    .how {
+      width: 100%; } }
 
 #vrview {
   width: 100%;
   height: 100%; }
+
+.mobile-nav-menu {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 500px;
+  width: 300px;
+  position: absolute;
+  top: 100px;
+  left: calc(100% - 320px); }
+  .mobile-nav-menu__item {
+    font-family: 'Futura Light';
+    margin: 5px 0 5px 0;
+    padding: 0 10px 0 0;
+    box-sizing: border-box;
+    text-align: right;
+    line-height: 90px;
+    font-size: 2.2em;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    width: 90%;
+    height: 90px;
+    border-bottom: 1px solid white; }
 
 /*# sourceMappingURL=style.css.map */

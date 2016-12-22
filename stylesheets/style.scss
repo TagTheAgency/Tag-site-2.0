@@ -350,7 +350,7 @@ header {
 	@include respond-to(handhelds) {
 		position: relative;
 		width: 60%;
-		top: 75px;
+		top: 65px;
 		// top: 600px;
 	}
 	@include respond-to(medium-screens) {
@@ -522,7 +522,7 @@ header {
 		span:nth-child(4) {
 			top: calc(100% - 30px);
 		}
-		&:hover {
+		&--active {
 			span:nth-child(1) {
 				opacity: 0;
 			}
@@ -813,7 +813,8 @@ header {
 	@include respond-to(handhelds) {
 		font-size: 1.5em;
 		p {
-			width: 65%;
+			width: 85%;
+			margin-bottom: 100px;
 		}
 	}
 	@include respond-to(medium-screens) {
@@ -910,6 +911,10 @@ header {
 }
 
 .personal-images {
+	@include respond-to(handhelds) {
+		height: 300px;
+		top: 600px;
+	}
 	@include respond-to(medium-screens) {
 		height: 300px;
 		top: 300px;
@@ -952,6 +957,9 @@ header {
 		@include center-horizontal;
 		@include flex-wrapper;	
 		position: relative;
+		@include respond-to(handhelds) {
+			height: 30%;
+		}
 		@include respond-to(handhelds-landscape) {
 			margin-top: 40px;
 		}
@@ -977,7 +985,7 @@ header {
 	}
 	&__copy {
 		@include respond-to(handhelds) {
-			width: 70%;
+			width: 80%;
 			padding-bottom: 70%;
 			font-size: 1.5em;
 		}
@@ -1186,6 +1194,9 @@ header {
 } 
 
 .how {
+	@include respond-to(handhelds) {
+		width: 100%;
+	}
 	float: right;
 	height: 100%;
 	width: 50%;
@@ -1200,5 +1211,29 @@ header {
 	height: 100%;
 }
 
+.mobile-nav-menu {
+	z-index: 2;
+	background-color: rgba(0,0,0,0.7);
+	height: 500px;
+	width: 300px;
+	position: absolute;
+	top: $header-height;
+	left: calc(100% - 320px);
+	&__item {
+		font-family: 'Futura Light';
+		margin: 5px 0 5px 0;
+		padding: 0 10px 0 0;
+		box-sizing: border-box;
+		text-align: right;
+		line-height: 90px;
+		font-size: 2.2em;
+		color: white;
+		@include center-horizontal;
+		position: relative;
+		width: 90%;
+		height: 90px;
+		border-bottom: 1px solid white;
+	}
 
+}
 
