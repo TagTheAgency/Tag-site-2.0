@@ -9,27 +9,27 @@ if($_POST){
     $phone = $_POST['phone'];
     $message = $_POST['text'];
 
-	$request_body = json_decode('{
-	  "personalizations": [
+	$request_body = json_decode("{
+	  'personalizations': [
 	    {
-	      "to": [
+	      'to': [
 	        {
-	          "email": "ira@tagtheagency.com"
+	          'email': 'ira@tagtheagency.com'
 	        }
 	      ],
-	      "subject": "Enquiry from Tag Website"
+	      'subject': 'Enquiry from Tag Website'
 	    }
 	  ],
-	  "from": {
-	    "email": "$email"
+	  'from': {
+	    'email': '$email'
 	  },
-	  "content": [
+	  'content': [
 	    {
-	      "type": "text/plain",
-	      "value": "$name $email $phone $message"
+	      'type': 'text/plain',
+	      'value': '$name $email $phone $message'
 	    }
 	  ]
-	}');
+	}");
 
 	$apiKey = getenv('SENDGRID_APIKEY');
 	$sg = new \SendGrid($apiKey);
