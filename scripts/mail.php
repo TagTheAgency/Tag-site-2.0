@@ -7,7 +7,7 @@ if($_POST){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $message = $_POST['text'];
+    $message = $_POST['message'];
 
 	$from = new SendGrid\Email(null, $email);
 	$subject = "Tag Site Enquiry from $name";
