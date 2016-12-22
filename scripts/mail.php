@@ -21,12 +21,12 @@ if($_POST){
 	    }
 	  ],
 	  "from": {
-	    "email": "{{$email}}"
+	    "email": "'$email'"
 	  },
 	  "content": [
 	    {
 	      "type": "text/plain",
-	      "value": "{{$email}}{{$phone}}{{$message}}"
+	      "value": "', $name, $email, $phone, $message, '"
 	    }
 	  ]
 	}');
