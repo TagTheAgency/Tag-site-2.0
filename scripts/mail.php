@@ -1,6 +1,4 @@
 <?php
-// If you are using Composer
-// require 'vendor/autoload.php';
 
 // If you are not using Composer (recommended)
 require("../sendgrid-php/sendgrid-php.php");
@@ -8,6 +6,7 @@ require("../sendgrid-php/sendgrid-php.php");
 if($_POST){
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $message = $_POST['text'];
 
 	$request_body = json_decode('{
@@ -32,7 +31,7 @@ if($_POST){
 	  ]
 	}');
 
-	$apiKey = getenv(process.env.SENDGRID_APIKEY);
+	$apiKey = getenv('SENDGRID_APIKEY');
 	$sg = new \SendGrid($apiKey);
 
 	$response = $sg->client->mail()->send()->post($request_body);
