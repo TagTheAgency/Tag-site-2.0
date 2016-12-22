@@ -87,12 +87,14 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
             phone: $(".contact-form__input--phone").val(),
             message: $(".contact-form__input--message").val()
         };
+
         $.ajax({
             type: "POST",
             url: "scripts/mail.php",
             data: data,
             success: function(){
-                console.log('success!!!!!')
+                $('.contact-form__submit').addClass('contact-form__submit--after')
+                $('.contact-form__submit').text('Thanks!')
             }
         });
         return false;

@@ -11,7 +11,7 @@ if($_POST){
 
 	$from = new SendGrid\Email(null, $email);
 	$subject = "Tag Site Enquiry from $name";
-	$to = new SendGrid\Email(null, "ira@tagtheagency.com");
+	$to = new SendGrid\Email(null, "hello@tagtheagency.com");
 	$content = new SendGrid\Content("text/plain", $message);
 	$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
