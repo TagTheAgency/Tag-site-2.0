@@ -21,7 +21,7 @@ if($_POST){
 	    }
 	  ],
 	  "from": {
-	    "email": "'$email'"
+	    "email": "', $email, '"
 	  },
 	  "content": [
 	    {
