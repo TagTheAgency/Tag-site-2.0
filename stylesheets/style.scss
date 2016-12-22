@@ -755,7 +755,13 @@ header {
 }
 
 .influencer-list {
-	margin: 0 0 0 20%;
+	@include respond-to(handhelds) {
+		margin: 0 0 0 0;
+	}
+	@include respond-to(medium-screens) {
+		margin: 80px 0 0 20%;
+	}
+	margin: 90px 0 0 20%;
 	color: white;
 	height: 100%;
 	width: 40%;
@@ -795,6 +801,8 @@ header {
 		text-align: center;
 	}
 	p {
+		padding-bottom: 50px;
+		box-sizing: border-box;
 		font-family: 'Harriet Regular';
 		font-size: 1.3em;
 		@include center-horizontal;
@@ -820,6 +828,7 @@ header {
 	@include respond-to(medium-screens) {
 		padding-top: 2%;
 		p {
+			padding-bottom: 30px;
 			font-size: 0.95em;
 			font-family: 'Harriet Regular';
 			@include center-horizontal;
@@ -892,7 +901,7 @@ header {
 	}
 	&__bottom-copy {
 		margin: 5% 0 0 0;
-		font-size: 1.3em;
+		font-size: 1.1em;
 	}
 }
 
@@ -1052,8 +1061,8 @@ header {
 	&__button {
 		cursor: pointer;
 		border-radius: 50%;
-		height: 110px;
-		width: 110px;
+		height: 105px;
+		width: 105px;
 		position: relative;
 		float: left;
 		background-color: black;
