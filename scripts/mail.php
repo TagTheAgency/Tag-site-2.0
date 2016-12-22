@@ -9,33 +9,18 @@ if($_POST){
     $phone = $_POST['phone'];
     $message = $_POST['text'];
 
-	$request_body = json_decode("{
-	  'personalizations': [
-	    {
-	      'to': [
-	        {
-	          'email': 'ira@tagtheagency.com'
-	        }
-	      ],
-	      'subject': 'Enquiry from Tag Website'
-	    }
-	  ],
-	  'from': {
-	    'email': '$email'
-	  },
-	  'content': [
-	    {
-	      'type': 'text/plain',
-	      'value': '$name $email $phone $message'
-	    }
-	  ]
-	}");
+	$from = new SendGrid\Email(null, $email);
+	$subject = "Tag Site Enquiry from $name";
+	$to = new SendGrid\Email(null, "ira@tagtheagency.com");
+	$content = new SendGrid\Content("text/plain", $message);
+	$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 	$apiKey = getenv('SENDGRID_APIKEY');
 	$sg = new \SendGrid($apiKey);
 
-	$response = $sg->client->mail()->send()->post($request_body);
+	$response = $sg->client->mail()->send()->post($mail);
 	echo $response->statusCode();
+	echo $response->headers();
 	echo $response->body();
 
 }
