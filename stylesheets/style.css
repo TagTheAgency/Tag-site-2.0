@@ -209,7 +209,7 @@ header {
     transition-duration: 1s; }
     .icons__image--home {
       background-position: bottom;
-      background-image: url("../imgs/icons/icon-56.png"); }
+      background-image: url("../imgs/icons/black-home-icon.png"); }
       .icons__image--home:hover {
         -ms-transform: rotate(180deg);
         /* IE 9 */
@@ -243,6 +243,11 @@ header {
     margin: 10px 0 0 0; }
   .icons--light {
     color: white; }
+  .icons--contact {
+    top: 650px; }
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+      .icons--contact {
+        top: 0px; } }
 
 .nav-top {
   text-transform: uppercase;
@@ -692,6 +697,7 @@ header {
   top: 450px;
   width: 100%;
   height: 320px;
+  padding: 10px 10px 10px 10px;
   box-sizing: border-box; }
   @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .personal-images {
@@ -940,5 +946,18 @@ header {
       background-color: #EC008C;
       color: white;
       cursor: default; }
+
+.how {
+  float: right;
+  height: 100%;
+  width: 50%;
+  background-image: url("../imgs/diagrams/Visual map-76.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#vrview {
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

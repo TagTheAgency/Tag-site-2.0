@@ -30,14 +30,13 @@ $influencers-bg: 'backgrounds/TAG-The-Agency-website-influencers-bg.png';
 $strategy-bg: 'backgrounds/upload_11_10_2016_at_2_19_10_PM.png';
 $contact-bg: 'backgrounds/TAG The Agency website contact us bg_WHAT copy 7.png';
 $vr-bg: 'backgrounds/TAG-The-Agency-website-VR-Studios-bg.png';
-$home-icon: 'icons/icon-56.png';
+$home-icon: 'icons/black-home-icon.png';
 $home-icon-light: 'icons/home-icon-white.png';
 $play-icon:'play-icon.png';
 $app-icon:'icons/Download_on_the_App_Store_Badge_US-UK_135x40.svg';
-$loading-yellow-icon: 'icons/ring-yellow.svg';
-$loading-black-icon: 'icons/ring-black.svg';
 $back-icon: 'icons/Icon-71.png';
 $forward-icon: 'icons/Icon-72.png';
+$how-diagram: 'diagrams/Visual map-76.png';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //VARIABLES/////////////////////////////////////////////////////////////////////////////////////////////////
@@ -421,6 +420,12 @@ header {
 	}
 	&--light {
 		color: white;
+	}
+	&--contact {
+		top: 650px;
+		@include respond-to(medium-screens) {
+			top: 0px;
+		}
 	}
 }
 
@@ -913,7 +918,7 @@ header {
 	top: 450px;
 	width: 100%;
 	height: 320px;
-	// padding: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
 	box-sizing: border-box;
 	&__image {
 		@include respond-to(medium-screens) {
@@ -1180,10 +1185,20 @@ header {
 	}
 } 
 
+.how {
+	float: right;
+	height: 100%;
+	width: 50%;
+	background-image: url($img-path + $how-diagram);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 
-
-
-
+#vrview {
+	width: 100%;
+	height: 100%;
+}
 
 
 

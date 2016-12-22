@@ -44,6 +44,7 @@ tagApp.config(function($routeProvider) {
 });
 
 tagApp.controller('mainController', function($scope, $location, $window, dataService, $http) {
+
     $scope.hideCopy = true
     // $scope.what_imagurl
 
