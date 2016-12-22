@@ -589,7 +589,7 @@ header {
     margin: 10px 0 0 0;
     text-align: center; }
   .info-pages__content {
-    margin-top: 5%;
+    margin-top: 15px;
     position: absolute;
     height: 75%;
     width: 100%; }
@@ -689,12 +689,13 @@ header {
 
 .personal-images {
   position: absolute;
-  top: 365px;
+  top: 450px;
   width: 100%;
-  height: 50%;
+  height: 320px;
   box-sizing: border-box; }
   @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
     .personal-images {
+      height: 300px;
       top: 300px; } }
   .personal-images__image {
     margin: 10px 10px 10px 10px;
@@ -702,6 +703,9 @@ header {
     background-position: top;
     height: calc(100% - 20px);
     float: left; }
+    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+      .personal-images__image {
+        margin: 5px 5px 5px 5px; } }
     .personal-images__image--1 {
       width: calc(40% - 20px); }
     .personal-images__image--2 {

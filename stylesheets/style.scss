@@ -800,7 +800,7 @@ header {
 	}
 
 	&__content {
-		margin-top: 5%;
+		margin-top: 15px;
 		position: absolute;
 		height: 75%;
 		width: 100%;
@@ -906,15 +906,19 @@ header {
 
 .personal-images {
 	@include respond-to(medium-screens) {
+		height: 300px;
 		top: 300px;
 	}
 	position: absolute;
-	top: 365px;
+	top: 450px;
 	width: 100%;
-	height: 50%;
+	height: 320px;
 	// padding: 10px 10px 10px 10px;
 	box-sizing: border-box;
 	&__image {
+		@include respond-to(medium-screens) {
+			margin: 5px 5px 5px 5px;
+		}
 		margin: 10px 10px 10px 10px;
 		background-size: cover;
 		background-position: top;
