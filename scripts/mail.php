@@ -5,31 +5,38 @@
 // If you are not using Composer (recommended)
 require("sendgrid-php/sendgrid-php.php");
 
-$request_body = json_decode('{
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "test@example.com"
-        }
-      ],
-      "subject": "Hello World from the SendGrid PHP Library!"
-    }
-  ],
-  "from": {
-    "email": "test@example.com"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "Hello, Email!"
-    }
-  ]
-}');
+if($_POST){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['text'];
 
-$apiKey = getenv(process.env.SENDGRID_APIKEY);
-$sg = new \SendGrid($apiKey);
+	$request_body = json_decode('{
+	  "personalizations": [
+	    {
+	      "to": [
+	        {
+	          "email": "test@example.com"
+	        }
+	      ],
+	      "subject": "Hello World from the SendGrid PHP Library!"
+	    }
+	  ],
+	  "from": {
+	    "email": "test@example.com"
+	  },
+	  "content": [
+	    {
+	      "type": "text/plain",
+	      "value": "Hello, Email!"
+	    }
+	  ]
+	}');
 
-$response = $sg->client->mail()->send()->post($request_body);
-echo $response->statusCode();
-echo $response->body();
+	$apiKey = getenv(process.env.SENDGRID_APIKEY);
+	$sg = new \SendGrid($apiKey);
+
+	$response = $sg->client->mail()->send()->post($request_body);
+	echo $response->statusCode();
+	echo $response->body();
+
+}
