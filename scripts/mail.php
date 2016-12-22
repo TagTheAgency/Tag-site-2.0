@@ -15,7 +15,7 @@ if($_POST){
 	    {
 	      "to": [
 	        {
-	          "email": "test@example.com"
+	          "email": "ira@tagtheagency.com"
 	        }
 	      ],
 	      "subject": "Hello World from the SendGrid PHP Library!"
