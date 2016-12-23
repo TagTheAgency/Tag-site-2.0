@@ -248,6 +248,8 @@ header {
     @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
       .icons--contact {
         top: 0px; } }
+  .icons--who {
+    top: 0px; }
 
 .nav-top {
   text-transform: uppercase;
