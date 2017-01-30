@@ -38,6 +38,9 @@ tagApp.config(function($routeProvider) {
     .when('/contact', {
         templateUrl : "../pages/contact.html",
     })
+    .when('/vr-app', {
+        templateUrl : "../pages/vr-app.html",
+    })
     .otherwise({
         redirectTo: '/'
     });

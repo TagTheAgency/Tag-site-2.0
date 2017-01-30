@@ -233,6 +233,8 @@ header {
       .icons__image--forward--light {
         -webkit-filter: invert(1);
         filter: invert(1); }
+    .icons__image--vr {
+      background-image: url("../imgs/icons/Icon-94.png"); }
   .icons__text {
     text-transform: uppercase;
     font-family: 'Futura';

@@ -34,6 +34,7 @@ $home-icon-light: 'icons/home-icon-white.png';
 $play-icon:'play-icon.png';
 $app-icon:'icons/Download_on_the_App_Store_Badge_US-UK_135x40.svg';
 $back-icon: 'icons/Icon-71.png';
+$vr-icon: 'icons/Icon-94.png';
 $forward-icon: 'icons/Icon-72.png';
 $how-diagram: 'diagrams/Visual map-76.png';
 
@@ -406,6 +407,9 @@ header {
 				filter: invert(1);
 			}
 			background-image: url($img-path + $forward-icon);
+		}
+		&--vr {
+			background-image: url($img-path + $vr-icon);
 		}
 	}
 	&__text {
