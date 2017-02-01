@@ -49,7 +49,6 @@ tagApp.config(function($routeProvider) {
 tagApp.controller('mainController', function($scope, $location, $window, dataService, $http) {
 
     $scope.hideCopy = true
-    // $scope.what_imagurl
 
     dataService.getStaffBios(function (response) {
         $scope.staffObj = response.data
@@ -81,6 +80,14 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
             $($event.target).css({"background-image": "url(" + person.images[person.images.length -1] + ")"})
         } else if (hover == false) {
             $($event.target).css({"background-image": "url(" + person.images[0] + ")"})
+        }
+    }
+
+    $scope.changeVrImage = function($event) {
+        if($('.media img')[0].src.includes('phone')) {
+            $('.media img').attr('src', '../imgs/carboard.png');
+        } else {
+            $('.media img').attr('src', '../imgs/phone.png');
         }
     }
 
