@@ -579,26 +579,11 @@ header {
     height: 100%; }
 
 .influencer-list {
-  margin: 90px 0 0 20%;
-  color: white;
+  width: 200px;
   height: 100%;
-  width: 40%; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
-    .influencer-list {
-      margin: 0 0 0 0; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
-    .influencer-list {
-      margin: 80px 0 0 20%; } }
-  .influencer-list h3 {
-    font-size: 1.3em;
-    font-family: "Futura Light";
-    margin: 10px 0 30px 0; }
-  .influencer-list ul {
-    font-family: "Futura Light";
-    list-style-type: none; }
-  .influencer-list li {
-    font-size: 1.2em;
-    margin: 5px 0 5px 0; }
+  background-image: url("../imgs/influencers.png");
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .thinking-background {
   z-index: -1;

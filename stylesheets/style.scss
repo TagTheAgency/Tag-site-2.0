@@ -37,6 +37,7 @@ $back-icon: 'icons/Icon-71.png';
 $vr-icon: 'icons/Icon-94.png';
 $forward-icon: 'icons/Icon-72.png';
 $how-diagram: 'diagrams/Visual map-76.png';
+$influencers-list: 'influencers.png';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //VARIABLES/////////////////////////////////////////////////////////////////////////////////////////////////
@@ -784,29 +785,11 @@ header {
 }
 
 .influencer-list {
-	@include respond-to(handhelds) {
-		margin: 0 0 0 0;
-	}
-	@include respond-to(medium-screens) {
-		margin: 80px 0 0 20%;
-	}
-	margin: 90px 0 0 20%;
-	color: white;
+	width: 200px;
 	height: 100%;
-	width: 40%;
-	h3 {
-		font-size: 1.3em;
-		font-family: $body-font;
-		margin: 10px 0 30px 0;
-	}
-	ul {
-		font-family: $body-font;
-		list-style-type: none;
-	}
-	li {
-		font-size: 1.2em;
-		margin: 5px 0 5px 0;
-	}
+	background-image: url($img-path + $influencers-list);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .thinking-background {
