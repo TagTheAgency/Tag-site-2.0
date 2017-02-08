@@ -11,6 +11,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
 html, body, header, main {
@@ -33,6 +34,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: relative;
   max-width: 90%;
@@ -95,6 +97,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
   @media only screen and (max-width: 64em) and (orientation: portrait) {
     .inner-container {
@@ -130,6 +133,7 @@ header {
     .media {
       position: absolute;
       left: 50%;
+      -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       position: relative;
       box-sizing: border-box;
@@ -140,6 +144,7 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     height: 50px;
     width: 50px;
@@ -257,6 +262,8 @@ header {
         filter: invert(1); }
     .icons__image--vr {
       background-image: url("../imgs/icons/Icon-94.png"); }
+    .icons__image--vr-cardboard {
+      background-image: url("../imgs/icons/Icon-95.png"); }
   .icons__text {
     text-transform: uppercase;
     font-family: 'Futura';
@@ -394,6 +401,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 1.3em;
   position: absolute;
@@ -607,6 +615,7 @@ header {
     font-size: 1.3em;
     position: absolute;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 40%;
     position: relative;
@@ -632,6 +641,7 @@ header {
         font-family: 'Harriet Regular';
         position: absolute;
         left: 50%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         width: 60%;
         position: relative;
@@ -640,6 +650,7 @@ header {
       .info-pages__content {
         position: absolute;
         left: 50%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         margin-top: 5px;
         position: relative;
@@ -705,6 +716,7 @@ header {
   .personal__image {
     position: absolute;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 10%;
     padding-bottom: 10%;
@@ -753,6 +765,7 @@ header {
     width: 65%;
     position: absolute;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     padding: 0;
     margin: 0;
@@ -789,6 +802,7 @@ header {
   .partners__copy {
     position: absolute;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
@@ -812,6 +826,7 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
       .partners__copy-wrapper h2 {
         font-size: 1.3em; }
@@ -819,6 +834,7 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         font-family: "Futura Light";
         width: 100%; }
@@ -832,6 +848,7 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: inline-block;
     color: white; }
@@ -1010,6 +1027,7 @@ header {
     color: white;
     position: absolute;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     position: relative;
     width: 90%;

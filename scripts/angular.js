@@ -41,6 +41,9 @@ tagApp.config(function($routeProvider) {
     .when('/vr-app', {
         templateUrl : "../pages/vr-app.html",
     })
+    .when('/vr-cardboard', {
+        templateUrl : "../pages/vr-cardboard.html",
+    })
     .otherwise({
         redirectTo: '/'
     });

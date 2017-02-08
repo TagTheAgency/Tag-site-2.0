@@ -35,6 +35,7 @@ $play-icon:'play-icon.png';
 $app-icon:'icons/Download_on_the_App_Store_Badge_US-UK_135x40.svg';
 $back-icon: 'icons/Icon-71.png';
 $vr-icon: 'icons/Icon-94.png';
+$cardboard-icon: 'icons/Icon-95.png';
 $forward-icon: 'icons/Icon-72.png';
 $how-diagram: 'diagrams/Visual map-76.png';
 $influencers-list: 'influencers.png';
@@ -111,12 +112,14 @@ $xlarge-breakpoint: em(1920) !default;
 	position: absolute;
 	top: 50%;
 	left:50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
 @mixin center-horizontal {
 	position: absolute;
 	left: 50%;
+	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 
@@ -434,6 +437,9 @@ header {
 		}
 		&--vr {
 			background-image: url($img-path + $vr-icon);
+		}
+		&--vr-cardboard {
+			background-image: url($img-path + $cardboard-icon);
 		}
 	}
 	&__text {
