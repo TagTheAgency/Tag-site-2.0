@@ -1,64 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tag</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
-</head>
-<body>
-	<div class="background background--influencers"></div>
-	<header>
-		<div class="nav-top nav-top--light">
-			<ul class="nav-top__menu">
-			<li class="nav-top__menu-item" ng-click="go('/what')">What</li>
-			<li class="nav-top__menu-item" ng-click="go('/who')">Who</li>
-			<li class="nav-top__menu-item" ng-click="go('/how')">How</li>
-			<li class="nav-top__menu-item" ng-click="go('/partners')">Partners</li>
-			<!-- <li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li> -->
-			<!-- <li class="nav-top__menu-item" ng-click="go('/store')">Store</li> -->
-			<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
-			</ul>
-			<div class="nav-top__logo nav-top__logo--light" ng-click="go('/')"></div>
-			<div class="nav-top__burger-icon">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+<div class="background background--influencers"></div>
+<main ng-init="setHeaderTheme('light')">
+	<div class="mobile-nav-menu" ng-show="show_header_menu">
+		<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
+	</div>
+	<div class="inner-container">
+		<div class="copy copy--light">
+			<h1>Influencers</h1>
+			<p>Talking the talk, that’s the game of social media! At TAG The Agency we have a network of influencers that can help to leverage your brand.</p>
+			<p>We work with our influencers to follow the latest trends and to develop campaigns that have a strong impact; we don't just send them products on your behalf and hope they say something about it, we bring our influencers to the development of the campaign, working with them to get the best from their networks by creating content that works.</p>
+			<p>Our current influencers network covers:</p>
+		</div>
+		<div class="media">
+			<div class="influencer-list">
+				
 			</div>
 		</div>
-	</header>
-	<main>
-		<div class="mobile-nav-menu" ng-show="show_header_menu">
-			<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
-		</div>
-		<div class="inner-container">
-			<div class="copy copy--light">
-				<h1>Influencers</h1>
-				<p>Talking the talk, that’s the game of social media! At TAG The Agency we have a network of influencers that can help to leverage your brand.</p>
-				<p>We work with our influencers to follow the latest trends and to develop campaigns that have a strong impact; we don't just send them products on your behalf and hope they say something about it, we bring our influencers to the development of the campaign, working with them to get the best from their networks by creating content that works.</p>
-				<p>Our current influencers network covers:</p>
+		<div class="icons icons--light">
+			<div class="icons__icon" ng-click="go('/done')">
+				<div class="icons__image icons__image--back icons__image--back--light"></div>
 			</div>
-			<div class="media">
-				<div class="influencer-list">
-					
-				</div>
+			<div class="icons__icon" ng-click="go('/')">
+				<div class="icons__image icons__image--home icons__image--home--light"></div>
+				<div class="icons__text">Home</div>
 			</div>
-			<div class="icons icons--light">
-				<div class="icons__icon" ng-click="go('/done')">
-					<div class="icons__image icons__image--back icons__image--back--light"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/')">
-					<div class="icons__image icons__image--home icons__image--home--light"></div>
-					<div class="icons__text">Home</div>
-				</div>
-				<div class="icons__icon" ng-click="go('/doing')">
-					<div class="icons__image icons__image--forward icons__image--forward--light"></div>
-				</div>
+			<div class="icons__icon" ng-click="go('/doing')">
+				<div class="icons__image icons__image--forward icons__image--forward--light"></div>
 			</div>
 		</div>
-	</main>
-</body>
-</html>
+	</div>
+</main>

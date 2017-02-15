@@ -1,134 +1,105 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tag</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
-</head>
-<body>
-	<header>
-		<div class="nav-top nav-top--dark">
-			<ul class="nav-top__menu">
-				<li class="nav-top__menu-item" ng-click="go('/what')">What</li>
-				<li class="nav-top__menu-item" ng-click="go('/who')">Who</li>
-				<li class="nav-top__menu-item" ng-click="go('/how')">How</li>
-				<li class="nav-top__menu-item" ng-click="go('/partners')">Partners</li>
-				<!-- <li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li> -->
-				<!-- <li class="nav-top__menu-item" ng-click="go('/store')">Store</li> -->
-				<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
-			</ul>
-			<div class="nav-top__logo nav-top__logo--dark" ng-click="go('/')"></div>
-			<div class="nav-top__burger-icon nav-top__burger-icon--dark" ng-click="show_header_menu = !show_header_menu" ng-class="show_header_menu ? 'nav-top__burger-icon nav-top__burger-icon--dark nav-top__burger-icon--active' : 'nav-top__burger-icon nav-top__burger-icon--dark'">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+<main ng-init="setHeaderTheme('dark')">
+	<div class="mobile-nav-menu" ng-show="show_header_menu">
+		<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
+	</div>
+	<div class="inner-container">
+		<div class="copy">
+			<h1>Our Work</h1>
+			<p>How do we do what we do? What have we done?</p>
+			<p>Simple. We work with you and your brand to develop campaigns and content that inspires your brand and community. From fun and fantastic to the business of business; TAG The Agency can create campaigns and content that hits the mark!</p>
+			<p>Need a little help with your advertising? Need it to win in social media? Not sure if your brand could play in this space? TAG us in; we'd love to play!</p>
+			<!-- <h2>Wanna play?</h2> -->
 		</div>
-	</header>
-	<main>
-		<div class="mobile-nav-menu" ng-show="show_header_menu">
-			<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
-		</div>
-		<div class="inner-container">
-			<div class="copy">
-				<h1>Our Work</h1>
-				<p>How do we do what we do? What have we done?</p>
-				<p>Simple. We work with you and your brand to develop campaigns and content that inspires your brand and community. From fun and fantastic to the business of business; TAG The Agency can create campaigns and content that hits the mark!</p>
-				<p>Need a little help with your advertising? Need it to win in social media? Not sure if your brand could play in this space? TAG us in; we'd love to play!</p>
-				<!-- <h2>Wanna play?</h2> -->
-			</div>
-			<div class="media">
-				<div class="work-examples">
-					<div class="work-examples__row-1">
-						<div class="work-examples__item">
-							<div class="work-examples__category">Events</div>
-							<div class="work-examples__title">UX New Zealand</div>
-							<div class="work-examples__video">
-								<iframe class="videos_iframe" src="https://www.youtube.com/embed/Q8sTIb88cTU?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-							</div>
-							<div class="work-examples__description">
-								<p></p>
-							</div>
-							<div class="work-examples__color-strip"></div>
-							<div class="loading-icon loading-icon--yellow"></div>
+		<div class="media">
+			<div class="work-examples">
+				<div class="work-examples__row-1">
+					<div class="work-examples__item">
+						<div class="work-examples__category">Events</div>
+						<div class="work-examples__title">UX New Zealand</div>
+						<div class="work-examples__video">
+							<iframe class="videos_iframe" src="https://www.youtube.com/embed/Q8sTIb88cTU?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 						</div>
-						<div class="work-examples__item">
-							<div class="work-examples__category">Advertising</div>
-							<div class="work-examples__title">Social Media Advertising</div>
-							<div class="work-examples__video">
-								<iframe class="videos_iframe" src="https://www.youtube.com/embed/VmeehmS5Hpo?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-							</div>
-							<div class="work-examples__description">
-								<p></p>
-							</div>
-							<div class="work-examples__color-strip"></div>
+						<div class="work-examples__description">
+							<p></p>
 						</div>
-						<div class="work-examples__item">
-							<div class="work-examples__category">Production</div>
-							<div class="work-examples__title">Video Production</div>
-							<div class="work-examples__video">
-								<iframe class="videos_iframe" src="https://www.youtube.com/embed/74gs08F50jY?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-							</div>
-							<div class="work-examples__description">
-								<p></p>
-							</div>
-							<div class="work-examples__color-strip"></div>
-						</div>
+						<div class="work-examples__color-strip"></div>
+						<div class="loading-icon loading-icon--yellow"></div>
 					</div>
-					<div class="work-examples__row-2">
-						<div class="work-examples__item">
-							<div class="work-examples__category">Creative</div>
-							<div class="work-examples__title">Facebook Apps</div>
-							<div class="work-examples__video">
-								<iframe class="videos_iframe" src="https://www.youtube.com/embed/EEptGUcCBHg?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-							</div>
-							<div class="work-examples__description">
-								<p></p>
-							</div>
-							<div class="work-examples__color-strip"></div>
+					<div class="work-examples__item">
+						<div class="work-examples__category">Advertising</div>
+						<div class="work-examples__title">Social Media Advertising</div>
+						<div class="work-examples__video">
+							<iframe class="videos_iframe" src="https://www.youtube.com/embed/VmeehmS5Hpo?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 						</div>
-						<div class="work-examples__item">
-							<div class="work-examples__category">Production</div>
-							<div class="work-examples__title">Drone Footage</div>
-							<div class="work-examples__video">
-								<iframe class="videos_iframe" src="https://www.youtube.com/embed/X_bIawpAjmY?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-							</div>
-							<div class="work-examples__description">
-								<p></p>
-							</div>
-							<div class="work-examples__color-strip work-examples__color-strip--full-pink"></div>
+						<div class="work-examples__description">
+							<p></p>
 						</div>
-						<div class="work-examples__item">
-							<div class="work-examples__category">Production</div>
-							<div class="work-examples__title">Video Campaigns</div>
-							<div class="work-examples__video">
-								<iframe class="videos_iframe" src="https://www.youtube.com/embed/BxQt03tX2qY?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-							</div>
-							<div class="work-examples__description">
-								<p></p>
-							</div>
-							<div class="work-examples__color-strip work-examples__color-strip--half-pink"></div>
+						<div class="work-examples__color-strip"></div>
+					</div>
+					<div class="work-examples__item">
+						<div class="work-examples__category">Production</div>
+						<div class="work-examples__title">Video Production</div>
+						<div class="work-examples__video">
+							<iframe class="videos_iframe" src="https://www.youtube.com/embed/74gs08F50jY?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 						</div>
+						<div class="work-examples__description">
+							<p></p>
+						</div>
+						<div class="work-examples__color-strip"></div>
+					</div>
+				</div>
+				<div class="work-examples__row-2">
+					<div class="work-examples__item">
+						<div class="work-examples__category">Creative</div>
+						<div class="work-examples__title">Facebook Apps</div>
+						<div class="work-examples__video">
+							<iframe class="videos_iframe" src="https://www.youtube.com/embed/EEptGUcCBHg?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="work-examples__description">
+							<p></p>
+						</div>
+						<div class="work-examples__color-strip"></div>
+					</div>
+					<div class="work-examples__item">
+						<div class="work-examples__category">Production</div>
+						<div class="work-examples__title">Drone Footage</div>
+						<div class="work-examples__video">
+							<iframe class="videos_iframe" src="https://www.youtube.com/embed/X_bIawpAjmY?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="work-examples__description">
+							<p></p>
+						</div>
+						<div class="work-examples__color-strip work-examples__color-strip--full-pink"></div>
+					</div>
+					<div class="work-examples__item">
+						<div class="work-examples__category">Production</div>
+						<div class="work-examples__title">Video Campaigns</div>
+						<div class="work-examples__video">
+							<iframe class="videos_iframe" src="https://www.youtube.com/embed/BxQt03tX2qY?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="work-examples__description">
+							<p></p>
+						</div>
+						<div class="work-examples__color-strip work-examples__color-strip--half-pink"></div>
 					</div>
 				</div>
 			</div>
-			<div class="icons">
-				<div class="icons__icon" ng-click="go('/thinking')">
-					<div class="icons__image icons__image--back"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/')">
-					<div class="icons__image icons__image--home"></div>
-					<div class="icons__text">Home</div>
-				</div>
-				<div class="icons__icon" ng-click="go('/influencers')">
-					<div class="icons__image icons__image--forward"></div>
-				</div>
+		</div>
+		<div class="icons">
+			<div class="icons__icon" ng-click="go('/thinking')">
+				<div class="icons__image icons__image--back"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/')">
+				<div class="icons__image icons__image--home"></div>
+				<div class="icons__text">Home</div>
+			</div>
+			<div class="icons__icon" ng-click="go('/influencers')">
+				<div class="icons__image icons__image--forward"></div>
 			</div>
 		</div>
+	</div>
 	</main>
-</body>
-</html>

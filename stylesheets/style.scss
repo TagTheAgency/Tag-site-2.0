@@ -212,6 +212,10 @@ header {
 		background-image: url($img-path + $production-bg);
 	}
 	&--influencers {
+		@include respond-to(handhelds) {
+			background-color: black;
+			background-image: url($img-path + $influencers-bg);
+		}
 		background-image: url($img-path + $influencers-bg);
 	}
 	&--strategy {
@@ -370,7 +374,7 @@ header {
 
 .icons {
 	position: absolute;
-	top: 500px;
+	bottom: 0;
 	width: calc(40% - 60px); // Minus margins
 	height: calc(20% - 10px); // Minus margins
 	margin: 0 50px 10px 10px;
@@ -378,12 +382,9 @@ header {
 		position: relative;
 		width: 60%;
 		top: 65px;
-		// top: 600px;
 	}
 	@include respond-to(medium-screens) {
-		// float: left;
-		position: relative;
-		top: 75px;
+
 	}
 	&__icon {
 		float: left;

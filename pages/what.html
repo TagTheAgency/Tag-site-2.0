@@ -1,68 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tag</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
-</head>
-<body>
-	<!-- <div class="background"></div> -->
-	<header>
-		<div class="nav-top nav-top--dark">
-			<ul class="nav-top__menu">
-				<li class="nav-top__menu-item nav-top__menu-item--active" ng-click="go('/what')">What</li>
-				<li class="nav-top__menu-item" ng-click="go('/who')">Who</li>
-				<li class="nav-top__menu-item" ng-click="go('/how')">How</li>
-				<li class="nav-top__menu-item" ng-click="go('/partners')">Partners</li>
-				<!-- <li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li> -->
-				<!-- <li class="nav-top__menu-item" ng-click="go('/store')">Store</li> -->
-				<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
-			</ul>
-			<div class="nav-top__logo nav-top__logo--dark" ng-click="go('/')"></div>
-			<div class="nav-top__burger-icon nav-top__burger-icon--dark" ng-click="show_header_menu = !show_header_menu" ng-class="show_header_menu ? 'nav-top__burger-icon nav-top__burger-icon--dark nav-top__burger-icon--active' : 'nav-top__burger-icon nav-top__burger-icon--dark'">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+<main ng-init="setHeaderTheme('dark')">
+	<div class="mobile-nav-menu" ng-show="show_header_menu">
+		<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
+	</div>
+	<div class="inner-container">
+		<div class="copy">
+			<h1>We Play to Win</h1>
+			<p>Built on the foundations of social media, our focus is on delivering innovative and creative advertising solutions to our clients and their audiences.</br></br>We specialise in innovation. Our philosophy is simple - focus on the audience to deliver content that resonates and inspires them to act!</br></br>TAG The Agency – we play to win.</p>
+		</div>
+		<div class="what" ng-init="what_image_url = 'what-bubbles'">
+			<div class="what__diagram">
+				<div class="center">
+					<div class="what__button what__button--production" ng-click="what_image_url = 'what-blue'"><span>Production</span></div>
+					<div class="what__button what__button--vr" ng-click="what_image_url = 'what-pink'"><span>Vr Studios</span></div>
+					<div class="what__button what__button--strategy" ng-click="what_image_url = 'what-yellow'"><span>Strategy</span></div>
+					<div class="what__button what__button--influencers" ng-click="what_image_url = 'what-black'"><span>Influencers</span></div>
+				</div>
+			</div>
+			<div class="what__bubbles" style="background-image: url(imgs/icons/{{what_image_url}}.png);"></div>
+		</div>
+		<div class="icons icons">
+			<div class="icons__icon" ng-click="go('/contact')">
+				<div class="icons__image icons__image--back icons__image--back"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/')">
+				<div class="icons__image icons__image--home icons__image--home"></div>
+				<div class="icons__text">Home</div>
+			</div>
+			<div class="icons__icon" ng-click="go('/who')">
+				<div class="icons__image icons__image--forward icons__image--forward"></div>
 			</div>
 		</div>
-	</header>
-	<main>
-		<div class="mobile-nav-menu" ng-show="show_header_menu">
-			<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
-		</div>
-		<div class="inner-container">
-			<div class="copy">
-				<h1>We Play to Win</h1>
-				<p>Built on the foundations of social media, our focus is on delivering innovative and creative advertising solutions to our clients and their audiences.</br></br>We specialise in innovation. Our philosophy is simple - focus on the audience to deliver content that resonates and inspires them to act!</br></br>TAG The Agency – we play to win.</p>
-			</div>
-			<div class="what" ng-init="what_image_url = 'what-bubbles'">
-				<div class="what__diagram">
-					<div class="center">
-						<div class="what__button what__button--production" ng-click="what_image_url = 'what-blue'"><span>Production</span></div>
-						<div class="what__button what__button--vr" ng-click="what_image_url = 'what-pink'"><span>Vr Studios</span></div>
-						<div class="what__button what__button--strategy" ng-click="what_image_url = 'what-yellow'"><span>Strategy</span></div>
-						<div class="what__button what__button--influencers" ng-click="what_image_url = 'what-black'"><span>Influencers</span></div>
-					</div>
-				</div>
-				<div class="what__bubbles" style="background-image: url(imgs/icons/{{what_image_url}}.png);"></div>
-			</div>
-			<div class="icons icons">
-				<div class="icons__icon" ng-click="go('/contact')">
-					<div class="icons__image icons__image--back icons__image--back"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/')">
-					<div class="icons__image icons__image--home icons__image--home"></div>
-					<div class="icons__text">Home</div>
-				</div>
-				<div class="icons__icon" ng-click="go('/who')">
-					<div class="icons__image icons__image--forward icons__image--forward"></div>
-				</div>
-			</div>
-		</div>
-	</main>
-</body>
-</html>
+	</div>
+</main>

@@ -1,73 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tag</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
-</head>
-<body>
-	<div class="background background--vr"></div>
-	<header>
-		<div class="nav-top nav-top--light">
-			<ul class="nav-top__menu">
-			<li class="nav-top__menu-item" ng-click="go('/what')">What</li>
-			<li class="nav-top__menu-item" ng-click="go('/who')">Who</li>
-			<li class="nav-top__menu-item" ng-click="go('/how')">How</li>
-			<li class="nav-top__menu-item" ng-click="go('/partners')">Partners</li>
-			<!-- <li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li> -->
-			<!-- <li class="nav-top__menu-item" ng-click="go('/store')">Store</li> -->
-			<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
-			</ul>
-			<div class="nav-top__logo nav-top__logo--light" ng-click="go('/')"></div>
-			<div class="nav-top__burger-icon">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+<div class="background background--vr"></div>
+<main ng-init="setHeaderTheme('light')">
+	<div class="mobile-nav-menu" ng-show="show_header_menu">
+		<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
+	</div>
+	<div class="inner-container">
+		<div class="copy copy--light">
+			<h1>VRStudio</h1>
+			<p>VRStudio turns your phone into a high definition 360° Video and 360° Photo viewer.</p>
+			<p>Download the app then simply move your iPhone around and watch as it turns into a window to another world! Then for a full VR experience on an iPhone use VRStudio with Google Cardboard or our own VR Headsets to immerse yourself in the excitement and innovation of virtual reality.<br>We have built the app using Google powered stereoscopic rendering, head tracking for mobile VR and our own VR 360 platform to ensure the very best quality of 360 and VR content.</p>
+		</div>
+		<div class="media">
+			<img src="../imgs/phone.png">
+			<!-- <div class="media__arrow media__arrow--left" ng-click="changeVrImage($event)"></div> -->
+			<!-- <div class="media__arrow media__arrow--right" ng-click="changeVrImage($event)"></div> -->
+		</div>
+		<div class="icons icons--light">
+			<div class="icons__icon" ng-click="go('/doing')">
+				<div class="icons__image icons__image--back icons__image--back--light"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/')">
+				<div class="icons__image icons__image--home icons__image--home--light"></div>
+				<div class="icons__text">Home</div>
+			</div>
+			<div class="icons__icon" ng-click="go('/thinking')">
+				<div class="icons__image icons__image--forward icons__image--forward--light"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/vr-app')">
+				<div class="icons__image icons__image--vr"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/vr-cardboard')">
+				<div class="icons__image icons__image--vr-cardboard"></div>
+			</div>
+			<div class="icons__icon" ng-click="openTab('https://itunes.apple.com/us/app/vrstudio/id1171505347')">
+				<div class="icons__image icons__image--app"></div>
+				<div class="icons__text"></div>
 			</div>
 		</div>
-	</header>
-	<main>
-		<div class="mobile-nav-menu" ng-show="show_header_menu">
-			<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
-		</div>
-		<div class="inner-container">
-			<div class="copy copy--light">
-				<h1>VRStudio</h1>
-				<p>VRStudio turns your phone into a high definition 360° Video and 360° Photo viewer.</p>
-				<p>Download the app then simply move your iPhone around and watch as it turns into a window to another world! Then for a full VR experience on an iPhone use VRStudio with Google Cardboard or our own VR Headsets to immerse yourself in the excitement and innovation of virtual reality.<br>We have built the app using Google powered stereoscopic rendering, head tracking for mobile VR and our own VR 360 platform to ensure the very best quality of 360 and VR content.</p>
-			</div>
-			<div class="media">
-				<img src="../imgs/phone.png">
-				<!-- <div class="media__arrow media__arrow--left" ng-click="changeVrImage($event)"></div> -->
-				<!-- <div class="media__arrow media__arrow--right" ng-click="changeVrImage($event)"></div> -->
-			</div>
-			<div class="icons icons--light">
-				<div class="icons__icon" ng-click="go('/doing')">
-					<div class="icons__image icons__image--back icons__image--back--light"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/')">
-					<div class="icons__image icons__image--home icons__image--home--light"></div>
-					<div class="icons__text">Home</div>
-				</div>
-				<div class="icons__icon" ng-click="go('/thinking')">
-					<div class="icons__image icons__image--forward icons__image--forward--light"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/vr-app')">
-					<div class="icons__image icons__image--vr"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/vr-cardboard')">
-					<div class="icons__image icons__image--vr-cardboard"></div>
-				</div>
-				<div class="icons__icon" ng-click="openTab('https://itunes.apple.com/us/app/vrstudio/id1171505347')">
-					<div class="icons__image icons__image--app"></div>
-					<div class="icons__text"></div>
-				</div>
-			</div>
-		</div>	
+	</div>	
 	</main>
-</body>
-</html>

@@ -1,67 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tag</title>
-	<!-- <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"> -->
-</head>
 <div class="background background--homepage"></div>
-<body>
-	<header>
-		<div class="nav-top nav-top">
-			<ul class="nav-top__menu">
-			<li class="nav-top__menu-item" ng-click="go('/what')">What</li>
-			<li class="nav-top__menu-item" ng-click="go('/who')">Who</li>
-			<li class="nav-top__menu-item" ng-click="go('/how')">How</li>
-			<li class="nav-top__menu-item" ng-click="go('/partners')">Partners</li>
-			<!-- <li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li> -->
-			<!-- <li class="nav-top__menu-item" ng-click="go('/store')">Store</li> -->
-			<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
-			</ul>
-			<div class="nav-top__logo nav-top__logo--light" ng-click="go('/')"></div>
-			<div class="nav-top__burger-icon" ng-click="show_header_menu = !show_header_menu" ng-class="show_header_menu ? 'nav-top__burger-icon nav-top__burger-icon--active' : 'nav-top__burger-icon'">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</header>
-	<main>
-		<div class="mobile-nav-menu" ng-show="show_header_menu">
-			<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
-		</div>
-		<div class="inner-container">		
-			<div class="cmyk-crosses">
-				<div class="cmyk-crosses__wrapper">
-					<div class="cmyk-crosses__item" ng-click="go('/doing')">
-						<div class="cmyk-crosses__image cmyk-crosses__image--blue"></div>
-						<div class="cmyk-crosses__text--blue">Doing</div>
-					</div>
-					<div class="cmyk-crosses__item" ng-click="go('/vr')">
-						<div class="cmyk-crosses__image cmyk-crosses__image--pink"></div>
-						<div class="cmyk-crosses__text--pink">VR Studio</div>
-					</div>
-					<div class="cmyk-crosses__item" ng-click="go('/thinking')">
-						<div class="cmyk-crosses__image cmyk-crosses__image--yellow"></div>
-						<div class="cmyk-crosses__text--yellow">Thinking</div>
-					</div>
-					<div class="cmyk-crosses__item" ng-click="go('/done')">
-						<div class="cmyk-crosses__image cmyk-crosses__image--white"></div>
-						<div class="cmyk-crosses__text--white">Done</div>
-					</div>
-					<div class="cmyk-crosses__item" ng-click="go('/influencers')">
-						<div class="cmyk-crosses__image cmyk-crosses__image--black"></div>
-						<div class="cmyk-crosses__text--black">Influencers</div>
-					</div>
+<main ng-init="setHeaderTheme('light')">
+	<div class="mobile-nav-menu" ng-show="show_header_menu">
+		<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
+	</div>
+	<div class="inner-container">		
+		<div class="cmyk-crosses">
+			<div class="cmyk-crosses__wrapper">
+				<div class="cmyk-crosses__item" ng-click="go('/doing')">
+					<div class="cmyk-crosses__image cmyk-crosses__image--blue"></div>
+					<div class="cmyk-crosses__text--blue">Doing</div>
+				</div>
+				<div class="cmyk-crosses__item" ng-click="go('/vr')">
+					<div class="cmyk-crosses__image cmyk-crosses__image--pink"></div>
+					<div class="cmyk-crosses__text--pink">VR Studio</div>
+				</div>
+				<div class="cmyk-crosses__item" ng-click="go('/thinking')">
+					<div class="cmyk-crosses__image cmyk-crosses__image--yellow"></div>
+					<div class="cmyk-crosses__text--yellow">Thinking</div>
+				</div>
+				<div class="cmyk-crosses__item" ng-click="go('/done')">
+					<div class="cmyk-crosses__image cmyk-crosses__image--white"></div>
+					<div class="cmyk-crosses__text--white">Done</div>
+				</div>
+				<div class="cmyk-crosses__item" ng-click="go('/influencers')">
+					<div class="cmyk-crosses__image cmyk-crosses__image--black"></div>
+					<div class="cmyk-crosses__text--black">Influencers</div>
 				</div>
 			</div>
 		</div>
-	</main>
-	<footer>
-	</footer>
-</body>
-</html>
+	</div>
+</main>

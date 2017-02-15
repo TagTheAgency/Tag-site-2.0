@@ -1,85 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tag</title>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
-</head>
-<body>
-	<div class="background background--vr"></div>
-	<header>
-		<div class="nav-top nav-top--light">
-			<ul class="nav-top__menu">
-			<li class="nav-top__menu-item" ng-click="go('/what')">What</li>
-			<li class="nav-top__menu-item" ng-click="go('/who')">Who</li>
-			<li class="nav-top__menu-item" ng-click="go('/how')">How</li>
-			<li class="nav-top__menu-item" ng-click="go('/partners')">Partners</li>
-			<!-- <li class="nav-top__menu-item" ng-click="go('/blog')">Blog</li> -->
-			<!-- <li class="nav-top__menu-item" ng-click="go('/store')">Store</li> -->
-			<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
-			</ul>
-			<div class="nav-top__logo nav-top__logo--light" ng-click="go('/')"></div>
-			<div class="nav-top__burger-icon">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+<div class="background background--vr"></div>
+<main ng-init="setHeaderTheme('light')">
+	<div class="mobile-nav-menu" ng-show="show_header_menu">
+		<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
+		<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
+	</div>
+	<div class="inner-container">
+		<div class="copy copy--light">
+			<h1>Virtual Reality Studios</h1>
+			<p>Welcome to VR studios. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</p>
+			<p>We have all the bases covered. We can work with you to produce mind blowing 360 video content, develop and supply custom branded VR Goggles and create and build a VR smartphone app for your content.</p>
+			<p>Get in touch today; we'd love to help bring your brand to life, truly, from the virtual world!</p>
+		</div>
+		<div class="media">
+			<div class="videos">
+				<div class="videos__video videos__video--full-width">
+					<div id=vrview></div>
+				</div>
+				<!-- <div class="videos__video videos__video--half-width">
+					<div class="loading-icon loading-icon--yellow"></div>
+					<iframe class="videos_iframe" src="https://www.youtube.com/embed/mjT1IHxBRjg?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="videos__video videos__video--half-width">
+					<div class="loading-icon loading-icon--yellow"></div>
+					<iframe class="videos_iframe" src="https://www.youtube.com/embed/mjT1IHxBRjg?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div> -->
 			</div>
 		</div>
-	</header>
-	<main>
-		<div class="mobile-nav-menu" ng-show="show_header_menu">
-			<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
-			<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
+		<div class="icons icons--light">
+			<div class="icons__icon" ng-click="go('/doing')">
+				<div class="icons__image icons__image--back icons__image--back--light"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/')">
+				<div class="icons__image icons__image--home icons__image--home--light"></div>
+				<div class="icons__text">Home</div>
+			</div>
+			<div class="icons__icon" ng-click="go('/thinking')">
+				<div class="icons__image icons__image--forward icons__image--forward--light"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/vr-app')">
+				<div class="icons__image icons__image--vr"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/vr-cardboard')">
+				<div class="icons__image icons__image--vr-cardboard"></div>
+			</div>
+			<div class="icons__icon" ng-click="openTab('https://itunes.apple.com/us/app/vrstudio/id1171505347')">
+				<div class="icons__image icons__image--app"></div>
+				<div class="icons__text"></div>
+			</div>
 		</div>
-		<div class="inner-container">
-			<div class="copy copy--light">
-				<h1>Virtual Reality Studios</h1>
-				<p>Welcome to VR studios. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</p>
-				<p>We have all the bases covered. We can work with you to produce mind blowing 360 video content, develop and supply custom branded VR Goggles and create and build a VR smartphone app for your content.</p>
-				<p>Get in touch today; we'd love to help bring your brand to life, truly, from the virtual world!</p>
-			</div>
-			<div class="media">
-				<div class="videos">
-					<div class="videos__video videos__video--full-width">
-						<div id=vrview></div>
-					</div>
-					<!-- <div class="videos__video videos__video--half-width">
-						<div class="loading-icon loading-icon--yellow"></div>
-						<iframe class="videos_iframe" src="https://www.youtube.com/embed/mjT1IHxBRjg?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-					</div>
-					<div class="videos__video videos__video--half-width">
-						<div class="loading-icon loading-icon--yellow"></div>
-						<iframe class="videos_iframe" src="https://www.youtube.com/embed/mjT1IHxBRjg?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-					</div> -->
-				</div>
-			</div>
-			<div class="icons icons--light">
-				<div class="icons__icon" ng-click="go('/doing')">
-					<div class="icons__image icons__image--back icons__image--back--light"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/')">
-					<div class="icons__image icons__image--home icons__image--home--light"></div>
-					<div class="icons__text">Home</div>
-				</div>
-				<div class="icons__icon" ng-click="go('/thinking')">
-					<div class="icons__image icons__image--forward icons__image--forward--light"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/vr-app')">
-					<div class="icons__image icons__image--vr"></div>
-				</div>
-				<div class="icons__icon" ng-click="go('/vr-cardboard')">
-					<div class="icons__image icons__image--vr-cardboard"></div>
-				</div>
-				<div class="icons__icon" ng-click="openTab('https://itunes.apple.com/us/app/vrstudio/id1171505347')">
-					<div class="icons__image icons__image--app"></div>
-					<div class="icons__text"></div>
-				</div>
-			</div>
-		</div>	
-	</main>
-	<script src="../scripts/vr.js"></script>
-</body>
-</html>
+	</div>	
+</main>
+<script src="../scripts/vr.js"></script>
