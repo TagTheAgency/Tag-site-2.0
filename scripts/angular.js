@@ -63,14 +63,12 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
 
     $scope.setHeaderTheme = function (theme) {
         if (theme == 'dark') {
-            console.log('dark')
             $('.nav-top').removeClass('nav-top--light')
             $('.nav-top').addClass('nav-top--dark')
             $('.nav-top__logo').removeClass('nav-top__logo--light')
             $('.nav-top__logo').addClass('nav-top__logo--dark')
             $('.nav-top__burger-icon').attr('ng-class', "show_header_menu ? 'nav-top__burger-icon nav-top__burger-icon--dark nav-top__burger-icon--active' : 'nav-top__burger-icon nav-top__burger-icon--dark'")
         } else {
-            console.log('light')
             $('.nav-top').addClass('nav-top--light')
             $('.nav-top').removeClass('nav-top--dark')
             $('.nav-top__logo').removeClass('nav-top__logo--dark')

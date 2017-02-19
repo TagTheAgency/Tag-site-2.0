@@ -1,8 +1,3 @@
-<!-- 
-	- Meta tag
-
- -->
-
 <!DOCTYPE html>
 <html ng-app="tagApp">
 <head>
@@ -38,11 +33,18 @@
 			<li class="nav-top__menu-item" ng-click="go('/contact')">Contact</li>
 			</ul>
 			<div class="nav-top__logo nav-top__logo--light" ng-click="go('/')"></div>
-			<div class="nav-top__burger-icon">
+			<div class="nav-top__burger-icon" ng-click="show_header_menu = !show_header_menu">
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
+			</div>
+			<div class="mobile-nav-menu" ng-show="show_header_menu">
+				<div class="mobile-nav-menu__item" ng-click="go('/what')">What</div>
+				<div class="mobile-nav-menu__item" ng-click="go('/who')">Who</div>
+				<div class="mobile-nav-menu__item" ng-click="go('/how')">How</div>
+				<div class="mobile-nav-menu__item" ng-click="go('/partners')">Partners</div>
+				<div class="mobile-nav-menu__item" ng-click="go('/contact')">Contact</div>
 			</div>
 		</div>
 	</header>
