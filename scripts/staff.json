@@ -1,13 +1,4 @@
 {
-    "mabel": {
-        "id": 1, 
-        "name": "Mabel",
-        "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/mabel/1.jpg",
-        "role": "Head of Security",
-        "bio": "With the massive task of maintaining staff happiness Mabel spends most of her time making the staff smile and feel relaxed. So much cute packed into a small and fancy dog, she is sure to to soften the hardest of hearts. When she is not spreading joy at the agency you can find Mabel sleeping in the sun, chasing her tail and or taking long walks on the beach.",
-        "img-path": "https://1793699979.rsc.cdn77.org",
-        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/mabel/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/mabel/CMYK.png"]
-    },
     "jess": {
         "id": 2, 
         "name": "Jess Bovey",
@@ -16,15 +7,6 @@
         "bio": "With over 10 years in the digital, social and agency world, Jess has the depth of experience matched by few. Efficient and savvy which comes from living and breathing digital and social. When Jess isn’t making sure TAG is running a tight game she is balancing a busy house, looking after her handsome little man, making sure her partner doesn’t buy too many car parts and runs a rather successful blog.",
         "img-path": "https://1793699979.rsc.cdn77.org",
         "images" : ["https://1793699979.rsc.cdn77.org/team-photos/jess/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jess/CMYK.png"]
-    },
-    "jaime": {
-        "id": 3, 
-        "name": "Jaime Parlett",
-        "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/jaime/1.jpg",
-        "role": "Account Director",
-        "bio": "Around here the saying “if at first you don’t succeed, try doing what your Account Director told you to do” is what we should live by. Instead we skip that and just listen to Jaime. With a wealth of experience in the world of digital advertising and client management, her cool, calm and collected approach makes sure everything is delivered on time and on budget; always with a touch of style. When Jaime isn’t looking after our key clients she blogs on fashion and loves long walks on the beach with Mabel; she has the world's cutest dog.",
-        "img-path": "https://1793699979.rsc.cdn77.org",
-        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/jaime/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/jaime/CMYK.png"]
     },
     "rosa": {
         "id": 4, 
