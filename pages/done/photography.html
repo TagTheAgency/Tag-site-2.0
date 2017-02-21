@@ -1,0 +1,25 @@
+<main ng-init="setHeaderTheme('dark')">
+	<div class="inner-container">
+		<div class="copy">
+			<h1>Photography</h1>
+			<p>Every game is won but not just through action or ad budgets, but through effective, smart, and savvy strategy. In the modern world, advertising strategies must be fluid and adaptable; moving with the media, following the audience, and keeping focus on them and the channels that they play in.</p>
+		</div>
+		<div class="media">
+			<img src="../imgs/photography.png">
+			<div class="media__arrow media__arrow--left" ng-click="go('/done-brand')"></div>
+			<div class="media__arrow media__arrow--right" ng-click="go('/done')"></div>
+		</div>
+		<div class="icons">
+			<div class="icons__icon" ng-click="go('/vr')">
+				<div class="icons__image icons__image--back"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/')">
+				<div class="icons__image icons__image--home"></div>
+				<div class="icons__text">Home</div>
+			</div>
+			<div class="icons__icon" ng-click="go('/done')">
+				<div class="icons__image icons__image--forward"></div>
+			</div>
+		</div>
+	</div>
+</main>

@@ -300,16 +300,16 @@ header {
 		background-repeat: no-repeat;
 		cursor: pointer;
 		&--left {
-			-webkit-filter: invert(1);
-			filter: invert(1);
+			// -webkit-filter: invert(1);
+			// filter: invert(1);
 			background-image: url($img-path + $back-icon);
-			left: calc(0% + 50px);
+			left: calc(0% - 25px);
 		}
 		&--right {
-			-webkit-filter: invert(1);
-			filter: invert(1);
+			// -webkit-filter: invert(1);
+			// filter: invert(1);
 			background-image: url($img-path + $forward-icon);
-			left: calc(100% - 50px);
+			left: calc(100% + 25px);
 		}
 	}
 }
@@ -659,6 +659,9 @@ header {
 		@include flex-wrapper;
 		height: 50%;
 		width: 100%;
+		&--center {
+			@include center;
+		}
 	}
 	&__row-2 {
 		@include respond-to(handhelds) {

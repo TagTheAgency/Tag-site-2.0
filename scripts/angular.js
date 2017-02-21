@@ -20,6 +20,18 @@ tagApp.config(function($routeProvider) {
     .when('/done', {
         templateUrl : "../pages/work.html"
     })
+    .when('/done-videos', {
+        templateUrl : "../pages/done/video.html"
+    })
+    .when('/done-apps', {
+        templateUrl : "../pages/done/apps.html"
+    })
+    .when('/done-brand', {
+        templateUrl : "../pages/done/brand.html"
+    })
+    .when('/done-photography', {
+        templateUrl : "../pages/done/photography.html"
+    })
     .when('/who', {
         templateUrl : "../pages/who.html"
     })
