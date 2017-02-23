@@ -300,16 +300,17 @@ header {
 		background-repeat: no-repeat;
 		cursor: pointer;
 		&--left {
-			// -webkit-filter: invert(1);
-			// filter: invert(1);
 			background-image: url($img-path + $back-icon);
 			left: calc(0% - 25px);
 		}
 		&--right {
-			// -webkit-filter: invert(1);
-			// filter: invert(1);
+			
 			background-image: url($img-path + $forward-icon);
 			left: calc(100% + 25px);
+		}
+		&--light {
+			-webkit-filter: invert(1);
+			filter: invert(1);
 		}
 	}
 }
@@ -776,6 +777,9 @@ header {
 				display: none;
 			}
 		}
+		&--vr {
+			background-color: rgba(0,0,0,0);
+		}
 		&:after {
 			// @include center;
 			// display: inline-block;
@@ -1238,6 +1242,7 @@ header {
 }
 
 #vrview {
+	margin-top: 20px;
 	width: 100%;
 	height: 100%;
 }

@@ -1,23 +1,26 @@
 <main ng-init="setHeaderTheme('dark')">
-	<div class="inner-container inner-container--strategy-page">
+	<div class="inner-container">
 		<div class="copy">
 			<h1>Apps</h1>
 			<p>Facebook Apps are an excellent way to engage and manage campaigns on Facebook, at TAG The Agency we can create, design, build and manage your next Facebook Campaign!</p>
+			<div style="height: 100px; width: 200px; margin-top: 20px; right: 100%;" ng-click="openTab('http://facebookapps.tagtheagency.com')">
+				<img src="../imgs/find-out-more.png" style="max-size: 100%; max-width: 100%">
+			</div>
 		</div>
 		<div class="media">
-			<img src="../imgs/apps.png">
+			<img src="../imgs/apps.png" ng-click="openTab('http://facebookapps.tagtheagency.com')">
 			<div class="media__arrow media__arrow--left" ng-click="go('/done-videos')"></div>
 			<div class="media__arrow media__arrow--right" ng-click="go('/done-brand')"></div>
 		</div>
 		<div class="icons">
-			<div class="icons__icon" ng-click="go('/vr')">
+			<div class="icons__icon" ng-click="go('/thinking')">
 				<div class="icons__image icons__image--back"></div>
 			</div>
 			<div class="icons__icon" ng-click="go('/')">
 				<div class="icons__image icons__image--home"></div>
 				<div class="icons__text">Home</div>
 			</div>
-			<div class="icons__icon" ng-click="go('/done')">
+			<div class="icons__icon" ng-click="go('/influencers')">
 				<div class="icons__image icons__image--forward"></div>
 			</div>
 		</div>

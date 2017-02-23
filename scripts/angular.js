@@ -9,7 +9,7 @@ tagApp.config(function($routeProvider) {
         templateUrl : "../pages/production.html",
     })
     .when('/vr', {
-        templateUrl : "../pages/vr.html"
+        templateUrl : "../pages/vr/vr.html"
     })
     .when('/influencers', {
         templateUrl : "../pages/influencers.html"
@@ -18,7 +18,7 @@ tagApp.config(function($routeProvider) {
         templateUrl : "../pages/strategy.html"
     })
     .when('/done', {
-        templateUrl : "../pages/work.html"
+        templateUrl : "../pages/done/done.html"
     })
     .when('/done-videos', {
         templateUrl : "../pages/done/video.html"
@@ -51,10 +51,10 @@ tagApp.config(function($routeProvider) {
         templateUrl : "../pages/contact.html",
     })
     .when('/vr-app', {
-        templateUrl : "../pages/vr-app.html",
+        templateUrl : "../pages/vr/vr-app.html",
     })
     .when('/vr-cardboard', {
-        templateUrl : "../pages/vr-cardboard.html",
+        templateUrl : "../pages/vr/vr-cardboard.html",
     })
     .otherwise({
         redirectTo: '/'

@@ -9,8 +9,10 @@
 		</div>
 		<div class="media">
 			<div class="videos">
-				<div class="videos__video videos__video--full-width">
+				<div class="videos__video videos__video--full-width videos__video--vr">
 					<div id=vrview></div>
+					<div class="media__arrow media__arrow--light media__arrow--left" ng-click="go('/vr-cardboard')"></div>
+					<div class="media__arrow media__arrow--light media__arrow--right" ng-click="go('/vr-app')"></div>
 				</div>
 				<!-- <div class="videos__video videos__video--half-width">
 					<div class="loading-icon loading-icon--yellow"></div>
@@ -33,12 +35,12 @@
 			<div class="icons__icon" ng-click="go('/thinking')">
 				<div class="icons__image icons__image--forward icons__image--forward--light"></div>
 			</div>
-			<div class="icons__icon" ng-click="go('/vr-app')">
+<!-- 			<div class="icons__icon" ng-click="go('/vr-app')">
 				<div class="icons__image icons__image--vr"></div>
 			</div>
 			<div class="icons__icon" ng-click="go('/vr-cardboard')">
 				<div class="icons__image icons__image--vr-cardboard"></div>
-			</div>
+			</div> -->
 			<div class="icons__icon" ng-click="openTab('https://itunes.apple.com/us/app/vrstudio/id1171505347')">
 				<div class="icons__image icons__image--app"></div>
 				<div class="icons__text"></div>

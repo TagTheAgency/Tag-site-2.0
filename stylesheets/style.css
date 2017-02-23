@@ -160,6 +160,9 @@ header {
     .media__arrow--right {
       background-image: url("../imgs/icons/Icon-72.png");
       left: calc(100% + 25px); }
+    .media__arrow--light {
+      -webkit-filter: invert(1);
+      filter: invert(1); }
 
 .copy {
   clear: both;
@@ -583,6 +586,8 @@ header {
       @media only screen and (max-width: 64em) and (orientation: portrait) {
         .videos__video--half-width {
           display: none; } }
+    .videos__video--vr {
+      background-color: transparent; }
   .videos_iframe {
     width: 100%;
     height: 100%; }
@@ -1006,6 +1011,7 @@ header {
       width: 100%; } }
 
 #vrview {
+  margin-top: 20px;
   width: 100%;
   height: 100%; }
 
