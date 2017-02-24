@@ -32,6 +32,9 @@ tagApp.config(function($routeProvider) {
     .when('/done-photography', {
         templateUrl : "../pages/done/photography.html"
     })
+    .when('/done-content', {
+        templateUrl : "../pages/done/content.html"
+    })
     .when('/who', {
         templateUrl : "../pages/who.html"
     })
