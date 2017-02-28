@@ -64,7 +64,7 @@ header {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .background {
       background-position: 60% 0; } }
   .background--homepage {
@@ -73,7 +73,7 @@ header {
     background-image: url("../imgs/backgrounds/TAG-The-Agency-website-production-bg.png"); }
   .background--influencers {
     background-image: url("../imgs/backgrounds/TAG-The-Agency-website-influencers-bg.png"); }
-    @media only screen and (max-width: 64em) and (orientation: portrait) {
+    @media only screen and (max-width: 736px) and (orientation: portrait) {
       .background--influencers {
         background-color: black;
         background-image: url("../imgs/backgrounds/TAG-The-Agency-website-influencers-bg.png"); } }
@@ -102,24 +102,24 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .inner-container {
       box-sizing: border-box;
       height: calc(100% - 100px);
-      width: 880px;
+      width: calc(100% - 60px);
       padding: 100px 30px 30px 30px; } }
-  @media only screen and (max-width: 64em) and (orientation: landscape) {
+  @media only screen and (max-width: 736px) and (orientation: landscape) {
     .inner-container {
       padding-top: 100px;
       height: calc(100% - 100px);
-      width: 880px; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+      width: 90%; } }
+  @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
     .inner-container {
-      width: 1020px;
+      width: 80%;
       height: 510px; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 1824px) {
     .inner-container {
-      width: 1440px;
+      width: 75%;
       height: 760px;
       max-height: 760px;
       min-height: 650px; } }
@@ -132,7 +132,7 @@ header {
   margin: 10px 10px 10px 10px; }
   .media img {
     position: absolute; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .media {
       position: absolute;
       left: 50%;
@@ -167,7 +167,7 @@ header {
 .copy {
   clear: both;
   float: left; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .copy {
       display: inline-block;
       width: 100%;
@@ -180,7 +180,7 @@ header {
       .copy p {
         font-size: 2.2em;
         margin: 0 0 2% 0; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+  @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
     .copy {
       display: inline-block;
       width: calc(40% - 60px);
@@ -192,7 +192,7 @@ header {
         margin: 8% 0 0 0; }
       .copy p {
         margin: 0 0 5% 0; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 1824px) {
     .copy {
       display: inline-block;
       width: calc(40% - 60px);
@@ -215,7 +215,7 @@ header {
   width: calc(40% - 60px);
   height: calc(20% - 10px);
   margin: 0 50px 10px 10px; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .icons {
       position: relative;
       width: 60%;
@@ -274,7 +274,7 @@ header {
     color: white; }
   .icons--contact {
     top: 650px; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .icons--contact {
         top: 0px; } }
   .icons--who {
@@ -302,14 +302,14 @@ header {
     float: right;
     text-align: center;
     list-style-type: none; }
-    @media only screen and (max-width: 64em) and (orientation: portrait) {
+    @media only screen and (max-width: 736px) and (orientation: portrait) {
       .nav-top__menu {
         display: none;
         width: 60%; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .nav-top__menu {
         width: 55%; } }
-    @media only screen and (min-width: 90em) {
+    @media only screen and (min-width: 1824px) {
       .nav-top__menu {
         width: 40%; } }
   .nav-top__menu-item {
@@ -327,7 +327,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
-    @media only screen and (max-width: 64em) and (orientation: portrait) {
+    @media only screen and (max-width: 736px) and (orientation: portrait) {
       .nav-top__logo {
         width: 200px; } }
     .nav-top__logo--dark {
@@ -384,10 +384,10 @@ header {
       transform: rotate(-45deg); }
     .nav-top__burger-icon--active span:nth-child(4) {
       opacity: 0; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .nav-top__burger-icon {
         display: none; } }
-    @media only screen and (min-width: 90em) {
+    @media only screen and (min-width: 1824px) {
       .nav-top__burger-icon {
         display: none; } }
   .nav-top--dark {
@@ -408,11 +408,11 @@ header {
   text-align: center;
   font-family: "Harriet Bold";
   top: 80%; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .cmyk-crosses {
       width: 100%;
       top: 75%; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 1824px) {
     .cmyk-crosses {
       top: 90%; } }
   .cmyk-crosses__wrapper {
@@ -475,7 +475,7 @@ header {
   float: left;
   height: 100%;
   width: 100%; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .work-examples {
       margin-top: 100px; } }
   .work-examples__row-1, .work-examples__row-2 {
@@ -495,22 +495,22 @@ header {
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .work-examples__row-2 {
       display: none; } }
   .work-examples__item {
     position: relative;
     background-color: black;
     flex: 1; }
-    @media only screen and (max-width: 64em) and (orientation: portrait) {
+    @media only screen and (max-width: 736px) and (orientation: portrait) {
       .work-examples__item {
         margin: 0 5px 0 5px;
         height: 100%; } }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .work-examples__item {
         height: calc(100% - 10px);
         margin: 5px 5px 5px 5px; } }
-    @media only screen and (min-width: 90em) {
+    @media only screen and (min-width: 1824px) {
       .work-examples__item {
         height: calc(100% - 20px);
         margin: 10px 10px 10px 10px; } }
@@ -522,7 +522,7 @@ header {
     font: 1.2em "Harriet Bold";
     position: absolute;
     margin: 20px 0 0 5px; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .work-examples__title {
         font-size: 1em; } }
   .work-examples__video {
@@ -536,10 +536,10 @@ header {
     background-color: black;
     height: 15%;
     bottom: 0%; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .work-examples__description {
         font-size: 0.7em; } }
-    @media only screen and (min-width: 90em) {
+    @media only screen and (min-width: 1824px) {
       .work-examples__description {
         font-size: 1.1em; } }
     .work-examples__description p {
@@ -576,14 +576,14 @@ header {
       margin: 0 5px 10px 5px;
       width: calc(100% - 10px);
       height: calc(65% - 10px); }
-      @media only screen and (max-width: 64em) and (orientation: portrait) {
+      @media only screen and (max-width: 736px) and (orientation: portrait) {
         .videos__video--full-width {
           height: 100%; } }
     .videos__video--half-width {
       width: calc(50% - 10px);
       margin: 0px 5px 0 5px;
       height: 35%; }
-      @media only screen and (max-width: 64em) and (orientation: portrait) {
+      @media only screen and (max-width: 736px) and (orientation: portrait) {
         .videos__video--half-width {
           display: none; } }
     .videos__video--vr {
@@ -632,13 +632,13 @@ header {
     position: absolute;
     height: 75%;
     width: 100%; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .info-pages {
       font-size: 1.5em; }
       .info-pages p {
         width: 85%;
         margin-bottom: 100px; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+  @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
     .info-pages {
       padding-top: 2%; }
       .info-pages p {
@@ -674,7 +674,7 @@ header {
   -ms-box-orient: horizontal;
   width: 100%;
   height: 40%; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .team__members-wrapper {
       height: 80%;
       -webkit-flex-wrap: wrap;
@@ -684,7 +684,7 @@ header {
   flex: 1;
   margin: 0 10px 0 10px;
   text-align: center; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .team__item {
       flex: 0 0 auto;
       height: 150px;
@@ -698,7 +698,7 @@ header {
   border-radius: 50%;
   width: 100%;
   padding-bottom: 100%; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .team__image {
       height: 150px;
       width: 150px;
@@ -738,11 +738,11 @@ header {
   height: 320px;
   padding: 10px 10px 10px 10px;
   box-sizing: border-box; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .personal-images {
       height: 300px;
       top: 600px; } }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+  @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
     .personal-images {
       height: 300px;
       top: 300px; } }
@@ -752,7 +752,7 @@ header {
     background-position: top;
     height: calc(100% - 20px);
     float: left; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .personal-images__image {
         margin: 5px 5px 5px 5px; } }
     .personal-images__image--1 {
@@ -782,10 +782,10 @@ header {
     align-items: stretch;
     -ms-box-orient: horizontal;
     position: relative; }
-    @media only screen and (max-width: 64em) and (orientation: portrait) {
+    @media only screen and (max-width: 736px) and (orientation: portrait) {
       .partners__item-wrapper {
         height: 30%; } }
-    @media only screen and (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (max-width: 736px) and (orientation: landscape) {
       .partners__item-wrapper {
         margin-top: 40px; } }
   .partners__item {
@@ -817,12 +817,12 @@ header {
     width: 25%;
     padding-bottom: 20%;
     text-align: center; }
-    @media only screen and (max-width: 64em) and (orientation: portrait) {
+    @media only screen and (max-width: 736px) and (orientation: portrait) {
       .partners__copy {
         width: 80%;
         padding-bottom: 70%;
         font-size: 1.5em; } }
-    @media only screen and (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (max-width: 736px) and (orientation: landscape) {
       .partners__copy {
         width: 40%;
         padding-bottom: 15%; } }
@@ -892,7 +892,7 @@ header {
       background-color: #FFF200; }
       .what__button--strategy span {
         color: black; }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+  @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
     .what {
       font-size: 0.9em;
       margin-top: 15px;
@@ -903,7 +903,7 @@ header {
         width: 80px; }
       .what__bubbles {
         height: 270px; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 1824px) {
     .what {
       font-size: 1.2em;
       margin-top: 15px;
@@ -913,11 +913,11 @@ header {
 .contact-form {
   width: 100%;
   height: 800px; }
-  @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+  @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
     .contact-form {
       width: 400px;
       height: 500px; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 1824px) {
     .contact-form {
       width: 500px;
       height: 600px; } }
@@ -927,10 +927,10 @@ header {
   .contact-form span {
     font-size: 4em;
     font-family: "Harriet Bold"; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .contact-form span {
         font-size: 1.5em; } }
-    @media only screen and (min-width: 90em) {
+    @media only screen and (min-width: 1824px) {
       .contact-form span {
         font-size: 2em; } }
   .contact-form__input {
@@ -955,13 +955,13 @@ header {
     .contact-form__input--message {
       height: 300px;
       background-color: #00AEEF; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .contact-form__input {
         height: 50px;
         margin: 0 0 10px 0; }
         .contact-form__input--message {
           height: 100px; } }
-    @media only screen and (min-width: 90em) {
+    @media only screen and (min-width: 1824px) {
       .contact-form__input {
         height: 50px;
         margin: 0 0 20px 0; }
@@ -983,12 +983,12 @@ header {
     .contact-form__submit:hover {
       color: #231F20;
       background-color: #FFF200; }
-    @media only screen and (min-width: 64em) and (max-width: 90em), (max-width: 64em) and (orientation: landscape) {
+    @media only screen and (min-width: 736px) and (max-width: 1824px), (max-width: 736px) and (orientation: landscape) {
       .contact-form__submit {
         font-size: 1.2em;
         line-height: 50px;
         height: 50px; } }
-    @media only screen and (min-width: 90em) {
+    @media only screen and (min-width: 1824px) {
       .contact-form__submit {
         font-size: 1.5em;
         line-height: 50px;
@@ -1006,7 +1006,7 @@ header {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat; }
-  @media only screen and (max-width: 64em) and (orientation: portrait) {
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
     .how {
       width: 100%; } }
 

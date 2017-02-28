@@ -64,9 +64,9 @@ $browser-context: 16;
   @return #{$pixels/$context}em;
 }
 
-$small-breakpoint: em(1024) !default;
-$medium-breakpoint:  em(1264) !default;
-$large-breakpoint:  em(1440) !default;
+$small-breakpoint: 736px !default; //iphone 6+
+$medium-breakpoint:  1224px !default; // Med screens
+$large-breakpoint:  1824px !default; //Large screens
 $xlarge-breakpoint: em(1920) !default;
 
 @mixin respond-to($media) {
@@ -255,20 +255,20 @@ header {
 	@include respond-to(handhelds) {
 		box-sizing: border-box;
 		height: calc(100% - 100px); //header height
-		width: 880px;
+		width: calc(100% - 60px);
 		padding: 100px 30px 30px 30px;
 	}
 	@include respond-to(handhelds-landscape) {
 		padding-top: $header-height;
 		height: calc(100% - 100px); //header height
-		width: 880px;
+		width: 90%;
 	}
 	@include respond-to(medium-screens) {
-		width: 1020px;
+		width: 80%;
 		height: 510px;
 	}
 	@include respond-to(wide-screens) {
-		width: 1440px;
+		width: 75%;
 		height: 760px;
 		max-height: 760px;
 		min-height: 650px;
