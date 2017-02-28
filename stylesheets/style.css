@@ -424,11 +424,11 @@ header {
     flex-wrap: nowrap;
     align-items: stretch;
     -ms-box-orient: horizontal;
+    justify-content: space-between;
     margin: 0 auto 0 auto;
     height: 100%;
     width: 100%; }
   .cmyk-crosses__item {
-    margin: 0 10px 0 10px;
     flex: 1; }
   .cmyk-crosses__image {
     cursor: pointer;
