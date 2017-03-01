@@ -1,0 +1,27 @@
+<main ng-init="setHeaderTheme('dark')">
+	<div class="inner-container">
+		<div class="copy">
+			<h1>Event</h1>
+			<p>Working with brands we integrate social media into their live events, amplifying the experience through digital snapshots that showcase the event across all social channels, extending the reach beyond the conference centre.</p>
+			<br>
+			<p>From live broadcasts to real-time curated tweeting, TAG The Agency is the team you need to take your event experience to the next level!</p>
+		</div>
+		<div class="media">
+			<iframe class="videos_iframe" src="https://www.youtube.com/embed/Q8sTIb88cTU?&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+			<div class="media__arrow media__arrow--left" ng-click="go('/done-advertising')"></div>
+			<div class="media__arrow media__arrow--right" ng-click="go('/done')"></div>
+		</div>
+		<div class="icons">
+			<div class="icons__icon" ng-click="go('/thinking')">
+				<div class="icons__image icons__image--back"></div>
+			</div>
+			<div class="icons__icon" ng-click="go('/')">
+				<div class="icons__image icons__image--home"></div>
+				<div class="icons__text">Home</div>
+			</div>
+			<div class="icons__icon" ng-click="go('/influencers')">
+				<div class="icons__image icons__image--forward"></div>
+			</div>
+		</div>
+	</div>
+</main>

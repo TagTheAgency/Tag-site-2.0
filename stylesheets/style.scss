@@ -251,7 +251,8 @@ header {
 }
 
 .inner-container {
-	@include center;
+	@include center-horizontal;
+	// margin-top: 5%;
 	@include respond-to(handhelds) {
 		box-sizing: border-box;
 		height: calc(100% - 100px); //header height
@@ -458,9 +459,9 @@ header {
 	}
 	&--contact {
 		top: 650px;
-		@include respond-to(medium-screens) {
-			top: 0px;
-		}
+		// @include respond-to(medium-screens) {
+		// 	top: 0px;
+		// }
 	}
 	&--who {
 		top: 0px;
@@ -659,7 +660,7 @@ header {
 	width: 100%;
 	&__row-1, &__row-2 {
 		@include flex-wrapper;
-		height: 50%;
+		height: 40%;
 		width: 100%;
 		&--center {
 			@include center;
@@ -702,8 +703,11 @@ header {
 		}
 	}
 	&__video {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 		z-index: 1;
-		padding-top: 50px;
+		margin-top: 50px;
 		width: 100%;
 		height: calc(85% - 50px);
 	}
@@ -1058,7 +1062,7 @@ header {
 .what {
 	float: right;
 	height: 700px;
-	width: 100%;
+	width: 60%;
 	background-position: center;
 	span {
 		@include center;
@@ -1110,7 +1114,7 @@ header {
 	@include respond-to(medium-screens) {
 		font-size: 0.9em;
 		margin-top: 15px;
-		width: 600px;
+		// width: 600px;
 		height: 275px;
 		&__button {
 			height: 80px;

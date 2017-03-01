@@ -98,10 +98,9 @@ header {
 
 .inner-container {
   position: absolute;
-  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
   @media only screen and (max-width: 740px) and (orientation: portrait) {
     .inner-container {
       box-sizing: border-box;
@@ -274,9 +273,6 @@ header {
     color: white; }
   .icons--contact {
     top: 650px; }
-    @media only screen and (min-width: 740px) and (max-width: 1824px) {
-      .icons--contact {
-        top: 0px; } }
   .icons--who {
     top: 0px; }
 
@@ -487,7 +483,7 @@ header {
     flex-wrap: nowrap;
     align-items: stretch;
     -ms-box-orient: horizontal;
-    height: 50%;
+    height: 40%;
     width: 100%; }
     .work-examples__row-1--center, .work-examples__row-2--center {
       position: absolute;
@@ -526,8 +522,11 @@ header {
       .work-examples__title {
         font-size: 1em; } }
   .work-examples__video {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     z-index: 1;
-    padding-top: 50px;
+    margin-top: 50px;
     width: 100%;
     height: calc(85% - 50px); }
   .work-examples__description {
@@ -848,7 +847,7 @@ header {
 .what {
   float: right;
   height: 700px;
-  width: 100%;
+  width: 60%;
   background-position: center; }
   .what span {
     position: absolute;
@@ -896,7 +895,6 @@ header {
     .what {
       font-size: 0.9em;
       margin-top: 15px;
-      width: 600px;
       height: 275px; }
       .what__button {
         height: 80px;
