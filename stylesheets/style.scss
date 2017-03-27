@@ -11,6 +11,9 @@
 @font-face {
 	font-family: 'Harriet Bold';
 	src: url('../fonts/Harriet Display Bold.otf'); }
+@font-face {
+	font-family: 'Harriet Light';
+	src: url('../fonts/HarrietDisplay-Light.otf'); }
 
 $body-font: 'Futura Light';
 $header-font: 'Harriet Bold';
@@ -596,6 +599,17 @@ header {
 			background-color: black;
 		}
 	}
+}
+
+.homepage-text {
+	@include center;
+	width: 65%;
+	height: 15%;
+	font-family: 'Harriet Light';
+	position: absolute;
+	text-align: center;
+	font-size: 3em;
+	color: white;
 }
 
 .cmyk-crosses {

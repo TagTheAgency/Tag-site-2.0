@@ -7,6 +7,9 @@
 @font-face {
   font-family: 'Harriet Bold';
   src: url("../fonts/Harriet Display Bold.otf"); }
+@font-face {
+  font-family: 'Harriet Light';
+  src: url("../fonts/HarrietDisplay-Light.otf"); }
 .center {
   position: absolute;
   top: 50%;
@@ -390,6 +393,20 @@ header {
     color: black; }
     .nav-top--dark span {
       background-color: black; }
+
+.homepage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 15%;
+  font-family: 'Harriet Light';
+  position: absolute;
+  text-align: center;
+  font-size: 3em;
+  color: white; }
 
 .cmyk-crosses {
   position: absolute;
