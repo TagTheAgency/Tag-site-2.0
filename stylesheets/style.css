@@ -75,11 +75,7 @@ header {
   .background--production {
     background-color: #00AEEF; }
   .background--influencers {
-    background-image: url("../imgs/backgrounds/TAG-The-Agency-website-influencers-bg.png"); }
-    @media only screen and (max-width: 740px) and (orientation: portrait) {
-      .background--influencers {
-        background-color: black;
-        background-image: url("../imgs/backgrounds/TAG-The-Agency-website-influencers-bg.png"); } }
+    background-color: black; }
   .background--strategy {
     background-color: #FFF200; }
   .background--vr {
@@ -132,6 +128,14 @@ header {
   height: calc(100% - 20px);
   width: calc(60% - 20px);
   margin: 10px 10px 10px 10px; }
+  .media iframe {
+    width: calc(100% - 150px);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .media--strategy img {
+    background-color: rgba(0, 0, 0, 0.7); }
   .media img {
     position: absolute; }
   @media only screen and (max-width: 740px) and (orientation: portrait) {

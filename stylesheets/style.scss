@@ -216,11 +216,12 @@ header {
 		// background-image: url($img-path + $production-bg);
 	}
 	&--influencers {
-		@include respond-to(handhelds) {
-			background-color: black;
-			background-image: url($img-path + $influencers-bg);
-		}
-		background-image: url($img-path + $influencers-bg);
+		// @include respond-to(handhelds) {
+		// 	background-color: black;
+		// 	background-image: url($img-path + $influencers-bg);
+		// }
+		// background-image: url($img-path + $influencers-bg);
+		background-color: black;
 	}
 	&--strategy {
 		// background-image: url($img-path + $strategy-bg);
@@ -283,6 +284,18 @@ header {
 }
 
 .media {
+	iframe {
+		width: calc(100% - 150px);
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	&--strategy {
+		img {
+			background-color: rgba(0,0,0,0.7);
+		}
+	}
 	position: absolute;
 	display: inline-block;
 	height: calc(100% - 20px);
