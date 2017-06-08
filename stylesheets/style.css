@@ -73,7 +73,7 @@ header {
   .background--homepage {
     background-image: url("../imgs/backgrounds/TAG-The-Agency-website-homepage-bg.png"); }
   .background--production {
-    background-image: url("../imgs/backgrounds/TAG-The-Agency-website-production-bg.png"); }
+    background-color: #00AEEF; }
   .background--influencers {
     background-image: url("../imgs/backgrounds/TAG-The-Agency-website-influencers-bg.png"); }
     @media only screen and (max-width: 740px) and (orientation: portrait) {
@@ -81,9 +81,9 @@ header {
         background-color: black;
         background-image: url("../imgs/backgrounds/TAG-The-Agency-website-influencers-bg.png"); } }
   .background--strategy {
-    background-image: url("../imgs/backgrounds/upload_11_10_2016_at_2_19_10_PM.png"); }
+    background-color: #FFF200; }
   .background--vr {
-    background-image: url("../imgs/backgrounds/TAG-The-Agency-website-VR-Studios-bg.png"); }
+    background-color: #EC008C; }
   .background--contact {
     background-image: url("../imgs/backgrounds/TAG The Agency website contact us bg_WHAT copy 7.png"); }
 
