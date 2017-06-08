@@ -212,7 +212,8 @@ header {
 		background-image: url($img-path + $homepage-bg);
 	}
 	&--production {
-		background-image: url($img-path + $production-bg);
+		background-color: $blue;
+		// background-image: url($img-path + $production-bg);
 	}
 	&--influencers {
 		@include respond-to(handhelds) {
@@ -222,10 +223,12 @@ header {
 		background-image: url($img-path + $influencers-bg);
 	}
 	&--strategy {
-		background-image: url($img-path + $strategy-bg);
+		// background-image: url($img-path + $strategy-bg);
+		background-color: $yellow;
 	}
 	&--vr {
-		background-image: url($img-path + $vr-bg);
+		// background-image: url($img-path + $vr-bg);
+		background-color: $pink;
 	}
 	&--contact {
 		background-image: url($img-path + $contact-bg);
