@@ -3,67 +3,67 @@ var tagApp = angular.module('tagApp', ['ngRoute', 'ngAnimate']);
 tagApp.config(function($routeProvider) {
     $routeProvider
     .when('/', {
-        templateUrl: "../pages/home.html",
+        templateUrl: "pages/home.html",
     })
     .when('/doing', {
-        templateUrl : "../pages/production.html",
+        templateUrl : "pages/production.html",
     })
     .when('/vr', {
-        templateUrl : "../pages/vr/vr.html"
+        templateUrl : "pages/vr/vr.html"
     })
     .when('/influencers', {
-        templateUrl : "../pages/influencers.html"
+        templateUrl : "pages/influencers.html"
     })
     .when('/thinking', {
-        templateUrl : "../pages/strategy.html"
+        templateUrl : "pages/strategy.html"
     })
     .when('/done', {
-        templateUrl : "../pages/done/done.html"
+        templateUrl : "pages/done/done.html"
     })
     .when('/done-videos', {
-        templateUrl : "../pages/done/video.html"
+        templateUrl : "pages/done/video.html"
     })
     .when('/done-apps', {
-        templateUrl : "../pages/done/apps.html"
+        templateUrl : "pages/done/apps.html"
     })
     .when('/done-brand', {
-        templateUrl : "../pages/done/brand.html"
+        templateUrl : "pages/done/brand.html"
     })
     .when('/done-photography', {
-        templateUrl : "../pages/done/photography.html"
+        templateUrl : "pages/done/photography.html"
     })
     .when('/done-content', {
-        templateUrl : "../pages/done/content.html"
+        templateUrl : "pages/done/content.html"
     })
     .when('/done-advertising', {
-        templateUrl : "../pages/done/advertising.html"
+        templateUrl : "pages/done/advertising.html"
     })
     .when('/done-event', {
-        templateUrl : "../pages/done/event.html"
+        templateUrl : "pages/done/event.html"
     })
     .when('/who', {
-        templateUrl : "../pages/who.html"
+        templateUrl : "pages/who.html"
     })
     .when('/partners', {
-        templateUrl : "../pages/partners.html"
+        templateUrl : "pages/partners.html"
     })
     .when('/staff', {
-        templateUrl : "../pages/personal.html"
+        templateUrl : "pages/personal.html"
     })
     .when('/what', {
-        templateUrl : "../pages/what.html",
+        templateUrl : "pages/what.html",
     })
     .when('/how', {
-        templateUrl : "../pages/how.html",
+        templateUrl : "pages/how.html",
     })
     .when('/contact', {
-        templateUrl : "../pages/contact.html",
+        templateUrl : "pages/contact.html",
     })
     .when('/vr-app', {
-        templateUrl : "../pages/vr/vr-app.html",
+        templateUrl : "pages/vr/vr-app.html",
     })
     .when('/vr-cardboard', {
-        templateUrl : "../pages/vr/vr-cardboard.html",
+        templateUrl : "pages/vr/vr-cardboard.html",
     })
     .otherwise({
         redirectTo: '/'
@@ -125,9 +125,9 @@ tagApp.controller('mainController', function($scope, $location, $window, dataSer
 
     $scope.changeVrImage = function($event) {
         if($('.media img')[0].src.includes('phone')) {
-            $('.media img').attr('src', '../imgs/carboard.png');
+            $('.media img').attr('src', 'imgs/carboard.png');
         } else {
-            $('.media img').attr('src', '../imgs/phone.png');
+            $('.media img').attr('src', 'imgs/phone.png');
         }
     }
 

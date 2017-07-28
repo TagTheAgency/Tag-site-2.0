@@ -13,7 +13,7 @@
         "name": "Rosa Santana",
         "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/rosa/1.jpg",
         "role": "Senior Designer",
-        "bio": "The Super Senior Designer of the agency; powered by sunshine, all things pink and “super awesome”. Rosa has the unique combination of design, strategy and international experience. Where most designers get lost in the ‘look’, Rosa sees the perfect balance in both form and function, enabling her to deliver complex design challenges with simplicity, style and a dash of awesome. Outside of the agency Rosa is in the endless pursuit sunshine and waves to keep her inspiration flowing.",
+        "bio": "The Super Senior Designer of the agency; powered by sunshine, all things pink and 'super awesome'. Rosa has the unique combination of design, strategy and international experience. Where most designers get lost in the ‘look’, Rosa sees the perfect balance in both form and function, enabling her to deliver complex design challenges with simplicity, style and a dash of awesome. Outside of the agency Rosa is in the endless pursuit sunshine and waves to keep her inspiration flowing.",
         "img-path": "https://1793699979.rsc.cdn77.org",
         "images" : ["https://1793699979.rsc.cdn77.org/team-photos/rosa/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/rosa/CMYK.png"]
     },
@@ -34,24 +34,6 @@
         "bio": "If you think it, Maddy can create it; there’s nothing that Maddy can’t turn into a digital masterpiece. With natural talent for creating art in the traditional form of pencil and paper and then digitising it and taking it to a mind-blowing level. Even when she is not at the agency Maddy is creating, making and experimenting with art.",
         "img-path": "https://1793699979.rsc.cdn77.org",
         "images" : ["https://1793699979.rsc.cdn77.org/team-photos/madeline/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/madeline/CMYK.png"]
-    },
-    "dan": {
-        "id": 7, 
-        "name": "Dan Harris",
-        "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/dan/1.jpg",
-        "role": "Video Production",
-        "bio": "Capturing beautiful moments in motion, Dan runs the video production for the agency. Calm, cool and never stressed, Dan delivers stunning creations for our clients. When not at the agency, Dan is still behind the lens, often found creating indie films, shooting music videos or seeing how to get the best elevation shots from a drone.",
-        "img-path": "https://1793699979.rsc.cdn77.org",
-        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/dan/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/dan/CMYK.png"]
-    },
-    "ira": {
-        "id": 8, 
-        "name": "Ira Ritchie Meek",
-        "thumbnail": "https://1793699979.rsc.cdn77.org/team-photos/ira/1.jpg",
-        "role": "Developer",
-        "bio": "Ira has an amazing appetite to learn, build, create and challenge. Ira is our Lead Developer who can build technology that works, and works well. Fussy on beautiful code and a passion for making complex things look simple; combine that with a view that ‘anything is possible’ in the world of the internet makes for an epic mindset for delivering innovation through code. Outside of the agency Ira is coding and creating commerce.",
-        "img-path": "https://1793699979.rsc.cdn77.org",
-        "images" : ["https://1793699979.rsc.cdn77.org/team-photos/ira/1.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/2.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/3.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/4.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/5.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/6.jpg", "https://1793699979.rsc.cdn77.org/team-photos/ira/CMYK.png"]
     },
     "tom": {
         "id": 9, 
